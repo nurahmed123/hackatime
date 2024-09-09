@@ -67,7 +67,7 @@ and [config.default.yml](https://github.com/kcoderhtml/hackatime/blob/master/con
 If you want to run Hackatime on **Kubernetes**, there
 is [wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) for quick and easy deployment.
 
-### 🧑‍💻 Option 4: Compile and run from source
+### 🧑‍💻 Option 2: Compile and run from source
 
 ```bash
 # Build and install
