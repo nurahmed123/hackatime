@@ -14,7 +14,7 @@
 <h3 align="center">A minimalist, self-hosted WakaTime-compatible backend for coding statistics.</h3>
 
 <p align="center">
-  <img src="static/assets/images/screenshot.webp" width="500px">
+  <img src="static/assets/images/screenshot.png" width="500px">
 </p>
 
 Forked from [muety/wakapi](https://github.com/muety/wakapi) for a Hackclub version.
