@@ -1,37 +1,23 @@
 <p align="center">
-  <img src="static/assets/images/logo-gh.svg" width="350">
+  <img src="https://assets.hackclub.com/flag-orpheus-top.svg" width="350">
+
+  <h1 align="center">Hackatime<h1>
 </p>
 
 <p align="center">
-  <img src="https://badges.fw-web.space/github/license/muety/wakapi">
-  <a href="https://liberapay.com/muety/"><img src="https://badges.fw-web.space/liberapay/receives/muety.svg?logo=liberapay"></a>
+  <img src="https://badges.fw-web.space/github/license/kcoderhtml/hackatime">
   <img src="https://wakapi.dev/api/badge/n1try/interval:any/project:wakapi?label=wakapi">
-  <img src="https://badges.fw-web.space/github/languages/code-size/muety/wakapi">
-  <a href="https://goreportcard.com/report/github.com/muety/wakapi"><img src="https://goreportcard.com/badge/github.com/muety/wakapi"></a>
-  <a href="https://sonarcloud.io/dashboard?id=muety_wakapi"><img src="https://sonarcloud.io/api/project_badges/measure?project=muety_wakapi&metric=ncloc"></a>
+  <img src="https://badges.fw-web.space/github/languages/code-size/kcoderhtml/hackatime">
+  <a href="https://goreportcard.com/report/github.com/kcoderhtml/hackatime"><img src="https://goreportcard.com/badge/github.com/kcoderhtml/hackatime"></a>
 </p>
 
 <h3 align="center">A minimalist, self-hosted WakaTime-compatible backend for coding statistics.</h3>
-
-<div align="center">
-  <h3>
-    <a href="https://wakapi.dev">Website</a>
-    <span> | </span>
-    <a href="#-features">Features</a>
-    <span> | </span>
-    <a href="#%EF%B8%8F-how-to-use">How to use</a>
-    <span> | </span>
-    <a href="https://github.com/muety/wakapi/issues">Issues</a>
-    <span> | </span>
-    <a href="https://github.com/muety">Contact</a>
-  </h3>
-</div>
 
 <p align="center">
   <img src="static/assets/images/screenshot.webp" width="500px">
 </p>
 
-Installation instructions can be found below and in the [Wiki](https://github.com/muety/wakapi/wiki).
+Forked from [kcoderhtml/hackatime](https://github.com/kcoderhtml/hackatime) for a Hackclub version.
 
 ## 🚀 Features
 
@@ -49,31 +35,14 @@ Installation instructions can be found below and in the [Wiki](https://github.co
 
 ## ⌨️ How to use?
 
-There are different options for how to use Wakapi, ranging from our hosted cloud service to self-hosting it. Regardless
+There are different options for how to use Hackatime, ranging from our hosted cloud service to self-hosting it. Regardless
 of which option choose, you will always have to do the [client setup](#-client-setup) in addition.
 
-### ☁️ Option 1: Use [wakapi.dev](https://wakapi.dev)
-
-If you want to try out a free, hosted cloud service, all you need to do is create an account and then set up your
-client-side tooling (see below).
-
-### 📦 Option 2: Quick-run a release
-
-```bash
-$ curl -L https://wakapi.dev/get | bash
-```
-
-**Alternatively** using [eget](https://github.com/zyedidia/eget):
-
-```bash
-$ eget muety/wakapi
-```
-
-### 🐳 Option 3: Use Docker
+### 🐳 Option 1: Use Docker
 
 ```bash
 # Create a persistent volume
-$ docker volume create wakapi-data
+$ docker volume create hackatime-data
 
 $ SALT="$(cat /dev/urandom | LC_ALL=C tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1)"
 
@@ -81,21 +50,21 @@ $ SALT="$(cat /dev/urandom | LC_ALL=C tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | he
 $ docker run -d \
   -p 3000:3000 \
   -e "WAKAPI_PASSWORD_SALT=$SALT" \
-  -v wakapi-data:/data \
-  --name wakapi \
-  ghcr.io/muety/wakapi:latest
+  -v hackatime-data:/data \
+  --name hackatime \
+  ghcr.io/kcoderhtml/hackatime:latest
 ```
 
 Alternatively, you can use Docker Compose (`docker compose up -d`) for a more straightforward deployment.
-See [compose.yml](https://github.com/muety/wakapi/blob/master/compose.yml) for configuration details. If you prefer to
+See [compose.yml](https://github.com/kcoderhtml/hackatimee/blob/master/compose.yml) for configuration details. If you prefer to
 persist data in a local directory while using SQLite as the database, make sure to set the correct `user` option in the
 Docker Compose configuration to avoid permission issues.
 
-**Note:** By default, SQLite is used as a database. To run Wakapi in Docker with MySQL or Postgres,
-see [Dockerfile](https://github.com/muety/wakapi/blob/master/Dockerfile)
-and [config.default.yml](https://github.com/muety/wakapi/blob/master/config.default.yml) for further options.
+**Note:** By default, SQLite is used as a database. To run Hackatime in Docker with MySQL or Postgres,
+see [Dockerfile](https://github.com/kcoderhtml/hackatime/blob/master/Dockerfile)
+and [config.default.yml](https://github.com/kcoderhtml/hackatime/blob/master/config.default.yml) for further options.
 
-If you want to run Wakapi on **Kubernetes**, there
+If you want to run Hackatime on **Kubernetes**, there
 is [wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) for quick and easy deployment.
 
 ### 🧑‍💻 Option 4: Compile and run from source
@@ -103,25 +72,25 @@ is [wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) for q
 ```bash
 # Build and install
 # Alternatively: go build -o wakapi
-$ go install github.com/muety/wakapi@latest
+$ go install github.com/kcoderhtml/hackatime@latest
 
 # Get default config and customize
-$ curl -o wakapi.yml https://raw.githubusercontent.com/muety/wakapi/master/config.default.yml
-$ vi wakapi.yml
+$ curl -o Hackatim.yml https://raw.githubusercontent.com/muety/Hackatim/master/config.default.yml
+$ vi Hackatim.yml
 
 # Run it
-$ ./wakapi -config wakapi.yml
+$ ./wakapi -config Hackatim.yml
 ```
 
 **Note:** Check the comments in `config.yml` for best practices regarding security configuration and more.
 
-💡 When running Wakapi standalone (without Docker), it is recommended to run it as
-a [SystemD service](etc/wakapi.service).
+💡 When running Hackatim standalone (without Docker), it is recommended to run it as
+a [SystemD service](etc/Hackatim.service).
 
 ### 💻 Client setup
 
-Wakapi relies on the open-source [WakaTime](https://github.com/wakatime/wakatime-cli) client tools. In order to collect
-statistics for Wakapi, you need to set them up.
+Hackatim relies on the open-source [WakaTime](https://github.com/wakatime/wakatime-cli) client tools. In order to collect
+statistics for Hackatim, you need to set them up.
 
 1. **Set up WakaTime** for your specific IDE or editor. Please refer to the
    respective [plugin guide](https://wakatime.com/plugins)
@@ -130,14 +99,14 @@ statistics for Wakapi, you need to set them up.
 ```ini
 [settings]
 
-# Your Wakapi server URL or 'https://wakapi.dev/api' when using the cloud server
+# Your Hackatim server URL
 api_url = http://localhost:3000/api
 
-# Your Wakapi API key (get it from the web interface after having created an account)
+# Your Hackatim API key (get it from the web interface after having created an account)
 api_key = 406fe41f-6d69-4183-a4cc-121e0c524c2b
 ```
 
-Optionally, you can set up a [client-side proxy](https://github.com/muety/wakapi/wiki/Advanced-Setup:-Client-side-proxy)
+Optionally, you can set up a [client-side proxy](https://github.com/muety/Hackatim/wiki/Advanced-Setup:-Client-side-proxy)
 in addition.
 
 ## 🔧 Configuration options
@@ -149,12 +118,12 @@ argument) or via environment variables. Here is an overview of all options.
 |------------------------------------------------------------------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `env` /<br>`ENVIRONMENT`                                                     | `dev`                                            | Whether to use development- or production settings                                                                                                                              |
 | `app.leaderboard_enabled` /<br>`WAKAPI_LEADERBOARD_ENABLED`                  | `true`                                           | Whether to enable the public leaderboard                                                                                                                                        |
-| `app.leaderboard_scope` /<br>`WAKAPI_LEADERBOARD_SCOPE`                      | `7_days`                                         | Aggregation interval for public leaderboard (see [here](https://github.com/muety/wakapi/blob/7d156cd3edeb93af2997bd95f12933b0aabef0c9/config/config.go#L71) for allowed values) |
+| `app.leaderboard_scope` /<br>`WAKAPI_LEADERBOARD_SCOPE`                      | `7_days`                                         | Aggregation interval for public leaderboard (see [here](https://github.com/kcoderhtml/hackatime/blob/7d156cd3edeb93af2997bd95f12933b0aabef0c9/config/config.go#L71) for allowed values) |
 | `app.leaderboard_generation_time` /<br>`WAKAPI_LEADERBOARD_GENERATION_TIME`  | `0 0 6 * * *,0 0 18 * * *`                       | One or multiple times of day at which to re-calculate the leaderboard                                                                                                           |
 | `app.aggregation_time` /<br>`WAKAPI_AGGREGATION_TIME`                        | `0 15 2 * * *`                                   | Time of day at which to periodically run summary generation for all users                                                                                                       |
 | `app.report_time_weekly` /<br>`WAKAPI_REPORT_TIME_WEEKLY`                    | `0 0 18 * * 5`                                   | Week day and time at which to send e-mail reports                                                                                                                               |
 | `app.data_cleanup_time` /<br>`WAKAPI_DATA_CLEANUP_TIME`                      | `0 0 6 * * 0`                                    | When to perform data cleanup operations (see `app.data_retention_months`)                                                                                                       |
-| `app.import_enabled` /<br>`WAKAPI_IMPORT_ENABLED`                            | `true`                                           | Whether data imports from WakaTime or other Wakapi instances are permitted                                                                                                      |
+| `app.import_enabled` /<br>`WAKAPI_IMPORT_ENABLED`                            | `true`                                           | Whether data imports from WakaTime or other Hackatime instances are permitted                                                                                                      |
 | `app.import_batch_size` /<br>`WAKAPI_IMPORT_BATCH_SIZE`                      | `50`                                             | Size of batches of heartbeats to insert to the database during importing from external services                                                                                 |
 | `app.import_backoff_min` /<br>`WAKAPI_IMPORT_BACKOFF_MIN`                    | `5`                                              | "Cooldown" period in minutes before user may attempt another data import                                                                                                        |
 | `app.import_max_rate` /<br>`WAKAPI_IMPORT_MAX_RATE`                          | `24`                                             | Minimum number of hours to wait after a successful data import before user may attempt another one                                                                              |
@@ -176,7 +145,7 @@ argument) or via environment variables. Here is an overview of all options.
 | `server.tls_cert_path` /<br> `WAKAPI_TLS_CERT_PATH`                          | -                                                | Path of SSL server certificate (leave blank to not use HTTPS)                                                                                                                   |
 | `server.tls_key_path` /<br> `WAKAPI_TLS_KEY_PATH`                            | -                                                | Path of SSL server private key (leave blank to not use HTTPS)                                                                                                                   |
 | `server.base_path` /<br> `WAKAPI_BASE_PATH`                                  | `/`                                              | Web base path (change when running behind a proxy under a sub-path)                                                                                                             |
-| `server.public_url` /<br> `WAKAPI_PUBLIC_URL`                                | `http://localhost:3000`                          | URL at which your Wakapi instance can be found publicly                                                                                                                         |
+| `server.public_url` /<br> `WAKAPI_PUBLIC_URL`                                | `http://localhost:3000`                          | URL at which your Hackatime instance can be found publicly                                                                                                                         |
 | `security.password_salt` /<br> `WAKAPI_PASSWORD_SALT`                        | -                                                | Pepper to use for password hashing                                                                                                                                              |
 | `security.insecure_cookies` /<br> `WAKAPI_INSECURE_COOKIES`                  | `false`                                          | Whether or not to allow cookies over HTTP                                                                                                                                       |
 | `security.cookie_max_age` /<br> `WAKAPI_COOKIE_MAX_AGE`                      | `172800`                                         | Lifetime of authentication cookies in seconds or `0` to use [Session](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Define_the_lifetime_of_a_cookie) cookies        |
@@ -185,7 +154,7 @@ argument) or via environment variables. Here is an overview of all options.
 | `security.invite_codes` /<br> `WAKAPI_INVITE_CODES`                          | `true`                                           | Whether to enable registration by invite codes. Primarily useful if registration is disabled (invite-only server).                                                              |
 | `security.disable_frontpage` /<br> `WAKAPI_DISABLE_FRONTPAGE`                | `false`                                          | Whether to disable landing page (useful for personal instances)                                                                                                                 |
 | `security.expose_metrics` /<br> `WAKAPI_EXPOSE_METRICS`                      | `false`                                          | Whether to expose Prometheus metrics under `/api/metrics`                                                                                                                       |
-| `security.trusted_header_auth` /<br> `WAKAPI_TRUSTED_HEADER_AUTH`            | `false`                                          | Whether to enable trusted header authentication for reverse proxies (see [#534](https://github.com/muety/wakapi/issues/534)). **Use with caution!**                             |
+| `security.trusted_header_auth` /<br> `WAKAPI_TRUSTED_HEADER_AUTH`            | `false`                                          | Whether to enable trusted header authentication for reverse proxies (see [#534](https://github.com/muety/wakatime/issues/534)). **Use with caution!**                             |
 | `security.trusted_header_auth_key` /<br> `WAKAPI_TRUSTED_HEADER_AUTH_KEY`    | `Remote-User`                                    | Header field for trusted header authentication. **Caution:** proxy must be configured to strip this header from client requests!                                                |
 | `security.trust_reverse_proxy_ips` /<br> `WAKAPI_TRUST_REVERSE_PROXY_IPS`    | -                                                | Comma-separated list of IPv4 or IPv6 addresses or CIDRs of reverse proxies to trust to handle authentication (e.g. `172.17.0.1`, `192.168.0.0/24`, `[::1]`).                    |
 | `security.signup_max_rate` /<br> `WAKAPI_SIGNUP_MAX_RATE`                    | `5/1h`                                           | Rate limiting config for signup endpoint in format `<max_req>/<multiplier><unit>`, where `unit` is one of `s`, `m` or `h`.                                                      |
@@ -202,8 +171,8 @@ argument) or via environment variables. Here is an overview of all options.
 | `db.max_conn` /<br> `WAKAPI_DB_MAX_CONNECTIONS`                              | `2`                                              | Maximum number of database connections                                                                                                                                          |
 | `db.ssl` /<br> `WAKAPI_DB_SSL`                                               | `false`                                          | Whether to use TLS encryption for database connection (Postgres and CockroachDB only)                                                                                           |
 | `db.automgirate_fail_silently` /<br> `WAKAPI_DB_AUTOMIGRATE_FAIL_SILENTLY`   | `false`                                          | Whether to ignore schema auto-migration failures when starting up                                                                                                               |
-| `mail.enabled` /<br> `WAKAPI_MAIL_ENABLED`                                   | `true`                                           | Whether to allow Wakapi to send e-mail (e.g. for password resets)                                                                                                               |
-| `mail.sender` /<br> `WAKAPI_MAIL_SENDER`                                     | `Wakapi <noreply@wakapi.dev>`                    | Default sender address for outgoing mails                                                                                                                                       |
+| `mail.enabled` /<br> `WAKAPI_MAIL_ENABLED`                                   | `true`                                           | Whether to allow Hackatime to send e-mail (e.g. for password resets)                                                                                                               |
+| `mail.sender` /<br> `WAKAPI_MAIL_SENDER`                                     | `Hackatime <noreply@wakapi.dev>`                    | Default sender address for outgoing mails                                                                                                                                       |
 | `mail.provider` /<br> `WAKAPI_MAIL_PROVIDER`                                 | `smtp`                                           | Implementation to use for sending mails (one of [`smtp`])                                                                                                                       |
 | `mail.smtp.host` /<br> `WAKAPI_MAIL_SMTP_HOST`                               | -                                                | SMTP server address for sending mail (if using `smtp` mail provider)                                                                                                            |
 | `mail.smtp.port` /<br> `WAKAPI_MAIL_SMTP_PORT`                               | -                                                | SMTP server port (usually 465)                                                                                                                                                  |
@@ -221,7 +190,7 @@ argument) or via environment variables. Here is an overview of all options.
 
 ### Supported databases
 
-Wakapi uses [GORM](https://gorm.io) as an ORM. As a consequence, a set of different relational databases is supported.
+Hackatime uses [GORM](https://gorm.io) as an ORM. As a consequence, a set of different relational databases is supported.
 
 * [SQLite](https://sqlite.org/) (_default, easy setup_)
 * [MySQL](https://hub.docker.com/_/mysql) (_recommended, because most extensively tested_)
@@ -233,7 +202,7 @@ Wakapi uses [GORM](https://gorm.io) as an ORM. As a consequence, a set of differ
 
 ## 🔐 Authentication
 
-Wakapi supports different types of user authentication.
+Hackatime supports different types of user authentication.
 
 * **Cookie:** This method is used in the browser. Users authenticate by sending along an encrypted, secure, HTTP-only
   cookie (`wakapi_auth`) that was set in the server's response upon login.
@@ -245,7 +214,7 @@ Wakapi supports different types of user authentication.
     * **Vis query param:** Alternatively, users can also pass their plain API key as a query parameter (
       e.g. `?api_key=86648d74-19c5-452b-ba01-fb3ec70d4c2f`) in the URL with every request.
 * **Trusted header:** This mechanism allows to delegate authentication to a **reverse proxy** (e.g. for SSO), that
-  Wakapi will then trust blindly. See [#534](https://github.com/muety/wakapi/issues/534) for details.
+  Hackatime will then trust blindly. See [#534](https://github.com/muety/wakapi/issues/534) for details.
     * Must be enabled via `trusted_header_auth` and configuring `trust_reverse_proxy_ip` in the config
     * Warning: This type of authentication is quite prone to misconfiguration. Make sure that your reverse proxy
       properly strips relevant headers from client requests.
@@ -265,10 +234,10 @@ $ swag init -o static/docs
 
 ### Prometheus export
 
-You can export your Wakapi statistics to Prometheus to view them in a Grafana dashboard or so. Here is how.
+You can export your Hackatime statistics to Prometheus to view them in a Grafana dashboard or so. Here is how.
 
 ```bash
-# 1. Start Wakapi with the feature enabled
+# 1. Start Hackatime with the feature enabled
 $ export WAKAPI_EXPOSE_METRICS=true
 $ ./wakapi
 
@@ -282,7 +251,7 @@ $ echo "<YOUR_API_KEY>" | base64
 
 ```yml
 # prometheus.yml
-# (assuming your Wakapi instance listens at localhost, port 3000)
+# (assuming your Hackatime instance listens at localhost, port 3000)
 
 scrape_configs:
   - job_name: 'wakapi'
@@ -302,25 +271,25 @@ of [wakatime_exporter](https://github.com/MacroPower/wakatime_exporter).
 
 ### WakaTime integration
 
-Wakapi plays well together with [WakaTime](https://wakatime.com). For one thing, you can **forward heartbeats** from
-Wakapi to WakaTime to effectively use both services simultaneously. In addition, there is the option to **import
+Hackatime plays well together with [WakaTime](https://wakatime.com). For one thing, you can **forward heartbeats** from
+Hackatime to WakaTime to effectively use both services simultaneously. In addition, there is the option to **import
 historic data** from WakaTime for consistency between both services. Both features can be enabled in the _Integrations_
-section of your Wakapi instance's settings page.
+section of your Hackatime instance's settings page.
 
 ### GitHub Readme Stats integrations
 
-Wakapi also integrates
+Hackatime also integrates
 with [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats#wakatime-week-stats) to generate fancy
 cards for you. Here is an example. To use this, don't forget to **enable public data**
 under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
 
-![](https://github-readme-stats.vercel.app/api/wakatime?username=n1try&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Wakapi%20Week%20Stats&layout=compact&range=last_7_days)
+![](https://github-readme-stats.vercel.app/api/wakatime?username=n1try&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact&range=last_7_days)
 
 <details>
 <summary>Click to view code</summary>
 
 ```markdown
-![](https://github-readme-stats.vercel.app/api/wakatime?username={yourusername}&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Wakapi%20Week%20Stats&layout=compact)
+![](https://github-readme-stats.vercel.app/api/wakatime?username={yourusername}&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact)
 ```
 
 </details>
@@ -329,7 +298,7 @@ under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
 ### Github Readme Metrics integration
 
 There is a [WakaTime plugin](https://github.com/lowlighter/metrics/tree/master/source/plugins/wakatime) for
-GitHub [Metrics](https://github.com/lowlighter/metrics/) that is also compatible with Wakapi. To use this, don't forget
+GitHub [Metrics](https://github.com/lowlighter/metrics/) that is also compatible with Hackatime. To use this, don't forget
 to **enable public data** under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
 
 Preview:
@@ -359,7 +328,7 @@ Preview:
 ### Browser Plugin (Chrome & Firefox)
 
 The [browser-wakatime](https://github.com/wakatime/browser-wakatime) plugin enables you to track your web surfing in
-WakaTime (and Wakapi, of course). Visited websites will appear as "files" in the summary. Follow these instructions to
+WakaTime (and Hackatime, of course). Visited websites will appear as "files" in the summary. Follow these instructions to
 get started:
 
 1. Install the browser extension from the official
@@ -375,7 +344,7 @@ get started:
 
 ![](.github/assets/screenshot_browser_plugin.png)
 
-Note: the plugin will only sync heartbeats once in a while, so it might take some time for them to appear on Wakapi.
+Note: the plugin will only sync heartbeats once in a while, so it might take some time for them to appear on Hackatime.
 To "force" it to sync, simply bring up the plugin main dialog.
 
 ### Gnome Extension
@@ -393,7 +362,7 @@ command as a status bar indicator:
 
 ## 📦 Data Export
 
-You can export your coding activity from Wakapi to CSV in the form of raw heartbeats. While there is no way to
+You can export your coding activity from Hackatime to CSV in the form of raw heartbeats. While there is no way to
 accomplish this directly through the web UI, we provide an easy-to-use Python [script](scripts/download_heartbeats.py)
 instead.
 
@@ -435,19 +404,19 @@ alongside [stretchr/testify](https://pkg.go.dev/github.com/stretchr/testify).
 #### How to run
 
 ```bash
-$ CGO_ENABLED=0 go test `go list ./... | grep -v 'github.com/muety/wakapi/scripts'` -json -coverprofile=coverage/coverage.out ./... -run ./...
+$ CGO_ENABLED=0 go test `go list ./... | grep -v 'github.com/kcoderhtml/hackatime/scripts'` -json -coverprofile=coverage/coverage.out ./... -run ./...
 ```
 
 ### API tests
 
-API tests are implemented as black box tests, which interact with a fully-fledged, standalone Wakapi through HTTP
-requests. They are supposed to check Wakapi's web stack and endpoints, including response codes, headers and data on a
+API tests are implemented as black box tests, which interact with a fully-fledged, standalone Hackatime through HTTP
+requests. They are supposed to check Hackatime's web stack and endpoints, including response codes, headers and data on a
 syntactical level, rather than checking the actual content that is returned.
 
 Our API (or end-to-end, in some way) tests are implemented as a [Postman](https://www.postman.com/) collection and can
 be run either from inside Postman, or using [newman](https://www.npmjs.com/package/newman) as a command-line runner.
 
-To get a predictable environment, tests are run against a fresh and clean Wakapi instance with a SQLite database that is
+To get a predictable environment, tests are run against a fresh and clean Hackatime instance with a SQLite database that is
 populated with nothing but some seed data (see [data.sql](testing/data.sql)). It is usually recommended for software
 tests to be [safe](https://www.restapitutorial.com/lessons/idempotency.html), stateless and without side effects. In
 contrary to that paradigm, our API tests strictly require a fixed execution order (which Postman assures) and their
@@ -491,7 +460,7 @@ As explained in [#284](https://github.com/muety/wakapi/issues/284), precompresse
 assets are delivered to save additional bandwidth. This was inspired by
 Caddy's [`precompressed`](https://caddyserver.com/docs/caddyfile/directives/file_server)
 directive. [
-`gzipped.FileServer`](https://github.com/muety/wakapi/blob/07a367ce0a97c7738ba8e255e9c72df273fd43a3/main.go#L249)
+`gzipped.FileServer`](https://github.com/kcoderhtml/hackatime/blob/07a367ce0a97c7738ba8e255e9c72df273fd43a3/main.go#L249)
 checks for every static file's `.br` or `.gz` equivalents and, if present, delivers those instead of the actual file,
 alongside `Content-Encoding: br`. Currently, compressed assets are simply checked in to Git. Later we might want to have
 this be part of a new build step.
@@ -514,11 +483,11 @@ $ yarn compress
 
 ## ❔ FAQs
 
-Since Wakapi heavily relies on the concepts provided by WakaTime, [their FAQs](https://wakatime.com/faq) largely apply
-to Wakapi as well. You might find answers there.
+Since Hackatime heavily relies on the concepts provided by WakaTime, [their FAQs](https://wakatime.com/faq) largely apply
+to Hackatime as well. You might find answers there.
 
 <details>
-<summary><b>What data are sent to Wakapi?</b></summary>
+<summary><b>What data are sent to Hackatime?</b></summary>
 
 <ul>
   <li>File names</li>
@@ -531,7 +500,7 @@ to Wakapi as well. You might find answers there.
 
 See the related [WakaTime FAQ section](https://wakatime.com/faq#data-collected) for details.
 
-If you host Wakapi yourself, you have control over all your data. However, if you use our webservice and are concerned
+If you host Hackatime yourself, you have control over all your data. However, if you use our webservice and are concerned
 about privacy, you can also [exclude or obfuscate](https://wakatime.com/faq#exclude-paths) certain file- or project
 names.
 </details>
@@ -543,17 +512,17 @@ All data are cached locally on your machine and sent in batches once you're onli
 </details>
 
 <details>
-<summary><b>How did Wakapi come about?</b></summary>
+<summary><b>How did Hackatime come about?</b></summary>
 
-Wakapi was started when I was a student, who wanted to track detailed statistics about my coding time. Although I'm a
+Hackatime was started when I was a student, who wanted to track detailed statistics about my coding time. Although I'm a
 big fan of WakaTime I didn't want to pay <a href="https://wakatime.com/pricing">$9 a month</a> back then. Luckily, most
 parts of WakaTime are open source!
 </details>
 
 <details>
-<summary><b>How does Wakapi compare to WakaTime?</b></summary>
+<summary><b>How does Hackatime compare to WakaTime?</b></summary>
 
-Wakapi is a small subset of WakaTime and has a lot less features. Cool WakaTime features, that are missing Wakapi,
+Hackatime is a small subset of WakaTime and has a lot less features. Cool WakaTime features, that are missing Hackatime,
 include:
 
 <ul>
@@ -566,14 +535,14 @@ include:
 </ul>
 
 WakaTime is worth the price. However, if you only need basic statistics and like to keep sovereignty over your data, you
-might want to go with Wakapi.
+might want to go with Hackatime.
 </details>
 
 <details>
 <summary><b>How are durations calculated?</b></summary>
 
 Inferring a measure for your coding time from heartbeats works a bit differently than in WakaTime. While WakaTime
-has <a href="https://wakatime.com/faq#timeout">timeout intervals</a>, Wakapi essentially just pads every heartbeat that
+has <a href="https://wakatime.com/faq#timeout">timeout intervals</a>, Hackatime essentially just pads every heartbeat that
 occurs after a longer pause with 2 extra minutes.
 
 Here is an example (circles are heartbeats):
@@ -591,23 +560,23 @@ typing code?
 <ul>
   <li><b>WakaTime</b> (with 5 min timeout): 3 min 20 sec
   <li><b>WakaTime</b> (with 2 min timeout): 20 sec
-  <li><b>Wakapi:</b> 10 sec + 2 min + 10 sec = 2 min 20 sec</li>
+  <li><b>Hackatime:</b> 10 sec + 2 min + 10 sec = 2 min 20 sec</li>
 </ul>
 
-Wakapi adds a "padding" of two minutes before the third heartbeat. This is why total times will slightly vary between
-Wakapi and WakaTime.
+Hackatime adds a "padding" of two minutes before the third heartbeat. This is why total times will slightly vary between
+Hackatime and WakaTime.
 </details>
 
 ## 👥 Community contributions
 
-* 💻 [Code] Image generator from Wakapi
+* 💻 [Code] Image generator from Hackatime
   stats – [LacazeThomas/wakapi-stats](https://github.com/LacazeThomas/wakapi-stats) (`Go`)
 * 💻 [Code] Discord integration for
-  Wakapi - [LLoneDev6/Wakapi-Discord](https://github.com/LoneDev6/Wakapi-Discord) (`JavaScript`)
+  Hackatime - [LLoneDev6/Hackatime-Discord](https://github.com/LoneDev6/Hackatime-Discord) (`JavaScript`)
 * 💻 [Code] Alternative heartbeats export
   script - [wakapiexporter.nim](https://github.com/theAkito/mini-tools-nim/tree/master/generic/web/wakapiexporter) (
   `Nim`)
-* 💻 [Code] Wakapi Helm chart for K8s
+* 💻 [Code] Hackatime Helm chart for K8s
   deployments - [andreymaznyak/wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) (`YAML`)
 * 🗒 [Article] [Wakamonth: hours reporting tool](https://bitstillery.com/2024/01/09/wakamonth-hours-reporting-tool/)
 
@@ -616,14 +585,14 @@ Wakapi and WakaTime.
 Coding in open source is my passion and I would love to do it on a full-time basis and make a living from it one day. So
 if you like this project, please consider supporting it 🙂. You can donate either
 through [buying me a coffee](https://buymeacoff.ee/n1try) or becoming a GitHub sponsor. Every little donation is highly
-appreciated and boosts my motivation to keep improving Wakapi!
+appreciated and boosts my motivation to keep improving Hackatime!
 
 ## 🙏 Thanks
 
 I highly appreciate the efforts of **[@alanhamlett](https://github.com/alanhamlett)** and the WakaTime team and am
 thankful for their software being open source.
 
-Moreover, thanks to **[server.camp](https://server.camp)** for sponsoring server infrastructure for Wakapi.dev.
+Moreover, thanks to **[server.camp](https://server.camp)** for sponsoring server infrastructure for Hackatime.dev.
 
 <img src=".github/assets/servercamp_logo.png" width="220px" />
 
