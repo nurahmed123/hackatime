@@ -7,13 +7,11 @@ module.exports = {
                 green: colors.emerald,
             },
             width: {
-                '16': '4rem',
-            }
-        }
+                16: '4rem',
+            },
+        },
     },
-    content: [
-        './views/*.tpl.html',
-    ],
+    content: ['./views/*.tpl.html'],
     safelist: [
         'newsbox-default',
         'newsbox-warning',
@@ -23,5 +21,5 @@ module.exports = {
         'leaderboard-gold',
         'leaderboard-silver',
         'leaderboard-bronze',
-    ]
+    ],
 }

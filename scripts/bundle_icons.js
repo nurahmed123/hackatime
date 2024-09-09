@@ -10,7 +10,7 @@
 const fs = require('fs')
 const path = require('path')
 const { Collection } = require('@iconify/json-tools')
-const { locate } = require("@iconify/json");
+const { locate } = require('@iconify/json')
 
 let icons = [
     'fxemoji:key',
@@ -86,12 +86,14 @@ let icons = [
     'octicon:info-16',
 ]
 
-const output = path.normalize(path.join(__dirname, '../static/assets/js/icons.dist.js'))
+const output = path.normalize(
+    path.join(__dirname, '../static/assets/js/icons.dist.js')
+)
 const pretty = false
 
 // Sort icons by collections: filtered[prefix][array of icons]
 let filtered = {}
-icons.forEach(icon => {
+icons.forEach((icon) => {
     let parts = icon.split(':'),
         prefix
 
@@ -113,7 +115,7 @@ icons.forEach(icon => {
 
 // Parse each collection
 let code = ''
-Object.keys(filtered).forEach(prefix => {
+Object.keys(filtered).forEach((prefix) => {
     let collection = new Collection()
     if (!collection.loadFromFile(locate(prefix))) {
         console.error('Error loading collection', prefix)
@@ -123,7 +125,7 @@ Object.keys(filtered).forEach(prefix => {
     code += collection.scriptify({
         icons: filtered[prefix],
         optimize: true,
-        pretty: pretty
+        pretty: pretty,
     })
 })
 

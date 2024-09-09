@@ -4,7 +4,8 @@
 
 /* Base definition */
 body {
-    font-family: 'Source Sans 3', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Source Sans 3', 'Roboto', 'Helvetica Neue', 'Helvetica',
+        'Arial', sans-serif;
 }
 
 [v-cloak] {
@@ -51,7 +52,7 @@ body {
 
 /* Custom classes */
 .h1 {
-    @apply font-semibold text-3xl text-white m-0
+    @apply font-semibold text-3xl text-white m-0;
 }
 
 .h1-subcaption {
@@ -131,11 +132,11 @@ body {
 }
 
 .text-gold {
-    color: #DAA520;
+    color: #daa520;
 }
 
 .leaderboard-gold {
-    border-color: #DAA520;
+    border-color: #daa520;
 }
 
 .leaderboard-silver {
@@ -173,7 +174,7 @@ body {
 }
 
 .entity-filter-control {
-    width: 180px; 
+    width: 180px;
     @apply text-gray-300 text-sm;
 }
 

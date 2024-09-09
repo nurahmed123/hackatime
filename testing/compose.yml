@@ -1,42 +1,42 @@
 services:
-  postgres:
-    image: postgres:15
-    environment:
-      POSTGRES_USER: "wakapi"
-      POSTGRES_PASSWORD: "wakapi"
-      POSTGRES_DB: "wakapi"
-      PGPORT: 55432
-    network_mode: host
+    postgres:
+        image: postgres:15
+        environment:
+            POSTGRES_USER: 'wakapi'
+            POSTGRES_PASSWORD: 'wakapi'
+            POSTGRES_DB: 'wakapi'
+            PGPORT: 55432
+        network_mode: host
 
-  mysql:
-    image: mysql:8
-    environment:
-      MYSQL_TCP_PORT: 53306
-      MYSQL_USER: "wakapi"
-      MYSQL_PASSWORD: "wakapi"
-      MYSQL_DATABASE: "wakapi"
-      MYSQL_ROOT_PASSWORD: example
-    network_mode: host
+    mysql:
+        image: mysql:8
+        environment:
+            MYSQL_TCP_PORT: 53306
+            MYSQL_USER: 'wakapi'
+            MYSQL_PASSWORD: 'wakapi'
+            MYSQL_DATABASE: 'wakapi'
+            MYSQL_ROOT_PASSWORD: example
+        network_mode: host
 
-  mariadb:
-    image: mariadb:10
-    environment:
-      MYSQL_TCP_PORT: 53306
-      MARIADB_USER: "wakapi"
-      MARIADB_PASSWORD: "wakapi"
-      MARIADB_DATABASE: "wakapi"
-      MARIADB_ROOT_PASSWORD: example
-    network_mode: host
+    mariadb:
+        image: mariadb:10
+        environment:
+            MYSQL_TCP_PORT: 53306
+            MARIADB_USER: 'wakapi'
+            MARIADB_PASSWORD: 'wakapi'
+            MARIADB_DATABASE: 'wakapi'
+            MARIADB_ROOT_PASSWORD: example
+        network_mode: host
 
-  cockroach:
-    image: cockroachdb/cockroach
-    entrypoint: '/cockroach/cockroach start-single-node --insecure --sql-addr=:56257'
-    network_mode: host
+    cockroach:
+        image: cockroachdb/cockroach
+        entrypoint: '/cockroach/cockroach start-single-node --insecure --sql-addr=:56257'
+        network_mode: host
 
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: "Hard!password123"
-      MSSQL_PID: "Developer"
-    network_mode: host
+    mssql:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        environment:
+            ACCEPT_EULA: 'Y'
+            SA_PASSWORD: 'Hard!password123'
+            MSSQL_PID: 'Developer'
+        network_mode: host

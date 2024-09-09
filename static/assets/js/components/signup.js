@@ -14,7 +14,10 @@ PetiteVue.createApp({
         debounceTimeout = setTimeout(() => {
             let url = avatarUrlTemplate
 
-            if ((url.includes('{username') && !this.username) || (url.includes('{email') && !this.email)) {
+            if (
+                (url.includes('{username') && !this.username) ||
+                (url.includes('{email') && !this.email)
+            ) {
                 url = defaultAvatarUrl
             } else {
                 url = url.replaceAll('{username}', this.username)
@@ -26,5 +29,5 @@ PetiteVue.createApp({
             console.log(url)
             this.avatarUrl = url
         }, 500)
-    }
+    },
 }).mount('#signup-page')
