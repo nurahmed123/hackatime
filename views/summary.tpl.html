@@ -7,7 +7,7 @@
     <script type="module" src="assets/js/components/summary.js"></script>
 
     <body
-        class="relative bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen max-w-screen-xl mx-auto"
+        class="relative bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen mx-auto"
     >
         {{ template "menu-main.tpl.html" . }} {{ template "alerts.tpl.html" . }}
         {{ template "time-picker.tpl.html" . }} {{ template
@@ -16,7 +16,7 @@
 
         <div
             id="summary-page"
-            class="grow"
+            class="grow max-w-screen-xl self-center"
             v-scope
             @vue:mounted="mounted({ userId: '{{ .SharedLoggedInViewModel.User.ID }}'})"
         >

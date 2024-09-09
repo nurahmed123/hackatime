@@ -1,13 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     {{ template "head.tpl.html" . }}
 
     <body
-        class="relative bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen {{ if .User }} max-w-screen-xl {{ else }} max-w-screen-lg {{end}} mx-auto justify-center"
+        class="relative bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen mx-auto justify-center"
     >
         {{ template "alerts.tpl.html" . }} {{ template "menu-main.tpl.html" . }}
 
-        <main class="mt-10 grow flex justify-center w-full" id="projects-page">
+        <main
+            class="mt-10 grow flex justify-center w-full {{ if .User }} max-w-screen-xl {{ else }} max-w-screen-lg {{end}} self-center"
+            id="projects-page"
+        >
             <div class="flex flex-col grow mt-10 max-available">
                 <h1 class="h1" style="margin-bottom: 0.5rem">Your Projects</h1>
 
