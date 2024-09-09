@@ -75,7 +75,7 @@ is [wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) for q
 $ go install github.com/kcoderhtml/hackatime@latest
 
 # Get default config and customize
-$ curl -o Hackatim.yml https://raw.githubusercontent.com/muety/Hackatim/master/config.default.yml
+$ curl -o Hackatim.yml https://raw.githubusercontent.com/kcoderhtml/hackatime/master/config.default.yml
 $ vi Hackatim.yml
 
 # Run it
