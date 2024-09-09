@@ -17,7 +17,7 @@
   <img src="static/assets/images/screenshot.webp" width="500px">
 </p>
 
-Forked from [kcoderhtml/hackatime](https://github.com/kcoderhtml/hackatime) for a Hackclub version.
+Forked from [muety/wakapi](https://github.com/muety/wakapi) for a Hackclub version.
 
 ## 🚀 Features
 
@@ -567,35 +567,10 @@ Hackatime adds a "padding" of two minutes before the third heartbeat. This is wh
 Hackatime and WakaTime.
 </details>
 
-## 👥 Community contributions
-
-* 💻 [Code] Image generator from Hackatime
-  stats – [LacazeThomas/wakapi-stats](https://github.com/LacazeThomas/wakapi-stats) (`Go`)
-* 💻 [Code] Discord integration for
-  Hackatime - [LLoneDev6/Hackatime-Discord](https://github.com/LoneDev6/Hackatime-Discord) (`JavaScript`)
-* 💻 [Code] Alternative heartbeats export
-  script - [wakapiexporter.nim](https://github.com/theAkito/mini-tools-nim/tree/master/generic/web/wakapiexporter) (
-  `Nim`)
-* 💻 [Code] Hackatime Helm chart for K8s
-  deployments - [andreymaznyak/wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) (`YAML`)
-* 🗒 [Article] [Wakamonth: hours reporting tool](https://bitstillery.com/2024/01/09/wakamonth-hours-reporting-tool/)
-
-## 👏 Support
-
-Coding in open source is my passion and I would love to do it on a full-time basis and make a living from it one day. So
-if you like this project, please consider supporting it 🙂. You can donate either
-through [buying me a coffee](https://buymeacoff.ee/n1try) or becoming a GitHub sponsor. Every little donation is highly
-appreciated and boosts my motivation to keep improving Hackatime!
-
 ## 🙏 Thanks
 
-I highly appreciate the efforts of **[@alanhamlett](https://github.com/alanhamlett)** and the WakaTime team and am
-thankful for their software being open source.
-
-Moreover, thanks to **[server.camp](https://server.camp)** for sponsoring server infrastructure for Hackatime.dev.
-
-<img src=".github/assets/servercamp_logo.png" width="220px" />
+Thanks a ton to [muety/wakapi](https://github.com/muety/wakapi) for making this project and for making it opensource and under a permissable license!
 
 ## 📓 License
 
-MIT @ [Ferdinand Mütsch](https://muetsch.io)
+MIT @ [Kieran Klukas](https://github.com/kcoderhtml)
