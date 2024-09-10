@@ -2,11 +2,12 @@ package view
 
 import (
 	"fmt"
+	"image/color"
+
 	"github.com/duke-git/lancet/v2/mathutil"
 	"github.com/duke-git/lancet/v2/slice"
 	"github.com/muety/wakapi/models"
 	"github.com/muety/wakapi/utils"
-	"image/color"
 )
 
 type ProjectsViewModel struct {
@@ -23,7 +24,7 @@ func (s *ProjectsViewModel) LangIcon(lang string) string {
 func (s *ProjectsViewModel) BackgroundIntensity(idx int) string {
 	maxCount := s.getMaxCount()
 	intensity := float64(s.Projects[idx].Count) / float64(maxCount)
-	return fadeColorToTransparent("#047857", intensity)
+	return fadeColorToTransparent("#dd9821", intensity)
 }
 
 func (s *ProjectsViewModel) WithSuccess(m string) *ProjectsViewModel {
