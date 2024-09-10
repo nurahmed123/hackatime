@@ -14,7 +14,7 @@
 </script>
 <script type="module" src="assets/js/components/signup.js"></script>
 
-<body class="bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen max-w-screen mx-auto justify-center">
+<body class="bg-background dark:bg-background-dark text-text-primary dark:text-text-dark-primary p-4 pt-10 flex flex-col min-h-screen max-w-screen mx-auto justify-center">
 
 {{ template "header.tpl.html" . }}
 
@@ -28,15 +28,11 @@
 {{ template "alerts.tpl.html" . }}
 
 <main class="mt-10 grow flex justify-center w-full" id="signup-page">
-    <div class="grow max-w-lg mt-10">
+    <div class="grow max-w-xl mt-10">
         <div class="mb-8">
-            <h1 class="h1">Sign up to Wakapi</h1>
-            <p class="h1-subcaption">
-                Welcome to Wakapi! Your first step is to create an account.
-                Afterwards, make sure to set up the <a href="https://wakatime.com" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-gray-400">WakaTime</a> client tools.
-                Instruction can be found in our <a href="https://github.com/muety/wakapi#-client-setup" target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="text-gray-300 hover:text-gray-400">README</a>.
+            <h1 class="text-4xl font-semibold antialiased mb-1 leading">Sign up to Wakapi</h1>
+            <p class="ml-1 text-text-secondary dark:text-text-dark-secondary">
+                Welcome to Hackatime! Your first step is to create an account. Once you login you will get instructions about how to setup your client
             </p>
         </div>
         <div>
@@ -67,7 +63,7 @@
                                v-model="email"
                                type="email" id="email"
                                name="email" @keyup="updateAvatar" placeholder="Your e-mail address">
-                        <div class="text-xs text-gray-600 mt-2">E-Mail address is optional, but required for some weekly reports and password reset.</div>
+                        <div class="text-xs text-text-secondary dark:text-text-dark-secondary mt-2">E-Mail address is optional, but required for some weekly reports and password reset.</div>
                     </div>
                 </div>
             </div>
