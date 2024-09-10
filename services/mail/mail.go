@@ -3,13 +3,14 @@ package mail
 import (
 	"bytes"
 	"fmt"
+	"time"
+
 	"github.com/muety/wakapi/helpers"
 	"github.com/muety/wakapi/models"
 	"github.com/muety/wakapi/routes"
 	"github.com/muety/wakapi/services"
 	"github.com/muety/wakapi/utils"
 	"github.com/muety/wakapi/views/mail"
-	"time"
 
 	conf "github.com/muety/wakapi/config"
 )
@@ -20,11 +21,11 @@ const (
 	tplNameWakatimeFailureNotification = "wakatime_connection_failure"
 	tplNameReport                      = "report"
 	tplNameSubscriptionNotification    = "subscription_expiring"
-	subjectPasswordReset               = "Wakapi - Password Reset"
-	subjectImportNotification          = "Wakapi - Data Import Finished"
-	subjectWakatimeFailureNotification = "Wakapi - WakaTime Connection Failure"
-	subjectReport                      = "Wakapi - Report from %s"
-	subjectSubscriptionNotification    = "Wakapi - Subscription expiring / expired"
+	subjectPasswordReset               = "Hackatime - Password Reset"
+	subjectImportNotification          = "Hackatime - Data Import Finished"
+	subjectWakatimeFailureNotification = "Hackatime - WakaTime Connection Failure"
+	subjectReport                      = "Hackatime - Report from %s"
+	subjectSubscriptionNotification    = "Hackatime - Subscription expiring / expired"
 )
 
 type SendingService interface {
