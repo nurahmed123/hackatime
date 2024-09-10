@@ -1,16 +1,16 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "REST API to interact with [Wakapi](https://wakapi.dev)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`",
-        "title": "Wakapi API",
+        "description": "REST API to interact with [Hackatime](https://w.dunkirk.sh)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`",
+        "title": "Hackatime API",
         "contact": {
-            "name": "Ferdinand Mütsch",
-            "url": "https://github.com/muety",
-            "email": "ferdinand@muetsch.io"
+            "name": "Kieran Klukas",
+            "url": "https://github.com/kcoderhtml",
+            "email": "me@dunkirk.sh"
         },
         "license": {
-            "name": "GPL-3.0",
-            "url": "https://github.com/muety/wakapi/blob/master/LICENSE"
+            "name": "MIT",
+            "url": "https://github.com/kcoderhtml/hackatime/blob/master/LICENSE"
         },
         "version": "1.0"
     },
@@ -18,8 +18,12 @@
         "/compat/shields/v1/{user}/{interval}/{filter}": {
             "get": {
                 "description": "Retrieve total time for a given entity (e.g. a project) within a given range (e.g. one week) in a format compatible with [Shields.io](https://shields.io/endpoint). Requires public data access to be allowed.",
-                "produces": ["application/json"],
-                "tags": ["badges"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "badges"
+                ],
                 "summary": "Get badge data",
                 "operationId": "get-badge",
                 "parameters": [
@@ -81,8 +85,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#leaders",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "List of users ranked by coding activity in descending order.",
                 "operationId": "get-wakatime-leaders",
                 "responses": {
@@ -103,8 +111,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#users",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve the given user",
                 "operationId": "get-wakatime-user",
                 "parameters": [
@@ -134,8 +146,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#all_time_since_today",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve summary for all time",
                 "operationId": "get-all-time",
                 "parameters": [
@@ -164,7 +180,9 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "tags": ["heartbeat"],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Get heartbeats of user for specified date",
                 "operationId": "get-heartbeats",
                 "parameters": [
@@ -204,8 +222,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push a new heartbeat",
                 "operationId": "post-heartbeat-3",
                 "parameters": [
@@ -240,8 +262,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push new heartbeats",
                 "operationId": "post-heartbeat-7",
                 "parameters": [
@@ -280,8 +306,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#projects",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve and filter the user's projects",
                 "operationId": "get-wakatime-projects",
                 "parameters": [
@@ -317,8 +347,12 @@
                     }
                 ],
                 "description": "Mimics undocumented endpoint related to https://wakatime.com/developers#projects",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve a single project",
                 "operationId": "get-wakatime-project",
                 "parameters": [
@@ -355,8 +389,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#stats",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve statistics for a given user",
                 "operationId": "get-wakatimes-tats",
                 "parameters": [
@@ -446,8 +484,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/developers#summaries.",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve WakaTime-compatible summaries",
                 "operationId": "get-wakatime-summaries",
                 "parameters": [
@@ -543,8 +585,12 @@
         },
         "/health": {
             "get": {
-                "produces": ["text/plain"],
-                "tags": ["misc"],
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "misc"
+                ],
                 "summary": "Check the application's health status",
                 "operationId": "get-health",
                 "responses": {
@@ -564,8 +610,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push a new heartbeat",
                 "operationId": "post-heartbeat",
                 "parameters": [
@@ -593,8 +643,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push new heartbeats",
                 "operationId": "post-heartbeat-5",
                 "parameters": [
@@ -620,8 +674,12 @@
         },
         "/plugins/errors": {
             "post": {
-                "consumes": ["application/json"],
-                "tags": ["diagnostics"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "diagnostics"
+                ],
                 "summary": "Push a new diagnostics object",
                 "operationId": "post-diagnostics",
                 "parameters": [
@@ -644,7 +702,9 @@
         },
         "/relay": {
             "get": {
-                "tags": ["relay"],
+                "tags": [
+                    "relay"
+                ],
                 "summary": "Proxy an GET API request to another Wakapi instance",
                 "operationId": "relay-get",
                 "parameters": [
@@ -672,7 +732,9 @@
                 }
             },
             "put": {
-                "tags": ["relay"],
+                "tags": [
+                    "relay"
+                ],
                 "summary": "Proxy an PUT API request to another Wakapi instance",
                 "operationId": "relay-put",
                 "parameters": [
@@ -700,7 +762,9 @@
                 }
             },
             "post": {
-                "tags": ["relay"],
+                "tags": [
+                    "relay"
+                ],
                 "summary": "Proxy an POST API request to another Wakapi instance",
                 "operationId": "relay-post",
                 "parameters": [
@@ -728,7 +792,9 @@
                 }
             },
             "delete": {
-                "tags": ["relay"],
+                "tags": [
+                    "relay"
+                ],
                 "summary": "Proxy an DELETE API request to another Wakapi instance",
                 "operationId": "relay-delete",
                 "parameters": [
@@ -756,7 +822,9 @@
                 }
             },
             "patch": {
-                "tags": ["relay"],
+                "tags": [
+                    "relay"
+                ],
                 "summary": "Proxy an PATCH API request to another Wakapi instance",
                 "operationId": "relay-patch",
                 "parameters": [
@@ -791,8 +859,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "produces": ["application/json"],
-                "tags": ["summary"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "summary"
+                ],
                 "summary": "Retrieve a summary",
                 "operationId": "get-summary",
                 "parameters": [
@@ -892,8 +964,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push a new heartbeat",
                 "operationId": "post-heartbeat-4",
                 "parameters": [
@@ -928,8 +1004,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push new heartbeats",
                 "operationId": "post-heartbeat-8",
                 "parameters": [
@@ -968,8 +1048,12 @@
                     }
                 ],
                 "description": "Mimics https://wakatime.com/api/v1/users/current/statusbar/today. Have no official documentation",
-                "produces": ["application/json"],
-                "tags": ["wakatime"],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "wakatime"
+                ],
                 "summary": "Retrieve summary for statusbar",
                 "operationId": "statusbar",
                 "parameters": [
@@ -998,8 +1082,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push a new heartbeat",
                 "operationId": "post-heartbeat-2",
                 "parameters": [
@@ -1034,8 +1122,12 @@
                         "ApiKeyAuth": []
                     }
                 ],
-                "consumes": ["application/json"],
-                "tags": ["heartbeat"],
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "heartbeat"
+                ],
                 "summary": "Push new heartbeats",
                 "operationId": "post-heartbeat-6",
                 "parameters": [

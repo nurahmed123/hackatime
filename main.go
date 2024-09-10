@@ -91,20 +91,20 @@ var (
 
 // TODO: Refactor entire project to be structured after business domains
 
-// @title Wakapi API
+// @title Hackatime API
 // @version 1.0
-// @description REST API to interact with [Wakapi](https://wakapi.dev)
+// @description REST API to interact with [Hackatime](https://w.dunkirk.sh)
 // @description
 // @description ## Authentication
 // @description Set header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`
 // @description **Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`
 
-// @contact.name Ferdinand Mütsch
-// @contact.url https://github.com/muety
-// @contact.email ferdinand@muetsch.io
+// @contact.name Kieran Klukas
+// @contact.url https://github.com/kcoderhtml
+// @contact.email me@dunkirk.sh
 
-// @license.name GPL-3.0
-// @license.url https://github.com/muety/wakapi/blob/master/LICENSE
+// @license.name MIT
+// @license.url https://github.com/kcoderhtml/hackatime/blob/master/LICENSE
 
 // @securitydefinitions.apikey ApiKeyAuth
 // @in header

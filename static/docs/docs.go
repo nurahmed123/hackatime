@@ -10,13 +10,13 @@ const docTemplate = `{
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
         "contact": {
-            "name": "Ferdinand Mütsch",
-            "url": "https://github.com/muety",
-            "email": "ferdinand@muetsch.io"
+            "name": "Kieran Klukas",
+            "url": "https://github.com/kcoderhtml",
+            "email": "me@dunkirk.sh"
         },
         "license": {
-            "name": "GPL-3.0",
-            "url": "https://github.com/muety/wakapi/blob/master/LICENSE"
+            "name": "MIT",
+            "url": "https://github.com/kcoderhtml/hackatime/blob/master/LICENSE"
         },
         "version": "{{.Version}}"
     },
@@ -1996,8 +1996,8 @@ var SwaggerInfo = &swag.Spec{
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
-	Title:            "Wakapi API",
-	Description:      "REST API to interact with [Wakapi](https://wakapi.dev)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`",
+	Title:            "Hackatime API",
+	Description:      "REST API to interact with [Hackatime](https://w.dunkirk.sh)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

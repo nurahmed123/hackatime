@@ -1,16 +1,16 @@
 {
-    "name": "wakapi",
+    "name": "hackatime",
     "description": "A minimalist, self-hosted WakaTime-compatible backend for coding statistics",
     "repository": {
-        "url": "https://github.com/muety/wakapi",
-        "license": "GPL-3.0"
+        "url": "https://github.com/kcoderhtml/hackatime",
+        "license": "MIT"
     },
     "urls": {
-        "prod": "https://wakapi.dev"
+        "prod": "https://w.dunkirk.sh"
     },
     "bugs": {
-        "list": "https://github.com/muety/wakapi/issues",
-        "report": "https://github.com/muety/wakapi/issues/new"
+        "list": "https://github.com/kcoderhtml/hackatime/issues",
+        "report": "https://github.com/kcoderhtml/hackatime/issues/new"
     },
     "keywords": [
         "go",
