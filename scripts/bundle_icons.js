@@ -30,7 +30,7 @@ let icons = [
     'noto:play-button',
     'noto:stop-button',
     'noto:lock',
-    'twemoji:gear',
+    'octicon:gear-24',
     'eva:corner-right-down-fill',
     'bi:heart-fill',
     'fxemoji:running',

@@ -91,7 +91,7 @@ body {
 }
 
 .menu-item {
-    @apply flex items-center text-sm font-semibold space-x-2 rounded hover:bg-gray-850 py-2 px-4 cursor-pointer;
+    @apply flex items-center text-sm font-semibold space-x-2 rounded hover:bg-accent-primary hover:dark:bg-accent-dark-primary py-2 px-4 cursor-pointer;
 }
 
 .submenu-item {

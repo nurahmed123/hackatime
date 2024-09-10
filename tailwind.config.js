@@ -37,10 +37,12 @@ module.exports = {
                 secondary: {
                     primary: 'oklch(75.31% 0.040 200.43)',
                     secondary: 'oklch(66.14% 0.04 200.43)',
+                    tertiary: 'oklch(57.44% 0.04 200.43)',
                 },
                 'secondary-dark': {
                     primary: 'oklch(50.08% 0.042 200.20)',
                     secondary: 'oklch(44.12% 0.042 200.2)',
+                    tertiary: 'oklch(37.59% 0.042 200.2)',
                 },
                 accent: {
                     primary: 'oklch(67.61% 0.114 293.10)',
