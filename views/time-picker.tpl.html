@@ -1,18 +1,18 @@
 <template id="time-picker-template">
     <div
-        class="menu-item flex items-center text-sm font-semibold space-x-2 rounded hover:bg-gray-850 py-2 px-4 cursor-pointer justify-end"
+        class="menu-item flex items-center text-sm font-semibold space-x-2 rounded hover:bg-accent-secondary dark:hover:bg-accent-dark-secondary py-2 px-4 cursor-pointer justify-end text-text-secondary dark:text-text-dark-secondary"
         @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
         data-trigger-for="showDropdownTimepicker"
     >
         <span
-            class="iconify inline text-2xl text-gray-400 grow"
+            class="iconify inline text-2xl text-text-tertiary dark:text-text-dark-tertiary grow"
             data-icon="fa-regular:calendar-alt"
         ></span>
-        <a v-cloak id="current-time-selection" class="text-gray-300 -mb-1"
+        <a v-cloak id="current-time-selection" class="-mb-1"
             >${timeSelection}</a
         >
         <span
-            class="iconify inline text-2xl text-gray-400"
+            class="iconify inline text-2xl"
             data-icon="akar-icons:chevron-down"
         ></span>
     </div>
@@ -23,10 +23,12 @@
         class="z-10 absolute top-0 right-0 popup mt-12 w-40"
         id="time-picker-dropdown"
     >
-        <div class="grow flex flex-col bg-gray-850 shadow-md rounded w-40 p-1">
+        <div
+            class="grow flex flex-col bg-accent-primary dark:bg-accent-dark-primary shadow-md rounded w-40 p-1"
+        >
             <a
                 id="time-option-today"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('today')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -34,7 +36,7 @@
             >
             <a
                 id="time-option-yesterday"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('yesterday')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -42,7 +44,7 @@
             >
             <a
                 id="time-option-week"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('week')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -50,7 +52,7 @@
             >
             <a
                 id="time-option-month"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('month')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -58,7 +60,7 @@
             >
             <a
                 id="time-option-year"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('year')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -66,7 +68,7 @@
             >
             <a
                 id="time-option-last_7_days"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('last_7_days')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -74,7 +76,7 @@
             >
             <a
                 id="time-option-last_30_days"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('last_30_days')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -82,7 +84,7 @@
             >
             <a
                 id="time-option-last_6_months"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('last_6_months')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -90,7 +92,7 @@
             >
             <a
                 id="time-option-last_12_months"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('last_12_months')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -98,7 +100,7 @@
             >
             <a
                 id="time-option-any"
-                class="submenu-item hover:bg-gray-800 rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('any')"
                 @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
                 data-trigger-for="showDropdownTimepicker"
@@ -107,11 +109,9 @@
             <hr class="my-2" />
             <form id="time-picker-form" class="flex flex-col space-y-1">
                 <div
-                    class="flex flex-col space-x-1 bg-gray-900 rounded p-1 border-2 border-gray-800"
+                    class="flex flex-col space-x-1 bg-secondary-primary dark:bg-secondary-dark-primary rounded p-1 border-2 border-secondary-secondary dark:border-secondary-dark-secondary"
                 >
-                    <label
-                        for="from-date-picker"
-                        class="text-gray-500 text-xs ml-2"
+                    <label for="from-date-picker" class="text-xs ml-2"
                         >Start:</label
                     >
                     <input
@@ -120,17 +120,15 @@
                         type="date"
                         name="from"
                         max="{{ .ToTime.T | simpledate }}"
-                        class="text-sm text-gray-300 bg-gray-900 cursor-pointer"
+                        class="text-sm text-text-secondary dark:text-text-dark-secondary bg-secondary-secondary dark:bg-secondary-dark-secondary p-1 rounded-md cursor-pointer"
                         required
                         data-trigger-for="showDropdownTimepicker"
                     />
                 </div>
                 <div
-                    class="flex flex-col space-x-1 bg-gray-900 rounded p-1 border-2 border-gray-800"
+                    class="flex flex-col space-x-1 bg-secondary-primary dark:bg-secondary-dark-primary rounded p-1 border-2 border-secondary-secondary dark:border-secondary-dark-secondary"
                 >
-                    <label
-                        for="to-date-picker"
-                        class="text-gray-500 text-xs ml-2"
+                    <label for="to-date-picker" class="text-xs ml-2"
                         >End:</label
                     >
                     <input
@@ -139,7 +137,7 @@
                         type="date"
                         name="to"
                         min="{{ .FromTime.T | simpledate }}"
-                        class="text-sm text-gray-300 bg-gray-900 cursor-pointer"
+                        class="text-sm text-text-secondary dark:text-text-dark-secondary bg-secondary-secondary dark:bg-secondary-dark-secondary p-1 rounded-md cursor-pointer"
                         required
                         data-trigger-for="showDropdownTimepicker"
                     />

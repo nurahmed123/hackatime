@@ -178,7 +178,7 @@ body {
 
 .entity-filter-control {
     width: 180px;
-    @apply text-gray-300 text-sm;
+    @apply text-text-secondary dark:text-text-dark-secondary text-sm;
 }
 
 .entity-filter-control label {
