@@ -44,11 +44,11 @@ module.exports = {
                 },
                 accent: {
                     primary: 'oklch(67.61% 0.114 293.10)',
-                    secondary: 'oklch(58.26% 0.114 293.1)',
+                    secondary: 'oklch(63.15% 0.114 293.1)',
                 },
                 'accent-dark': {
                     primary: 'oklch(46.02% 0.127 287.87)',
-                    secondary: 'oklch(40.58% 0.127 287.87)',
+                    secondary: 'oklch(43.57% 0.127 287.87)',
                 },
             },
         },
