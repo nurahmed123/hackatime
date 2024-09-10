@@ -1664,19 +1664,23 @@
                             <div class="w-full md:w-1/2">
                                 <input type="url" name="api_url"
                                 id="wakatime_api_url" class="w-full
-                                appearance-none bg-gray-850 text-text-primary
-                                dark:text-text-dark-primary outline-none rounded
-                                py-2 px-4 mb-2 {{ if not .User.WakatimeApiKey
-                                }}focus:bg-gray-800{{ end }} {{ if
-                                .User.WakatimeApiKey }}cursor-not-allowed{{ end
-                                }}" placeholder="{{ defaultWakatimeUrl }}" {{ if
+                                appearance-none bg-secondary-primary
+                                dark:bg-secondary-dark-primary text-text-primary
+                                dark:text-text-dark-primary placeholder-current
+                                outline-none rounded py-2 px-4 mb-2 {{ if not
+                                .User.WakatimeApiKey
+                                }}focus:bg-secondary-secondary
+                                focus:dark:bg-secondary-dark-secondary{{ end }}
+                                {{ if .User.WakatimeApiKey
+                                }}cursor-not-allowed{{ end }}" placeholder="{{
+                                defaultWakatimeUrl }}" {{ if
                                 .User.WakatimeApiKey }}readonly{{ end }}
                                 value="{{ .User.WakaTimeURL "" }}">
                                 <input
                                     type="password"
                                     name="api_key"
                                     id="wakatime_api_key"
-                                    class="w-full appearance-none bg-gray-850 text-text-primary dark:text-text-dark-primary outline-none rounded py-2 px-4 mt-2 {{ if not .User.WakatimeApiKey }}focus:bg-gray-800{{ end }} {{ if .User.WakatimeApiKey }}cursor-not-allowed{{ end }}"
+                                    class="w-full appearance-none bg-secondary-primary dark:bg-secondary-dark-primary text-text-primary dark:text-text-dark-primary placeholder-current outline-none rounded py-2 px-4 mt-2 {{ if not .User.WakatimeApiKey }}focus:bg-secondary-secondary focus:dark:bg-secondary-dark-secondary{{ end }} {{ if .User.WakatimeApiKey }}cursor-not-allowed{{ end }}"
                                     placeholder="{{ $placeholderText }}"
                                     {{
                                     if
@@ -1802,7 +1806,7 @@
                                         />
                                     </div>
                                     <input
-                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-gray-850 text-gray-500 outline-none rounded py-2 px-4 cursor-not-allowed"
+                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-secondary-secondary dark:bg-secondary-dark-secondary text-text-secondary dark:text-text-dark-secondary outline-none rounded py-2 px-4 cursor-not-allowed"
                                         value="%s/api/badge/{{ .User.ID }}/interval:today?label=today"
                                         readonly
                                     />
@@ -1817,7 +1821,7 @@
                                         />
                                     </div>
                                     <input
-                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-gray-850 text-gray-500 outline-none rounded py-2 px-4 cursor-not-allowed"
+                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-secondary-secondary dark:bg-secondary-dark-secondary text-text-secondary dark:text-text-dark-secondary outline-none rounded py-2 px-4 cursor-not-allowed"
                                         value="%s/api/badge/{{ .User.ID }}/{{ .User.ID }}/interval:30_days?label=last%2030d"
                                         readonly
                                     />
@@ -1832,7 +1836,7 @@
                                         />
                                     </div>
                                     <input
-                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-gray-850 text-gray-500 outline-none rounded py-2 px-4 cursor-not-allowed"
+                                        class="with-url-value w-2/3 font-mono text-xs appearance-none bg-secondary-secondary dark:bg-secondary-dark-secondary text-text-secondary dark:text-text-dark-secondary outline-none rounded py-2 px-4 cursor-not-allowed"
                                         value="https://img.shields.io/endpoint?url=%s/api/compat/shields/v1/{{ .User.ID }}/interval:all_time&label=All%20time&color=blue"
                                         readonly
                                     />
@@ -1889,7 +1893,7 @@
                                     />
                                 </div>
                                 <textarea
-                                    class="with-url-inner-no-scheme shrink w-full font-mono text-xs appearance-none bg-gray-850 text-gray-500 outline-none rounded py-2 px-4 cursor-not-allowed mt-2"
+                                    class="with-url-inner-no-scheme shrink w-full font-mono text-xs appearance-none bg-secondary-secondary dark:bg-secondary-dark-secondary text-text-secondary dark:text-text-dark-secondary outline-none rounded py-2 px-4 cursor-not-allowed mt-2"
                                     rows="5"
                                     style="resize: none"
                                     readonly
