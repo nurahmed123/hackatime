@@ -9,5 +9,34 @@
         height="42px"
         alt="Logo"
         class="logo"
+        id="logo-normal"
     />
+    <img
+        src="assets/images/logo-mobile.svg"
+        width="110px"
+        height="42px"
+        alt="Logo"
+        class="logo"
+        id="logo-side"
+    />
+
+    <style>
+        #logo-normal {
+            display: block;
+        }
+
+        #logo-side {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #logo-normal {
+                display: none;
+            }
+
+            #logo-side {
+                display: block;
+            }
+        }
+    </style>
 </a>
