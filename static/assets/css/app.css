@@ -63,7 +63,7 @@ body {
 }
 
 .btn-default {
-    @apply py-2 px-4 font-semibold rounded bg-gray-800 hover:bg-gray-850 text-sm;
+    @apply py-2 px-4 font-semibold rounded bg-accent-primary dark:bg-accent-dark-primary hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary hover:bg-gray-850 text-sm;
 }
 
 .btn-disabled {
@@ -83,7 +83,7 @@ body {
 }
 
 .input-default {
-    @apply appearance-none bg-secondary dark:bg-secondary-dark focus:bg-primary text-text-primary dark:text-text-dark-primary placeholder-current outline-none rounded w-full py-2 px-4;
+    @apply appearance-none bg-secondary-secondary dark:bg-secondary-dark-secondary focus:bg-secondary-primary focus:dark:bg-secondary-dark-primary text-text-primary dark:text-text-dark-primary placeholder-current outline-none rounded w-full py-2 px-4;
 }
 
 .select-default {

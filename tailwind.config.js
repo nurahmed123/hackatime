@@ -34,10 +34,22 @@ module.exports = {
                 'background-dark': 'oklch(31.00% 0.007 229.04)',
                 primary: 'oklch(73.01% 0.146 74.32)',
                 'primary-dark': 'oklch(65.87% 0.146 74.32)',
-                secondary: 'oklch(75.31% 0.040 200.43)',
-                'secondary-dark': 'oklch(50.08% 0.042 200.20)',
-                accent: 'oklch(67.61% 0.114 293.10)',
-                'accent-dark': 'oklch(34.56% 0.127 287.87)',
+                secondary: {
+                    primary: 'oklch(75.31% 0.040 200.43)',
+                    secondary: 'oklch(66.14% 0.04 200.43)',
+                },
+                'secondary-dark': {
+                    primary: 'oklch(50.08% 0.042 200.20)',
+                    secondary: 'oklch(44.12% 0.042 200.2)',
+                },
+                accent: {
+                    primary: 'oklch(67.61% 0.114 293.10)',
+                    secondary: 'oklch(58.26% 0.114 293.1)',
+                },
+                'accent-dark': {
+                    primary: 'oklch(46.02% 0.127 287.87)',
+                    secondary: 'oklch(40.58% 0.127 287.87)',
+                },
             },
         },
     },
