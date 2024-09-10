@@ -33,7 +33,7 @@ module.exports = {
                 background: 'oklch(87.84% 0.001 197.14)',
                 'background-dark': 'oklch(31.00% 0.007 229.04)',
                 primary: 'oklch(73.01% 0.146 74.32)',
-                'primary-dark': 'oklch(73.01% 0.146 74.32)',
+                'primary-dark': 'oklch(65.87% 0.146 74.32)',
                 secondary: 'oklch(75.31% 0.040 200.43)',
                 'secondary-dark': 'oklch(50.08% 0.042 200.20)',
                 accent: 'oklch(67.61% 0.114 293.10)',

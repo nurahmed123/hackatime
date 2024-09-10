@@ -63,7 +63,7 @@ body {
 }
 
 .btn-default {
-    @apply py-2 px-4 font-semibold rounded bg-gray-800 hover:bg-gray-850 text-white text-sm;
+    @apply py-2 px-4 font-semibold rounded bg-gray-800 hover:bg-gray-850 text-sm;
 }
 
 .btn-disabled {
@@ -71,11 +71,11 @@ body {
 }
 
 .btn-primary {
-    @apply py-2 px-4 font-semibold rounded bg-green-700 hover:bg-green-800 text-white text-sm;
+    @apply py-2 px-4 font-semibold rounded bg-primary hover:bg-primary-dark text-sm;
 }
 
 .btn-danger {
-    @apply py-2 px-4 font-semibold rounded bg-red-600 hover:bg-red-700 text-white text-sm;
+    @apply py-2 px-4 font-semibold rounded bg-red-600 hover:bg-red-700 text-sm;
 }
 
 .btn-small {
@@ -99,7 +99,7 @@ body {
 }
 
 .chip {
-    @apply text-xs bg-gray-850 rounded rounded-full py-1 px-2 font-semibold inline-block mb-1;
+    @apply text-xs bg-gray-850 rounded-full py-1 px-2 font-semibold inline-block mb-1;
 }
 
 .link {
@@ -107,7 +107,7 @@ body {
 }
 
 .newsbox {
-    @apply px-4 py-2 border-2 border-red-700 bg-gray-850 rounded-md text-white border-green-700;
+    @apply px-4 py-2 border-2 bg-gray-850 rounded-md text-white border-green-700;
 }
 
 .newsbox-default {
