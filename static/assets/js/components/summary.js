@@ -8,7 +8,11 @@ PetiteVue.createApp({
         return null
     },
     mounted({ userId }) {
-        fetch(`api/activity/chart/${userId}.svg?dark&noattr`)
+        const isDarkMode = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+        ).matches
+        const darkParam = isDarkMode ? 'dark' : ''
+        fetch(`api/activity/chart/${userId}.svg?${darkParam}&noattr`)
             .then((res) => res.text())
             .then((data) => (this.activityChartSvg = data))
     },
