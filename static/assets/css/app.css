@@ -83,7 +83,7 @@ body {
 }
 
 .input-default {
-    @apply appearance-none bg-gray-850 focus:bg-gray-800 text-gray-300 outline-none rounded w-full py-2 px-4;
+    @apply appearance-none bg-secondary dark:bg-secondary-dark focus:bg-primary text-text-primary dark:text-text-dark-primary placeholder-current outline-none rounded w-full py-2 px-4;
 }
 
 .select-default {
