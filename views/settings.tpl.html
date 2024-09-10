@@ -13,7 +13,7 @@
     <script type="module" src="assets/js/components/settings.js"></script>
 
     <body
-        class="bg-gray-900 text-gray-700 p-4 pt-10 flex flex-col min-h-screen mx-auto justify-center"
+        class="bg-background dark:bg-background-dark text-text-primary dark:text-text-dark-primary p-4 pt-10 flex flex-col min-h-screen mx-auto justify-center"
     >
         <style>
             .inline-bullet-list li a {
@@ -38,7 +38,9 @@
             id="settings-page"
         >
             <div class="flex flex-col mt-10 max-w-full">
-                <h1 class="font-semibold text-3xl text-white m-0 mb-4">
+                <h1
+                    class="text-4xl font-semibold antialiased mb-1 leading-snug"
+                >
                     Settings
                 </h1>
 
@@ -47,7 +49,7 @@
                 >
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('account'), 'hover:text-gray-500': !isActive('account') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('account'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('account') }"
                     >
                         <a href="settings#account" @click="updateTab"
                             >Account</a
@@ -55,13 +57,13 @@
                     </li>
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('data'), 'hover:text-gray-500': !isActive('data') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('data'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('data') }"
                     >
                         <a href="settings#data" @click="updateTab">Data</a>
                     </li>
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('permissions'), 'hover:text-gray-500': !isActive('permissions') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('permissions'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('permissions') }"
                     >
                         <a href="settings#permissions" @click="updateTab"
                             >Permissions</a
@@ -69,7 +71,7 @@
                     </li>
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('integrations'), 'hover:text-gray-500': !isActive('integrations') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('integrations'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('integrations') }"
                     >
                         <a href="settings#integrations" @click="updateTab"
                             >Integrations</a
@@ -78,7 +80,7 @@
                     {{ if .SubscriptionsEnabled }}
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('subscription'), 'hover:text-gray-500': !isActive('subscription') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('subscription'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('subscription') }"
                     >
                         <a href="settings#subscription" @click="updateTab"
                             >Subscription</a
@@ -87,7 +89,7 @@
                     {{ end }}
                     <li
                         class="font-semibold text-2xl"
-                        v-bind:class="{ 'text-gray-300': isActive('danger_zone'), 'hover:text-gray-500': !isActive('danger_zone') }"
+                        v-bind:class="{ 'text-text-primary dark:text-text-dark-primary': isActive('danger_zone'), 'hover:text-text-secondary dark:hover:text-text-dark-secondary text-text-tertiary dark:text-text-dark-tertiary': !isActive('danger_zone') }"
                     >
                         <a href="settings#danger_zone" @click="updateTab"
                             >Danger Zone</a
@@ -112,11 +114,12 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold"
                                     for="select-timezone"
                                     >Time Zone</label
                                 >
-                                <span class="block text-sm text-gray-600"
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                     >Time Zone, which you are located in.
                                     Relevant for displaying daily
                                     statistics.</span
@@ -142,11 +145,13 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="email"
                                     >E-Mail Address</label
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Optional in general, but required for weekly
                                     reports and for resetting your password.
                                 </span>
@@ -167,11 +172,12 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="reports_weekly"
                                     >Weekly E-Mail Reports</label
                                 >
-                                <span class="block text-sm text-gray-600"
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                     >Opt in to receive a summary of your coding
                                     activity once a week.</span
                                 >
@@ -238,11 +244,12 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="password_old"
                                     >Current Password</label
                                 >
-                                <span class="block text-sm text-gray-600"
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                     >Enter your old password for
                                     verification.</span
                                 >
@@ -263,11 +270,12 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="password_new"
                                     >New Password</label
                                 >
-                                <span class="block text-sm text-gray-600"
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                     >Choose a new password. Preferably, it is at
                                     least 8 characters long and contains
                                     letters, digits and special chars.</span
@@ -289,11 +297,12 @@
                         <div class="flex mb-8">
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
-                                    class="font-semibold text-gray-300"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="password_repeat"
                                     >Repeat Password</label
                                 >
-                                <span class="block text-sm text-gray-600"
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                     >Once again ...</span
                                 >
                             </div>
@@ -332,10 +341,13 @@
 
                         <div class="flex mb-8">
                             <div class="w-2/3 mr-4 inline-block">
-                                <span class="font-semibold text-gray-300"
+                                <span
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     >Invite Friends</span
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can invite new users to Wakapi with an
                                     exclusive code. Click to generate one and
                                     then send the link to your friend. Thanks
@@ -345,7 +357,7 @@
                                 {{ if ne .InviteLink "" }}
                                 <div class="mt-4">
                                     <label
-                                        class="text-sm text-gray-300 mb-2"
+                                        class="text-sm text-text-primary dark:text-text-dark-primary mb-2"
                                         for="invite_code_result"
                                         >Success! Here's your invite
                                         link:</label
@@ -354,7 +366,7 @@
                                         type="url"
                                         name="invite_code"
                                         id="invite_code_result"
-                                        class="w-full appearance-none bg-gray-850 text-gray-300 outline-none rounded py-2 px-4 mb-2 cursor-not-allowed font-mono text-sm"
+                                        class="w-full appearance-none bg-gray-850 text-text-primary dark:text-text-dark-primary outline-none rounded py-2 px-4 mb-2 cursor-not-allowed font-mono text-sm"
                                         readonly
                                         value="{{ .InviteLink }}"
                                     />
@@ -393,10 +405,12 @@
                                 class="w-full md:w-1/3 mb-2 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Unknown Projects</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can choose to exclude and ignore coding
                                     stats from unknown projects. Changing this
                                     setting will require to recompute your
@@ -410,7 +424,7 @@
                                 <div class="flex justify-between items-center">
                                     <div class="flex flex-col gap-y-1">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="unknown-projects-toggle"
                                             >Exclude unknown projects</label
                                         >
@@ -468,15 +482,17 @@
 
                     <!-- Aliases -->
                     <div class="w-full">
-                        <div class="flex flex-wrap flex-nowrap mb-8 gap-x-4">
+                        <div class="flex flex-nowrap mb-8 gap-x-4">
                             <div
                                 class="w-full md:w-1/3 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Aliases</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can specify aliases for any type of
                                     entity. For instance, you can define a rule,
                                     that both "myapp-frontend" and
@@ -489,14 +505,14 @@
                                 {{ if .Aliases }}
                                 <div class="mb-8">
                                     <h3
-                                        class="inline-block font-semibold text-gray-300"
+                                        class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                     >
                                         Rules
                                     </h3>
                                     {{ range $i, $alias := .Aliases }}
                                     <div class="flex items-center">
                                         <div
-                                            class="text-gray-300 border-1 w-full inline-block my-1 py-1 text-align text-sm"
+                                            class="text-text-primary dark:text-text-dark-primary border-1 w-full inline-block my-1 py-1 text-align text-sm"
                                             style="line-height: 1.8"
                                         >
                                             &#9656;&nbsp; All
@@ -565,7 +581,7 @@
 
                                 <form action="" method="post" class="mb-2">
                                     <h3
-                                        class="inline-block font-semibold text-gray-300"
+                                        class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                     >
                                         Add Rule
                                     </h3>
@@ -624,7 +640,9 @@
                                     </div>
                                 </form>
 
-                                <p class="text-sm text-gray-600">
+                                <p
+                                    class="text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Wildcard patterns are supported, see
                                     <a
                                         href="https://github.com/becheran/wildmatch-go"
@@ -649,10 +667,12 @@
                                 class="w-full md:w-1/3 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Project Labels</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can assign labels (aka. tags) to
                                     projects to group them together, e.g. by
                                     "private" and "work".
@@ -663,7 +683,7 @@
                                 {{ if .Labels }}
                                 <div class="mb-8">
                                     <h3
-                                        class="inline-block font-semibold text-gray-300"
+                                        class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                     >
                                         Your labels
                                     </h3>
@@ -674,7 +694,7 @@
                                             style="line-height: 1.8"
                                         >
                                             &#9656;&nbsp;&nbsp;<span
-                                                class="font-semibold text-gray-300"
+                                                class="font-semibold text-text-primary dark:text-text-dark-primary"
                                                 >{{ $label.Key }}:</span
                                             >
                                             {{ range $j, $value := $label.Values
@@ -775,11 +795,13 @@
                                 </div>
                                 {{end}} {{ if .Projects }}
                                 <h3
-                                    class="inline-block font-semibold text-gray-300"
+                                    class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                 >
                                     Bulk association
                                 </h3>
-                                <p class="text-sm text-gray-600">
+                                <p
+                                    class="text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Associate a label with multiple projects
                                 </p>
                                 <form action="" method="post">
@@ -826,7 +848,9 @@
                                     </div>
                                 </form>
                                 {{ else }}
-                                <div class="text-gray-300 text-sm mb-4 mt-6">
+                                <div
+                                    class="text-text-primary dark:text-text-dark-primary text-sm mb-4 mt-6"
+                                >
                                     You don't have any projects, yet. Start out
                                     by sending a few heartbeats before you can
                                     then assign labels.
@@ -847,10 +871,12 @@
                                 class="w-full md:w-1/3 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Language Mappings</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can specify custom mapping from file
                                     extensions to programming languages, for
                                     instance a ".jsx" file could be mapped to
@@ -862,7 +888,7 @@
                                 {{ if .LanguageMappings }}
                                 <div class="mb-8">
                                     <h3
-                                        class="inline-block font-semibold text-gray-300"
+                                        class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                     >
                                         Rules
                                     </h3>
@@ -870,7 +896,7 @@
                                     }}
                                     <div class="flex items-center mb-2">
                                         <div
-                                            class="text-gray-300 border-1 w-full inline-block my-1 py-1 text-align text-sm"
+                                            class="text-text-primary dark:text-text-dark-primary border-1 w-full inline-block my-1 py-1 text-align text-sm"
                                         >
                                             &#9656;&nbsp; When filename ends in
                                             <span
@@ -919,7 +945,7 @@
 
                                 <form action="" method="post">
                                     <h3
-                                        class="inline-block font-semibold text-gray-300"
+                                        class="inline-block font-semibold text-text-primary dark:text-text-dark-primary"
                                     >
                                         Add Rule
                                     </h3>
@@ -988,10 +1014,12 @@
                                 class="w-full md:w-1/3 mb-2 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Heartbeats Timeout</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     This parameter affects the heuristic based
                                     on which a series of consecutive heartbeats
                                     sent by your IDE are aggregated to total
@@ -1024,7 +1052,7 @@
                                         class="flex flex-col flex-grow gap-y-1"
                                     >
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="heartbeats_timeout"
                                             >Timeout / offset (seconds)</label
                                         >
@@ -1042,7 +1070,8 @@
                                                 required
                                                 value="{{ .User.HeartbeatsTimeoutSec }}"
                                             />
-                                            <span class="text-gray-600 text-sm"
+                                            <span
+                                                class="text-text-secondary dark:text-text-dark-secondary text-sm"
                                                 >(min. 30 seconds, max. 5
                                                 minutes)</span
                                             >
@@ -1070,10 +1099,12 @@
                                 class="w-full md:w-1/3 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Vibrant Colors</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can view the entire summary in vibrant
                                     colors similar to the "Languages" chart.
                                     Note that this setting is saved in your web
@@ -1125,10 +1156,12 @@
                                 class="w-full md:w-1/2 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Public Leaderboard</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Opt in to get listed in the
                                     <a class="link" href="leaderboard"
                                         >public leaderboard</a
@@ -1149,7 +1182,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="enable_leaderboard"
                                             >Participate in leaderboard</label
                                         >
@@ -1214,10 +1247,12 @@
                                 class="w-full md:w-1/2 mb-4 md:mb-0 inline-block"
                             >
                                 <span
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     >Public Data</span
                                 >
-                                <p class="block text-sm text-gray-600">
+                                <p
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Some features require public access to your
                                     data without authentication. This mainly
                                     includes badges ("shields" endpoint) and the
@@ -1240,12 +1275,12 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="max_days"
                                             >Time Range</label
                                         >
                                         <span
-                                            class="block text-sm text-gray-600"
+                                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                                             >(in days; 0 = not public, -1 =
                                             unlimited)</span
                                         >
@@ -1267,7 +1302,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_projects"
                                             >Share Projects</label
                                         >
@@ -1315,7 +1350,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_languages"
                                             >Share Languages</label
                                         >
@@ -1363,7 +1398,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_editors"
                                             >Share Editors</label
                                         >
@@ -1411,7 +1446,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_oss"
                                             >Share OS'</label
                                         >
@@ -1459,7 +1494,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_machines"
                                             >Share Machines</label
                                         >
@@ -1507,7 +1542,7 @@
                                 <div class="flex gap-x-8">
                                     <div class="grow">
                                         <label
-                                            class="font-semibold text-gray-300"
+                                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                                             for="share_labels"
                                             >Share Project Labels</label
                                         >
@@ -1584,11 +1619,13 @@
                                 class="w-full md:w-1/2 mb-4 md:mb-0 inline-block"
                             >
                                 <label
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     for="select-timezone"
                                     >WakaTime</label
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     You can connect Wakapi with the official
                                     WakaTime (or another Wakapi instance, when
                                     optionally specifying a custom API URL) in a
@@ -1627,19 +1664,19 @@
                             <div class="w-full md:w-1/2">
                                 <input type="url" name="api_url"
                                 id="wakatime_api_url" class="w-full
-                                appearance-none bg-gray-850 text-gray-300
-                                outline-none rounded py-2 px-4 mb-2 {{ if not
-                                .User.WakatimeApiKey }}focus:bg-gray-800{{ end
-                                }} {{ if .User.WakatimeApiKey
-                                }}cursor-not-allowed{{ end }}" placeholder="{{
-                                defaultWakatimeUrl }}" {{ if
+                                appearance-none bg-gray-850 text-text-primary
+                                dark:text-text-dark-primary outline-none rounded
+                                py-2 px-4 mb-2 {{ if not .User.WakatimeApiKey
+                                }}focus:bg-gray-800{{ end }} {{ if
+                                .User.WakatimeApiKey }}cursor-not-allowed{{ end
+                                }}" placeholder="{{ defaultWakatimeUrl }}" {{ if
                                 .User.WakatimeApiKey }}readonly{{ end }}
                                 value="{{ .User.WakaTimeURL "" }}">
                                 <input
                                     type="password"
                                     name="api_key"
                                     id="wakatime_api_key"
-                                    class="w-full appearance-none bg-gray-850 text-gray-300 outline-none rounded py-2 px-4 mt-2 {{ if not .User.WakatimeApiKey }}focus:bg-gray-800{{ end }} {{ if .User.WakatimeApiKey }}cursor-not-allowed{{ end }}"
+                                    class="w-full appearance-none bg-gray-850 text-text-primary dark:text-text-dark-primary outline-none rounded py-2 px-4 mt-2 {{ if not .User.WakatimeApiKey }}focus:bg-gray-800{{ end }} {{ if .User.WakatimeApiKey }}cursor-not-allowed{{ end }}"
                                     placeholder="{{ $placeholderText }}"
                                     {{
                                     if
@@ -1648,7 +1685,9 @@
                                     end
                                     }}
                                 />
-                                <div class="mt-2 text-gray-300">
+                                <div
+                                    class="mt-2 text-text-primary dark:text-text-dark-primary"
+                                >
                                     <input
                                         type="checkbox"
                                         name="use_legacy_importer"
@@ -1713,11 +1752,13 @@
                                 class="w-full md:w-1/2 mb-4 md:mb-0 inline-block"
                             >
                                 <label
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     for="select-timezone"
                                     >Badges</label
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     This integration with allows to generate
                                     badges for README pages or forums. To enable
                                     this feature, you need to grant public,
@@ -1811,11 +1852,13 @@
                                 class="w-full md:w-1/2 mb-4 md:mb-0 inline-block"
                             >
                                 <label
-                                    class="font-semibold text-gray-300 text-lg"
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                                     for="select-timezone"
                                     >GitHub Readme Stats</label
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Wakapi intregrates with
                                     <a
                                         class="link"
@@ -1867,10 +1910,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                     v-if="isActive('subscription')"
                 >
                     <div class="w-full lg:w-1/2">
-                        <span class="font-semibold text-gray-300 text-lg"
+                        <span
+                            class="font-semibold text-text-primary dark:text-text-dark-primary text-lg"
                             >Subscription</span
                         >
-                        <span class="block text-sm text-gray-600">
+                        <span
+                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                        >
                             By default, this Wakapi instance will only store
                             historical coding activity for {{
                             .DataRetentionMonths }} months. However, if you want
@@ -1899,10 +1945,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                         <br />
 
                         {{ if not .User.HasActiveSubscription }}
-                        <span class="font-semibold text-gray-300"
+                        <span
+                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                             >How it works</span
                         >
-                        <span class="block text-sm text-gray-600">
+                        <span
+                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                        >
                             Without a subscription, your coding activity older
                             than {{ .DataRetentionMonths }} months will get
                             deleted by a routine that is run every day. If you
@@ -1918,15 +1967,18 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             months gets dropped.
                         </span>
                         <br />
-                        <span class="font-semibold text-gray-300"
+                        <span
+                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                             >Please note</span
                         >
-                        <span class="block text-sm text-gray-600"
+                        <span
+                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                             >If you just purchased a subscription, it might take
                             a moment until it's active. Try refresh this page in
                             a minute. Otherwise, please contact us!</span
                         >
-                        <span class="block text-sm text-gray-600"
+                        <span
+                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
                             >By purchasing a subscription, you agree that your
                             e-mail address, plus all information optionally
                             passed as billing details, will be processed by
@@ -1942,19 +1994,25 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                         <br />
 
                         {{ end }} {{ if not .UserFirstData.IsZero }}
-                        <span class="block text-sm text-gray-600">
+                        <span
+                            class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                        >
                             Your currently oldest data point is from
-                            <span class="text-gray-300 font-semibold"
+                            <span
+                                class="text-text-primary dark:text-text-dark-primary font-semibold"
                                 >{{ .UserFirstData | datetime }}</span
                             >.
                         </span>
                         <br />
                         {{ end }}
 
-                        <span class="font-semibold text-gray-300"
+                        <span
+                            class="font-semibold text-text-primary dark:text-text-dark-primary"
                             >Subscription status:</span
                         >
-                        <span class="text-gray-600 ml-1 text-sm">
+                        <span
+                            class="text-text-secondary dark:text-text-dark-secondary ml-1 text-sm"
+                        >
                             {{ if .User.HasActiveSubscription }}
                             <span class="font-semibold text-green-500 text-base"
                                 >Active</span
@@ -1989,7 +2047,8 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             >
                                 Subscribe ({{ .SubscriptionPrice }} / mo)</button
                             ><br />
-                            <span class="text-xs text-gray-600"
+                            <span
+                                class="text-xs text-text-secondary dark:text-text-dark-secondary"
                                 >You have to provide an e-mail address to
                                 purchase a subscription.</span
                             >
@@ -2031,10 +2090,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             />
 
                             <div class="w-1/2 mr-4 inline-block">
-                                <span class="font-semibold text-gray-300"
+                                <span
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     >Regenerate Summaries</span
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Regenerate all pre-computed summaries from
                                     raw heartbeat data. This may be useful if,
                                     for some reason, summaries are faulty or
@@ -2064,10 +2126,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             />
 
                             <div class="w-1/2 mr-4 inline-block">
-                                <span class="font-semibold text-gray-300"
+                                <span
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     >Reset API Key</span
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Please note that resetting your API key
                                     requires you to update your .wakatime.cfg
                                     files on all of your computers to make the
@@ -2094,10 +2159,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             />
 
                             <div class="w-1/2 mr-4 inline-block">
-                                <span class="font-semibold text-gray-300"
+                                <span
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     >Clear Data</span
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Clear all your time tracking data from
                                     Wakapi. This cannot be undone. Be careful!
                                 </span>
@@ -2126,10 +2194,13 @@ https://github-readme-stats.vercel.app/api/wakatime?username={{ .User.ID }}&api_
                             />
 
                             <div class="w-1/2 mr-4 inline-block">
-                                <span class="font-semibold text-gray-300"
+                                <span
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     >Delete Account</span
                                 >
-                                <span class="block text-sm text-gray-600">
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
                                     Deleting your account will cause all data,
                                     including all your heartbeats, to be erased
                                     from the server immediately. This action is

@@ -103,7 +103,7 @@ body {
 }
 
 .link {
-    @apply font-semibold text-gray-400 hover:text-gray-300;
+    @apply font-semibold text-text-secondary dark:text-text-dark-secondary hover:text-accent-primary ;
 }
 
 .newsbox {
