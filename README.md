@@ -75,17 +75,17 @@ is [wakapi-helm-chart](https://github.com/andreymaznyak/wakapi-helm-chart) for q
 $ go install github.com/kcoderhtml/hackatime@latest
 
 # Get default config and customize
-$ curl -o Hackatim.yml https://raw.githubusercontent.com/kcoderhtml/hackatime/master/config.default.yml
+$ curl -o hackatim.yml https://raw.githubusercontent.com/kcoderhtml/hackatime/master/config.default.yml
 $ vi Hackatim.yml
 
 # Run it
-$ ./wakapi -config Hackatim.yml
+$ ./wakapi -config hackatim.yml
 ```
 
 **Note:** Check the comments in `config.yml` for best practices regarding security configuration and more.
 
 💡 When running Hackatim standalone (without Docker), it is recommended to run it as
-a [SystemD service](etc/Hackatim.service).
+a [SystemD service](etc/hackatime.service).
 
 ### 💻 Client setup
 
