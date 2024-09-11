@@ -141,7 +141,7 @@ if [ "$DB_TYPE" == "sqlite" ]; then
     echo "Importing seed data ..."
     sqlite3 wakapi_testing.db < data.sql
 
-    start_wakapi_background "../wakapi" "$config"
+    start_wakapi_background "../hackatime" "$config"
     echo "Running test collection ..."
     if ! newman run "wakapi_api_tests.postman_collection.json"; then
         echo "newman failed"
