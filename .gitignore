@@ -1,6 +1,7 @@
 launch.json
 .vscode
 wakapi
+hackatime
 .idea
 build
 *.exe
