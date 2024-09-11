@@ -84,10 +84,10 @@ esac
 
 wait_for_wakapi () {
     counter=0
-    echo "Waiting for Wakapi to come up ..."
+    echo "Waiting for Hackatime to come up ..."
     until curl --output /dev/null --silent --get --fail http://localhost:3000/api/health; do
         if [ "$counter" -ge 30 ]; then
-            echo "Waited for 30s, but Wakapi failed to come up ..."
+            echo "Waited for 30s, but Hackatime failed to come up ..."
             exit 1
         fi
 
@@ -109,7 +109,7 @@ start_wakapi_background() {
 }
 
 kill_wakapi() {
-    echo "Shutting down Wakapi ..."
+    echo "Shutting down Hackatime ..."
     kill -TERM $pid
 }
 
@@ -126,12 +126,12 @@ fi
 echo "Configuration file: $config"
 if [ "${MIGRATION-0}" -eq 1 ]; then
     echo "Running last release ..."
-    start_wakapi_background "./wakapi" "$config"
+    start_wakapi_background "./hackatime" "$config"
     kill_wakapi
 fi
 
 echo "Running current build ..."
-start_wakapi_background "../wakapi" "$config"
+start_wakapi_background "../hackatime" "$config"
 kill_wakapi
 
 # Only sqlite has data
