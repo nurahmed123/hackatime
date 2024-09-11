@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"codeberg.org/Codeberg/avatars"
-	"gith"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime//middleware"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 	lru "github.com/hashicorp/golang-lru"
 	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/utils"

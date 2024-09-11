@@ -4,12 +4,12 @@ import (
 	"errors"
 	"log/slog"
 	"sync"
-	"github.com/kcoderhtml/hackatime/
+	"time"
 
 	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
 	"github.com/kcoderhtml/hackatime/config"
 	"github.com/muety/artifex/v2"
-"github.com/kcoderhtml/hackatime/
+
 	"github.com/kcoderhtml/hackatime/models"
 )
 

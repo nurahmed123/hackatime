@@ -1,20 +1,20 @@
 package v1
 
 import (
-	"github.com/kcoderhtml/hackatime/
+	"net/http"
 	"net/url"
 	"strings"
 	"time"
 
 	"github.com/kcoderhtml/hackatime/models"
 
-	"github.com/kcoderhtml/hackatime/"
+	"github.com/go-chi/chi/v5"
 	"github.com/kcoderhtml/hackatime/helpers"
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"gi"github.com/kcoderhtml/hackatime/time/middlewares"
-	v1 "github."github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
 	"github.com/kcoderhtml/hackatime/services"
 	"github.com/kcoderhtml/hackatime/utils"
 )

@@ -2,11 +2,11 @@ package routes
 
 import (
 	"net/http"
-	"time"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/"
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"github.com"github.com/kcoderhtml/hackatime/dlewares"
+	"time"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/view"
 	routeutils "github.com/kcoderhtml/hackatime/routes/utils"

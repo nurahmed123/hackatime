@@ -3,9 +3,9 @@ package utils
 import (
 	"context"
 	"net/http"
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
+	"net/http/httptest"
+	"strings"
+	"testing"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/kcoderhtml/hackatime/middlewares"

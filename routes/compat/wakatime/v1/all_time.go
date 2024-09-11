@@ -2,14 +2,14 @@ package v1
 
 import (
 	"net/http"
-	"time"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/"
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"gi"github.com/kcoderhtml/hackatime/time/helpers"
+	"time"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com"github.com/kcoderhtml/hackatime/els"
-	"github.com/kcoderhtml/hackatime//hackatime/models/compat/wakatime/v1"
+	"github.com/kcoderhtml/hackatime/models"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
 	"github.com/kcoderhtml/hackatime/models/types"
 	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
 	"github.com/kcoderhtml/hackatime/services"

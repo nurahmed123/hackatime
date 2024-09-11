@@ -3,7 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/kcoderhtml/hackatime/
+	"io"
 	"net/http"
 
 	"github.com/kcoderhtml/hackatime/models"

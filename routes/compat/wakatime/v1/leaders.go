@@ -3,18 +3,18 @@ package v1
 import (
 	"math"
 	"net/http"
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/et/v2/slice"
+	"strings"
+	"time"
+
+	"github.com/duke-git/lancet/v2/slice"
 	"github.com/go-chi/chi/v5"
 	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/utils"
-"github.com/kcoderhtml/hackatime/
-	con"github.com/kcoderhtml/hackatime/hackatime/config"
-	"github.com/kcoderhtml/hackatime//hackatime/models/compat/wakatime/v1"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
 	"github.com/kcoderhtml/hackatime/services"
 )
 

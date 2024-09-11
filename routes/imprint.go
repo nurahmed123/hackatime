@@ -2,9 +2,9 @@ package routes
 
 import (
 	"net/http"
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/"
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/view"
 	"github.com/kcoderhtml/hackatime/services"

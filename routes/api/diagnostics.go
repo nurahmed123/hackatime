@@ -3,11 +3,11 @@ package api
 import (
 	"encoding/json"
 	"net/http"
-"github.com/kcoderhtml/hackatime/
+
 	"github.com/go-chi/chi/v5"
 	"github.com/kcoderhtml/hackatime/helpers"
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+
+	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/services"
 )

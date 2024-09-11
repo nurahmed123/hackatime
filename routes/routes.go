@@ -2,12 +2,12 @@ package routes
 
 import (
 	"html/template"
-	"github.com/kcoderhtml/hackatime/
+	"strings"
 
 	"github.com/duke-git/lancet/v2/strutil"
 	"github.com/kcoderhtml/hackatime/helpers"
 
-	"github.com/kcoderhtml/hackatime/et/v2/datetime"
+	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/utils"

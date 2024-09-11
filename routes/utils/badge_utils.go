@@ -2,8 +2,8 @@ package utils
 
 import (
 	"errors"
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
+	"regexp"
+
 	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/models"
 )

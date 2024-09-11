@@ -2,10 +2,10 @@ package api
 
 import (
 	"io"
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
+	"net/http"
+	"net/http/httptest"
+	"regexp"
+	"strings"
 	"testing"
 	"time"
 

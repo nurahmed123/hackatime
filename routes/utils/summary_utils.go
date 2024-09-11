@@ -1,9 +1,9 @@
 package utils
 
 import (
-	"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
+	"net/http"
+	"strings"
+
 	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/types"

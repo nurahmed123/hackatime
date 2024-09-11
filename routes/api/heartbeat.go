@@ -3,17 +3,17 @@ package api
 import (
 	"net/http"
 
-	"github.com/kcoderhtml/hackatime/et/v2/condition"
+	"github.com/duke-git/lancet/v2/condition"
 	"github.com/go-chi/chi/v5"
 	"github.com/kcoderhtml/hackatime/helpers"
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"github.com/kcode"github.com/kcoderhtml/hackatime/es"
-	customMiddl"github.com/kcoderhtml/hackatime/tml/hackatime/middlewares/custom"
-	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	customMiddleware "github.com/kcoderhtml/hackatime/middlewares/custom"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
 	"github.com/kcoderhtml/hackatime/services"
 	"github.com/kcoderhtml/hackatime/utils"
-"github.com/kcoderhtml/hackatime/
+
 	"github.com/kcoderhtml/hackatime/models"
 )
 
@@ -43,7 +43,7 @@ func (h *HeartbeatApiHandler) RegisterRoutes(router chi.Router) {
 			middlewares.NewAuthenticateMiddleware(h.userSrvc).Handler,
 			customMiddleware.NewWakatimeRelayMiddleware().Handler,
 		)
-		// see https://github.com/muety/wakapi/issues/203
+		// see https://github.com/kcoderhtml/hackatime/issues/203
 		r.Post("/heartbeat", h.Post)
 		r.Post("/heartbeats", h.Post)
 		r.Post("/users/{user}/heartbeats", h.Post)

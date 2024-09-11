@@ -1,7 +1,7 @@
 package view
 
 import (
-	"github.com/kcoderhtml/hackatime/
+	"time"
 
 	"github.com/kcoderhtml/hackatime/models"
 )

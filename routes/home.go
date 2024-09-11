@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-	"stri"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/a"
+	"strings"
+	"time"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/gorilla/schema"
 	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models/view"

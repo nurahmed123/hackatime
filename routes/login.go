@@ -5,13 +5,13 @@ import (
 	"log/slog"
 	"net/http"
 	"net/url"
-	"stri"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/a"
-	"github.com"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/te"
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"strings"
+	"time"
+
+	"github.com/dchest/captcha"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/httprate"
+	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/view"

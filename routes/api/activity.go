@@ -3,12 +3,12 @@ package api
 import (
 	"net/http"
 	"regexp"
-	"stri"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/
-"github.com/kcoderhtml/hackatime/
-	"github.com/kcoderhtml/hackatime/"
-	"github.com/kcoderhtml/hackatime//middleware"
-	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"strings"
+	"time"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
+	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models"
