@@ -2,9 +2,10 @@ package helpers
 
 import (
 	"errors"
-	"github.com/muety/wakapi/models"
 	"net/http"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 func ParseSummaryParams(r *http.Request) (*models.SummaryParams, error) {

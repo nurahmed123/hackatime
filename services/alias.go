@@ -3,12 +3,13 @@ package services
 import (
 	"errors"
 	"fmt"
+	"sync"
+
 	"github.com/becheran/wildmatch-go"
 	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/repositories"
-	"sync"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/repositories"
 )
 
 type AliasService struct {

@@ -2,8 +2,9 @@ package helpers
 
 import (
 	"fmt"
-	"github.com/muety/wakapi/config"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/config"
 )
 
 // ParseDateTimeTZ attempts to parse the given date string from multiple formats.

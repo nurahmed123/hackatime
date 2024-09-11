@@ -1,12 +1,13 @@
 package migrations
 
 import (
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"gorm.io/gorm"
 	"log/slog"
 	"sort"
 	"strings"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"gorm.io/gorm"
 )
 
 type gormMigrationFunc func(db *gorm.DB) error

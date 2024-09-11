@@ -2,17 +2,17 @@ package v1
 
 import (
 	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models/types"
+	"github.com/kcoderhtml/hackatime/ckatime/helpers"
+	"github.com/kcoderhtml/hackatime/ckatime/models/types"
 	"net/http"
 	"time"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	v1 "github.com/muety/wakapi/models/compat/wakatime/v1"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
+	conf "github.com/kcoderhtml/hackatime/ckatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	v1 "github.com/kcoderhtml/hackatime/ckatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/ckatime/services"
 )
 
 type StatusBarViewModel struct {

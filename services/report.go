@@ -1,16 +1,17 @@
 package services
 
 import (
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
 	"log/slog"
 	"math/rand"
 	"time"
+
+	"github.com/duke-git/lancet/v2/datetime"
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/leandro-lugaresi/hub"
+	"github.com/muety/artifex/v2"
 )
 
 // delay between evey report generation task (to throttle email sending frequency)

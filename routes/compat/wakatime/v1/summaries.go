@@ -4,18 +4,18 @@ import (
 	"errors"
 	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
+	"github.com/kcoderhtml/hackatime/ckatime/helpers"
 	"net/http"
 	"strings"
 	"time"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	v1 "github.com/muety/wakapi/models/compat/wakatime/v1"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
+	conf "github.com/kcoderhtml/hackatime/ckatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	v1 "github.com/kcoderhtml/hackatime/ckatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/kcoderhtml/hackatime/ckatime/utils"
 )
 
 type SummariesHandler struct {

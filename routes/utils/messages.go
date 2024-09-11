@@ -1,9 +1,10 @@
 package utils
 
 import (
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models/view"
 	"net/http"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models/view"
 )
 
 func SetError(r *http.Request, w http.ResponseWriter, message string) {

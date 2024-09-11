@@ -2,9 +2,9 @@ package migrations
 
 import (
 	"github.com/alitto/pond"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 	"gorm.io/gorm"
 )
 

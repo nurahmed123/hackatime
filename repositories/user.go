@@ -3,11 +3,12 @@ package repositories
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/condition"
 	"time"
 
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
+	"github.com/duke-git/lancet/v2/condition"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 	"gorm.io/gorm"
 )
 

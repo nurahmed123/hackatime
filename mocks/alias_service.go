@@ -1,7 +1,7 @@
 package mocks
 
 import (
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/models"
 	"github.com/stretchr/testify/mock"
 )
 

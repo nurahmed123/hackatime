@@ -1,8 +1,9 @@
 package imports
 
 import (
-	"github.com/muety/wakapi/models"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type DataImporter interface {

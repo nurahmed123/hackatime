@@ -1,10 +1,11 @@
 package migrations
 
 import (
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
-	"gorm.io/gorm"
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
+	"gorm.io/gorm"
 )
 
 func hasRun(name string, db *gorm.DB) bool {

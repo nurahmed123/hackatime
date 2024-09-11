@@ -3,17 +3,18 @@ package services
 import (
 	"errors"
 	"fmt"
+	"log/slog"
+	"time"
+
 	"github.com/duke-git/lancet/v2/convertor"
 	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/gofrs/uuid/v5"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/repositories"
+	"github.com/kcoderhtml/hackatime/utils"
 	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/repositories"
-	"github.com/muety/wakapi/utils"
 	"github.com/patrickmn/go-cache"
-	"log/slog"
-	"time"
 )
 
 type UserService struct {

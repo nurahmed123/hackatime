@@ -1,13 +1,14 @@
 package services
 
 import (
-	"github.com/muety/wakapi/mocks"
-	"github.com/muety/wakapi/models"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/suite"
 	"math/rand"
 	"testing"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/mocks"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/suite"
 )
 
 const (

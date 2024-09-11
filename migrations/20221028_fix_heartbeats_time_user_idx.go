@@ -4,10 +4,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"gorm.io/gorm"
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"gorm.io/gorm"
 )
 
 // due to an error in the model definition, idx_time_user used to only cover 'user_id', but not time column

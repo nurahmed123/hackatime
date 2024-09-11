@@ -3,9 +3,10 @@ package helpers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
 	"net/http"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 func ExtractCookieAuth(r *http.Request, config *config.Config) (username *string, err error) {

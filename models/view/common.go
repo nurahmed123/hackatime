@@ -1,8 +1,8 @@
 package view
 
 import (
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
+	conf "github.com/kcoderhtml/hackatime/ckatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
 )
 
 type BasicViewModel interface {

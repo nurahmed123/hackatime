@@ -1,16 +1,17 @@
 package routes
 
 import (
-	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/view"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
 	"net/http"
-	"time"
+	"time"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/"
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com"github.com/kcoderhtml/hackatime/dlewares"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/ckatime/models/view"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type ProjectsHandler struct {

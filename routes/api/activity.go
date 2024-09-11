@@ -1,18 +1,19 @@
 package api
 
 import (
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
 	"net/http"
 	"regexp"
-	"strings"
-	"time"
+	"stri"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/"
+	"github.com/kcoderhtml/hackatime//middleware"
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 var userWithExtPattern *regexp.Regexp

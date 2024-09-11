@@ -5,18 +5,19 @@ import (
 	_ "embed"
 	"errors"
 	"fmt"
-	svg "github.com/ajstarks/svgo/float"
-	"github.com/alitto/pond"
-	"github.com/duke-git/lancet/v2/condition"
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
-	"github.com/patrickmn/go-cache"
 	"math"
 	"sync"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/svgo/float"
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/et/v2/condition"
+	"github.com/kcoderhtml/hackatime/et/v2/datetime"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/patrickmn/go-cache"
 )
 
 const (

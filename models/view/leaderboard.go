@@ -1,9 +1,10 @@
 package view
 
 import (
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type LeaderboardViewModel struct {

@@ -1,11 +1,12 @@
 package services
 
 import (
+	"time"
+
 	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/duke-git/lancet/v2/mathutil"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"time"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type DurationService struct {

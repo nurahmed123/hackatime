@@ -1,8 +1,9 @@
 package repositories
 
 import (
-	"github.com/muety/wakapi/models"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type IAliasRepository interface {

@@ -1,9 +1,10 @@
 package v1
 
 import (
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 // https://wakatime.com/developers#all_time_since_today

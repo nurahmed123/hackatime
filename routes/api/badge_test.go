@@ -1,20 +1,21 @@
 package api
 
 import (
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/mocks"
-	"github.com/muety/wakapi/models"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 	"io"
-	"net/http"
-	"net/http/httptest"
-	"regexp"
-	"strings"
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
 	"testing"
 	"time"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/mocks"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 )
 
 var (

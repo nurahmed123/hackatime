@@ -3,7 +3,7 @@ package api
 import (
 	"github.com/dchest/captcha"
 	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
+	conf "github.com/kcoderhtml/hackatime/ckatime/config"
 )
 
 type CaptchaHandler struct {

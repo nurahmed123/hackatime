@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
 	"gorm.io/gorm"
 )
 

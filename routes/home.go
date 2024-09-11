@@ -3,17 +3,18 @@ package routes
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/go-chi/chi/v5"
-	"github.com/gorilla/schema"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models/view"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
 	"net/http"
 	"strconv"
-	"strings"
-	"time"
+	"stri"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/a"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models/view"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type HomeHandler struct {

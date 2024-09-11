@@ -1,10 +1,11 @@
 package helpers
 
 import (
-	"github.com/muety/wakapi/models"
-	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestResolveMaximumRange_Default(t *testing.T) {

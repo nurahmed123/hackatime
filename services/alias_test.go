@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/muety/wakapi/mocks"
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/ckatime/ckatime/mocks"
+	"github.com/kcoderhtml/hackatime/ckatime/ckatime/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/suite"

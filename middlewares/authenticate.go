@@ -3,16 +3,17 @@ package middlewares
 import (
 	"errors"
 	"fmt"
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/muety/wakapi/helpers"
 	"net"
 	"net/http"
 	"strings"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/kcoderhtml/hackatime/helpers"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 const (

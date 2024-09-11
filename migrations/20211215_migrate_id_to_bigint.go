@@ -1,9 +1,10 @@
 package migrations
 
 import (
-	"github.com/muety/wakapi/config"
-	"gorm.io/gorm"
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"gorm.io/gorm"
 )
 
 func init() {

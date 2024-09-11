@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 // https://shields.io/endpoint

@@ -2,13 +2,14 @@ package api
 
 import (
 	"encoding/json"
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
 	"net/http"
-
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/services"
+"github.com/kcoderhtml/hackatime/
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type DiagnosticsApiHandler struct {

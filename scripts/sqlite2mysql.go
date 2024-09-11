@@ -36,8 +36,8 @@ import (
 	"os"
 
 	"github.com/jinzhu/configor"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/repositories"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/repositories"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"

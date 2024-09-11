@@ -1,12 +1,13 @@
 package routes
 
 import (
-	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/view"
-	"github.com/muety/wakapi/services"
 	"net/http"
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/"
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/models/view"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type ImprintHandler struct {

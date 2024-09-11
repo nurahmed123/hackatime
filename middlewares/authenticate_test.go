@@ -3,13 +3,14 @@ package middlewares
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/muety/wakapi/config"
 	"net/http"
 	"net/url"
 	"testing"
 
-	"github.com/muety/wakapi/mocks"
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/config"
+
+	"github.com/kcoderhtml/hackatime/mocks"
+	"github.com/kcoderhtml/hackatime/models"
 	"github.com/stretchr/testify/assert"
 )
 

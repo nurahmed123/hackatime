@@ -3,12 +3,13 @@ package models
 import (
 	"crypto/md5"
 	"fmt"
-	"github.com/dchest/captcha"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/utils"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/dchest/captcha"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 const (

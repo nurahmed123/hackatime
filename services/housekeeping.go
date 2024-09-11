@@ -1,13 +1,14 @@
 package services
 
 import (
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
 	"log/slog"
 	"time"
+
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/muety/artifex/v2"
 )
 
 type HousekeepingService struct {

@@ -1,11 +1,12 @@
 package services
 
 import (
-	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/types"
-	"github.com/muety/wakapi/utils"
 	"time"
+
+	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/types"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type IAggregationService interface {

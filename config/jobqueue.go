@@ -2,9 +2,10 @@ package config
 
 import (
 	"fmt"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/utils"
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/muety/artifex/v2"
 )
 
 var jobQueues map[string]*artifex.Dispatcher

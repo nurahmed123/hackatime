@@ -1,12 +1,13 @@
 package relay
 
 import (
-	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
 	"regexp"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
 )
 
 const targetUrlHeader = "X-Target-URL"

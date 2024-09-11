@@ -3,10 +3,10 @@ package utils
 import (
 	"errors"
 	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/services"
+	conf "github.com/kcoderhtml/hackatime/ckatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/ckatime/services"
 	"net/http"
 )
 

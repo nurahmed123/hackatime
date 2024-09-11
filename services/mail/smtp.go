@@ -3,11 +3,12 @@ package mail
 import (
 	"crypto/tls"
 	"errors"
+	"io"
+
 	"github.com/emersion/go-sasl"
 	"github.com/emersion/go-smtp"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"io"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type SMTPSendingService struct {

@@ -1,9 +1,10 @@
 package mocks
 
 import (
-	"github.com/muety/wakapi/models"
-	"github.com/stretchr/testify/mock"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/stretchr/testify/mock"
 )
 
 type SummaryRepositoryMock struct {

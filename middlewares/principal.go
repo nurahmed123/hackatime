@@ -2,8 +2,9 @@ package middlewares
 
 import (
 	"context"
-	"github.com/muety/wakapi/models"
 	"net/http"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 const keyPrincipal = "principal"

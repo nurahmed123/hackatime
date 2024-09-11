@@ -1,16 +1,17 @@
 package routes
 
 import (
-	"github.com/duke-git/lancet/v2/strutil"
-	"github.com/muety/wakapi/helpers"
 	"html/template"
-	"strings"
+	"github.com/kcoderhtml/hackatime/
 
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
-	"github.com/muety/wakapi/views"
+	"github.com/duke-git/lancet/v2/strutil"
+	"github.com/kcoderhtml/hackatime/helpers"
+
+	"github.com/kcoderhtml/hackatime/et/v2/datetime"
+	"github.com/kcoderhtml/hackatime/ckatime/config"
+	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/ckatime/utils"
+	"github.com/kcoderhtml/hackatime/views"
 )
 
 var templates map[string]*template.Template

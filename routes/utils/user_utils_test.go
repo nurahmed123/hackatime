@@ -2,15 +2,16 @@ package utils
 
 import (
 	"context"
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/mocks"
-	"github.com/muety/wakapi/models"
-	"github.com/stretchr/testify/assert"
 	"net/http"
-	"net/http/httptest"
-	"strings"
-	"testing"
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/mocks"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCheckEffectiveUser_Current(t *testing.T) {

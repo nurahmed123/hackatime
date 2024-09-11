@@ -2,21 +2,22 @@ package routes
 
 import (
 	"fmt"
-	"github.com/dchest/captcha"
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/httprate"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/view"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
 	"log/slog"
 	"net/http"
 	"net/url"
-	"strings"
-	"time"
+	"stri"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/a"
+	"github.com"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/te"
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/view"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type LoginHandler struct {

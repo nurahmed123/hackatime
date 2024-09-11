@@ -1,10 +1,11 @@
 package imports
 
 import (
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
 	"strings"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type WakatimeImporter struct {

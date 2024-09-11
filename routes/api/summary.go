@@ -1,14 +1,15 @@
 package api
 
 import (
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
-	routeutils "github.com/muety/wakapi/routes/utils"
 	"net/http"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/services"
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type SummaryApiHandler struct {

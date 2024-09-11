@@ -1,10 +1,11 @@
 package migrations
 
 import (
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"gorm.io/gorm"
 	"strings"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"gorm.io/gorm"
 )
 
 // fix for https://github.com/muety/wakapi/issues/416

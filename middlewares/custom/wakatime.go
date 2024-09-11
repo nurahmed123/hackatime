@@ -6,16 +6,17 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/patrickmn/go-cache"
 	"io"
 	"log/slog"
 	"net/http"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/leandro-lugaresi/hub"
+	"github.com/patrickmn/go-cache"
 )
 
 const maxFailuresPerDay = 100

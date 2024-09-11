@@ -1,19 +1,20 @@
 package api
 
 import (
-	"github.com/duke-git/lancet/v2/condition"
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
 	"net/http"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	customMiddleware "github.com/muety/wakapi/middlewares/custom"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
-
-	"github.com/muety/wakapi/models"
+	"github.com/kcoderhtml/hackatime/et/v2/condition"
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"github.com/kcode"github.com/kcoderhtml/hackatime/es"
+	customMiddl"github.com/kcoderhtml/hackatime/tml/hackatime/middlewares/custom"
+	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type HeartbeatApiHandler struct {

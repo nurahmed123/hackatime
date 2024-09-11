@@ -3,9 +3,10 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/muety/wakapi/models"
-	"io"
+	"github.com/kcoderhtml/hackatime/
 	"net/http"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {

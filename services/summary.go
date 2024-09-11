@@ -2,19 +2,20 @@ package services
 
 import (
 	"errors"
-	"github.com/becheran/wildmatch-go"
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/types"
-	"github.com/muety/wakapi/repositories"
-	"github.com/patrickmn/go-cache"
 	"log/slog"
 	"sort"
 	"strings"
 	"time"
+
+	"github.com/becheran/wildmatch-go"
+	"github.com/duke-git/lancet/v2/datetime"
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/types"
+	"github.com/kcoderhtml/hackatime/repositories"
+	"github.com/leandro-lugaresi/hub"
+	"github.com/patrickmn/go-cache"
 )
 
 type SummaryService struct {

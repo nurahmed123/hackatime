@@ -1,8 +1,9 @@
 package view
 
 import (
-	"github.com/muety/wakapi/models"
-	"time"
+	"github.com/kcoderhtml/hackatime/
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type SettingsViewModel struct {

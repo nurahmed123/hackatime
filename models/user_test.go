@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	conf "github.com/muety/wakapi/config"
+	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/stretchr/testify/assert"
 )
 

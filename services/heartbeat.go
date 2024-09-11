@@ -2,19 +2,20 @@ package services
 
 import (
 	"fmt"
-	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
-	"github.com/duke-git/lancet/v2/maputil"
-	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/repositories"
-	"github.com/muety/wakapi/utils"
-	"github.com/patrickmn/go-cache"
 	"math"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/muety/wakapi/models"
+	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
+	"github.com/duke-git/lancet/v2/maputil"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/repositories"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/leandro-lugaresi/hub"
+	"github.com/patrickmn/go-cache"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type HeartbeatService struct {

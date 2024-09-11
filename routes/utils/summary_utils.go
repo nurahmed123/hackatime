@@ -1,12 +1,13 @@
 package utils
 
 import (
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/types"
-	"github.com/muety/wakapi/services"
-	"net/http"
-	"strings"
+	"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/ckatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/types"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 func LoadUserSummary(ss services.ISummaryService, r *http.Request) (*models.Summary, error, int) {

@@ -1,10 +1,11 @@
 package mocks
 
 import (
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/types"
-	"github.com/stretchr/testify/mock"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/types"
+	"github.com/stretchr/testify/mock"
 )
 
 type SummaryServiceMock struct {

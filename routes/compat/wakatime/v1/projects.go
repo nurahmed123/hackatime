@@ -1,21 +1,22 @@
 package v1
 
 import (
-	"github.com/muety/wakapi/models"
-	"net/http"
+	"github.com/kcoderhtml/hackatime/
 	"net/url"
 	"strings"
 	"time"
 
-	"github.com/go-chi/chi/v5"
-	"github.com/muety/wakapi/helpers"
+	"github.com/kcoderhtml/hackatime/models"
 
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/middlewares"
-	v1 "github.com/muety/wakapi/models/compat/wakatime/v1"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
+	"github.com/kcoderhtml/hackatime/"
+	"github.com/kcoderhtml/hackatime/helpers"
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"gi"github.com/kcoderhtml/hackatime/time/middlewares"
+	v1 "github."github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type ProjectsHandler struct {

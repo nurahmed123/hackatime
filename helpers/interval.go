@@ -2,9 +2,10 @@ package helpers
 
 import (
 	"errors"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/utils"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 func ParseInterval(interval string) (*models.IntervalKey, error) {

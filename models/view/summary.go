@@ -1,9 +1,10 @@
 package view
 
 import (
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
 	"time"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type SummaryViewModel struct {

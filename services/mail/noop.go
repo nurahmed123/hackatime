@@ -1,8 +1,9 @@
 package mail
 
 import (
-	"github.com/muety/wakapi/models"
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type NoopSendingService struct{}

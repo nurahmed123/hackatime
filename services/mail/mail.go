@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/routes"
-	"github.com/muety/wakapi/services"
-	"github.com/muety/wakapi/utils"
-	"github.com/muety/wakapi/views/mail"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/routes"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/kcoderhtml/hackatime/views/mail"
 
-	conf "github.com/muety/wakapi/config"
+	conf "github.com/kcoderhtml/hackatime/config"
 )
 
 const (

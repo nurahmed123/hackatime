@@ -1,17 +1,18 @@
 package v1
 
 import (
-	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	v1 "github.com/muety/wakapi/models/compat/wakatime/v1"
-	"github.com/muety/wakapi/models/types"
-	routeutils "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
 	"net/http"
-	"time"
+	"time"github.com/kcoderhtml/hackatime/
+"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime/"
+	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
+	"gi"github.com/kcoderhtml/hackatime/time/helpers"
+	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
+	"github.com"github.com/kcoderhtml/hackatime/els"
+	"github.com/kcoderhtml/hackatime//hackatime/models/compat/wakatime/v1"
+	"github.com/kcoderhtml/hackatime/models/types"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type AllTimeHandler struct {

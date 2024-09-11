@@ -2,16 +2,17 @@ package routes
 
 import (
 	"fmt"
-	"github.com/go-chi/chi/v5"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/middlewares"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/models/view"
-	su "github.com/muety/wakapi/routes/utils"
-	"github.com/muety/wakapi/services"
 	"net/http"
 	"time"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/view"
+	su "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type SummaryHandler struct {

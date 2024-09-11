@@ -5,19 +5,21 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/alitto/pond"
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/utils"
 	"net/http"
 	"strings"
 	"time"
 
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/models"
-	wakatime "github.com/muety/wakapi/models/compat/wakatime/v1"
-	"go.uber.org/atomic"
+	"github.com/alitto/pond"
+	"github.com/duke-git/lancet/v2/datetime"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/muety/artifex/v2"
+
 	"log/slog"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	wakatime "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	"go.uber.org/atomic"
 )
 
 const OriginWakatime = "wakatime"

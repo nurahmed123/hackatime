@@ -2,19 +2,20 @@ package services
 
 import (
 	"fmt"
-	"github.com/leandro-lugaresi/hub"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/helpers"
-	"github.com/muety/wakapi/models"
-	"github.com/muety/wakapi/repositories"
-	"github.com/muety/wakapi/utils"
-	"github.com/patrickmn/go-cache"
 	"log/slog"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/repositories"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/leandro-lugaresi/hub"
+	"github.com/muety/artifex/v2"
+	"github.com/patrickmn/go-cache"
 )
 
 type LeaderboardService struct {

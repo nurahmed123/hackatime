@@ -2,18 +2,19 @@ package services
 
 import (
 	"fmt"
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/muety/artifex/v2"
-	"github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/utils"
-	"go.uber.org/atomic"
 	"log/slog"
 	"strconv"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/muety/wakapi/models"
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/muety/artifex/v2"
+	"go.uber.org/atomic"
+
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 const (

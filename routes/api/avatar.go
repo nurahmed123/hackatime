@@ -1,14 +1,15 @@
 package api
 
 import (
-	"codeberg.org/Codeberg/avatars"
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
-	lru "github.com/hashicorp/golang-lru"
-	conf "github.com/muety/wakapi/config"
-	"github.com/muety/wakapi/utils"
 	"net/http"
 	"time"
+
+	"codeberg.org/Codeberg/avatars"
+	"gith"github.com/kcoderhtml/hackatime/
+	"github.com/kcoderhtml/hackatime//middleware"
+	lru "github.com/hashicorp/golang-lru"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type AvatarHandler struct {
