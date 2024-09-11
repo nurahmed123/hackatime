@@ -23,7 +23,7 @@ jobs:
               run: go get
 
             - name: Unit Tests
-              run: CGO_ENABLED=0 go test `go list ./... | grep -v 'github.com/muety/wakapi/scripts'` -run ./... # skip scripts package, because not actually a package
+              run: CGO_ENABLED=0 go test `go list ./... | grep -v 'github.com/kcoderhtml/hackatime/scripts'` -run ./... # skip scripts package, because not actually a package
 
             - name: API Tests
               run: |
