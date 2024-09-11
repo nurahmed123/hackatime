@@ -117,7 +117,7 @@ if [ "${platform:-x}" = "x" ]; then
 \\=====================================/
 
 Uh oh! We couldn't automatically detect your operating system. You can file a
-bug here: https://github.com/muety/wakapi
+bug here: https://github.com/kcoderhtml/hackatime
 
 To continue with installation, please choose from one of the following values:
 
@@ -150,7 +150,7 @@ if command -v grep >/dev/null 2>&1 ; then
 Uh oh! We recieved an invalid tag and cannot be sure that the tag will not break
  this script.
 
-Please open an issue on GitHub at https://github.com/muety/wakapi with
+Please open an issue on GitHub at https://github.com/kcoderhtml/hackatime with
  the invalid tag included:
 
 EOM
@@ -162,9 +162,9 @@ fi
 extension='zip'
 
 echo "Latest Version: $TAG"
-echo "Downloading https://github.com/muety/wakapi/releases/download/$TAG/wakapi_$platform.$extension"
+echo "Downloading https://github.com/kcoderhtml/hackatime/releases/download/$TAG/wakapi_$platform.$extension"
 
-eval "$http 'https://github.com/muety/wakapi/releases/download/$TAG/wakapi_$platform.$extension'" > "wakapi.$extension"
+eval "$http 'https://github.com/kcoderhtml/hackatime/releases/download/$TAG/wakapi_$platform.$extension'" > "wakapi.$extension"
 
 case "$extension" in
   "zip") unzip -j "wakapi.$extension" -d "wakapi-$TAG" ;;
@@ -190,6 +190,6 @@ You can run it with:
 
 ./wakapi
 
-For further instructions see https://github.com/muety/wakapi
+For further instructions see https://github.com/kcoderhtml/hackatime
 
 EOM

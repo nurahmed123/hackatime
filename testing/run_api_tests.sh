@@ -28,7 +28,7 @@ cd "$script_dir" || exit 1
 if [ "${MIGRATION-0}" -eq 1 ]; then
     if [ ! -f wakapi_linux_amd64.zip ]; then
         echo "Downloading latest release"
-        curl https://github.com/muety/wakapi/releases/latest/download/wakapi_linux_amd64.zip -O -L
+        curl https://github.com/kcoderhtml/hackatime/releases/latest/download/wakapi_linux_amd64.zip -O -L
     fi
     unzip -o wakapi_linux_amd64.zip
     echo "Running tests with release version"
