@@ -3,17 +3,18 @@ package v1
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	"github.com/kcoderhtml/hackatime/ckatime/mocks"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
 	"time"
+
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/mocks"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 var (

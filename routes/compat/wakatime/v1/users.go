@@ -1,15 +1,16 @@
 package v1
 
 import (
-	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/ckatime/helpers"
 	"net/http"
 
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	v1 "github.com/kcoderhtml/hackatime/ckatime/models/compat/wakatime/v1"
-	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type UsersHandler struct {

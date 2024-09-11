@@ -2,8 +2,9 @@ package repositories
 
 import (
 	"errors"
-	"github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
+
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 	"gorm.io/gorm"
 )
 

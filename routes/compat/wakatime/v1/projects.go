@@ -15,7 +15,7 @@ import (
 	"gi"github.com/kcoderhtml/hackatime/time/middlewares"
 	v1 "github."github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
 	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/kcoderhtml/hackatime/services"
 	"github.com/kcoderhtml/hackatime/utils"
 )
 

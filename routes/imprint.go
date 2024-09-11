@@ -5,7 +5,7 @@ import (
 "github.com/kcoderhtml/hackatime/
 	"github.com/kcoderhtml/hackatime/"
 	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/view"
 	"github.com/kcoderhtml/hackatime/services"
 )

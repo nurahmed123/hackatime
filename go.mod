@@ -3,8 +3,6 @@ module github.com/kcoderhtml/hackatime
 go 1.23
 
 require (
-	codeberg.org/Codeberg/avatars v1.0.0
-	github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b
 	github.com/alexedwards/argon2id v1.0.0
 	github.com/alitto/pond v1.9.2
 	github.com/dchest/captcha v1.0.0
@@ -14,9 +12,7 @@ require (
 	github.com/getsentry/sentry-go v0.28.1
 	github.com/glebarez/sqlite v1.11.0
 	github.com/go-chi/chi/v5 v5.1.0
-	github.com/go-chi/httprate v0.14.1
 	github.com/gofrs/uuid/v5 v5.3.0
-	github.com/gorilla/schema v1.4.1
 	github.com/gorilla/securecookie v1.1.2
 	github.com/gorilla/sessions v1.4.0
 	github.com/hashicorp/golang-lru v1.0.2
@@ -47,7 +43,6 @@ require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/becheran/wildmatch-go v1.0.0
-	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/glebarez/go-sqlite v1.22.0 // indirect

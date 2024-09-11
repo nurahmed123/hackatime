@@ -2,20 +2,21 @@ package v1
 
 import (
 	"errors"
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/ckatime/helpers"
 	"net/http"
 	"strings"
 	"time"
 
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
-	v1 "github.com/kcoderhtml/hackatime/ckatime/models/compat/wakatime/v1"
-	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
-	"github.com/kcoderhtml/hackatime/ckatime/utils"
+	"github.com/duke-git/lancet/v2/datetime"
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type SummariesHandler struct {

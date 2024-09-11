@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"github.com/kcoderhtml/hackatime/ckatime/models"
+	"github.com/kcoderhtml/hackatime/models"
 	"gorm.io/gorm"
 )
 

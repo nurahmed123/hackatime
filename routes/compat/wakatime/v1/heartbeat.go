@@ -1,17 +1,18 @@
 package v1
 
 import (
-	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/ckatime/helpers"
 	"net/http"
 	"time"
 
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	wakatime "github.com/kcoderhtml/hackatime/ckatime/models/compat/wakatime/v1"
-	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/duke-git/lancet/v2/datetime"
+	"github.com/go-chi/chi/v5"
+	"github.com/kcoderhtml/hackatime/helpers"
+
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	wakatime "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 type HeartbeatsResult struct {

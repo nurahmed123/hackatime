@@ -2,12 +2,13 @@ package utils
 
 import (
 	"errors"
-	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
 	"net/http"
+
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/services"
 )
 
 // CheckEffectiveUser extracts the requested user from a URL (like '/users/{user}'), compares it with the currently authorized user and writes an HTTP error if they differ.

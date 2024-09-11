@@ -1,8 +1,8 @@
 package view
 
 import (
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
 )
 
 type BasicViewModel interface {

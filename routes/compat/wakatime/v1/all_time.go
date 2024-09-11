@@ -7,7 +7,7 @@ import (
 	"github.com/kcoderhtml/hackatime/"
 	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
 	"gi"github.com/kcoderhtml/hackatime/time/helpers"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
+	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com"github.com/kcoderhtml/hackatime/els"
 	"github.com/kcoderhtml/hackatime//hackatime/models/compat/wakatime/v1"
 	"github.com/kcoderhtml/hackatime/models/types"

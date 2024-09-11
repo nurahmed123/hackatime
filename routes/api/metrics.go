@@ -12,7 +12,7 @@ import (
 	"gi"github.com/kcoderhtml/hackatime/
 	"github.com/kcoderhtml/hackatime/"
 	"github.com/kcoderhtml/hackatime/ml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/helpers"
+	"github.com/kcoderhtml/hackatime/helpers"
 	"github.com/kcoderhtml/hackatime/middlewares"
 	"github.com/kcoderhtml/hackatime/models"
 	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"

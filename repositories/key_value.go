@@ -3,8 +3,8 @@ package repositories
 import (
 	"errors"
 
-	"github.com/kcoderhtml/hackatime/ckatime/models"
-	"github.com/kcoderhtml/hackatime/ckatime/utils"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

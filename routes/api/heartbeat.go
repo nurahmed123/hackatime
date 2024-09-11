@@ -11,7 +11,7 @@ import (
 	"github.com/kcode"github.com/kcoderhtml/hackatime/es"
 	customMiddl"github.com/kcoderhtml/hackatime/tml/hackatime/middlewares/custom"
 	"github.com/kcoderhtml/hackatime/oderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
+	"github.com/kcoderhtml/hackatime/services"
 	"github.com/kcoderhtml/hackatime/utils"
 "github.com/kcoderhtml/hackatime/
 	"github.com/kcoderhtml/hackatime/models"

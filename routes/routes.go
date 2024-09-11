@@ -8,9 +8,9 @@ import (
 	"github.com/kcoderhtml/hackatime/helpers"
 
 	"github.com/kcoderhtml/hackatime/et/v2/datetime"
-	"github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
-	"github.com/kcoderhtml/hackatime/ckatime/utils"
+	"github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/utils"
 	"github.com/kcoderhtml/hackatime/views"
 )
 

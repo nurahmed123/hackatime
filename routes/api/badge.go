@@ -2,20 +2,21 @@ package api
 
 import (
 	"fmt"
+	"net/http"
+	"time"
+
 	"github.com/duke-git/lancet/v2/maputil"
 	"github.com/duke-git/lancet/v2/slice"
 	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/middlewares"
-	"github.com/kcoderhtml/hackatime/ckatime/models"
-	v1 "github.com/kcoderhtml/hackatime/ckatime/models/compat/shields/v1"
-	routeutils "github.com/kcoderhtml/hackatime/ckatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/services"
-	"github.com/kcoderhtml/hackatime/ckatime/utils"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	v1 "github.com/kcoderhtml/hackatime/models/compat/shields/v1"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 	"github.com/narqo/go-badge"
 	"github.com/patrickmn/go-cache"
-	"net/http"
-	"time"
 )
 
 type BadgeHandler struct {

@@ -2,17 +2,18 @@ package routes
 
 import (
 	"fmt"
-	"github.com/duke-git/lancet/v2/slice"
-	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/ckatime/ckatime/config"
-	"github.com/kcoderhtml/hackatime/ckatime/ckatime/middlewares"
-	"github.com/kcoderhtml/hackatime/ckatime/ckatime/models"
-	"github.com/kcoderhtml/hackatime/ckatime/ckatime/models/view"
-	routeutils "github.com/kcoderhtml/hackatime/ckatime/ckatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/ckatime/ckatime/services"
-	"github.com/kcoderhtml/hackatime/ckatime/ckatime/utils"
 	"net/http"
 	"strings"
+
+	"github.com/duke-git/lancet/v2/slice"
+	"github.com/go-chi/chi/v5"
+	conf "github.com/kcoderhtml/hackatime/config"
+	"github.com/kcoderhtml/hackatime/middlewares"
+	"github.com/kcoderhtml/hackatime/models"
+	"github.com/kcoderhtml/hackatime/models/view"
+	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/kcoderhtml/hackatime/services"
+	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type LeaderboardHandler struct {
