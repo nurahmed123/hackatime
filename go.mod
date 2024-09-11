@@ -94,3 +94,5 @@ require (
 	modernc.org/memory v1.8.0 // indirect
 	modernc.org/sqlite v1.32.0 // indirect
 )
+
+replace github.com/muety/wakapi => github.com/kcoderhtml/hackatime latest
