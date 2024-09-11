@@ -95,4 +95,4 @@ require (
 	modernc.org/sqlite v1.32.0 // indirect
 )
 
-replace github.com/muety/wakapi => github.com/kcoderhtml/hackatime latest
+replace github.com/muety/wakapi => github.com/kcoderhtml/hackatime v0.1.3
