@@ -1,12 +1,12 @@
 {
     "scripts": {
         "build:all": "bun run build:icons && bun run build:tailwind",
-        "build:tailwind": "tailwindcss build -i static/assets/css/app.css -o static/assets/css/app.dist.css --minify",
+        "build:tailwind": "tailwindcss build -i static/assets/css/app.css -o static/assets/css/app.dist.v0.1.6.css --minify",
         "build:icons": "bun scripts/bundle_icons.js",
         "build:all:compress": "bun run build:all && bun run compress",
         "watch": "chokidar \"./views/**/*.html\" \"./static/assets/js/**/*.js\" \"./static/assets/css/**/*.css\" \"tailwind.config.js\" -i \"**/vendor/*\" -i \"**/*.dist.*\" -c \"bun run build:all\"",
         "watch:compress": "chokidar \"./views/**/*.html\" \"./static/assets/js/**/*.js\" \"./static/assets/css/**/*.css\" -i \"**/vendor/*\" -i \"**/*.dist.*\" -c \"bun run build:all:compress\"",
-        "compress": "brotli -f static/assets/css/*.dist.css && brotli -f static/assets/js/*.dist.js"
+        "compress": "brotli -f static/assets/css/*.dist.*.css && brotli -f static/assets/js/*.dist.js"
     },
     "devDependencies": {
         "@iconify/json": "^2.2.120",
