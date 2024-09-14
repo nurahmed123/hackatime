@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ template "head.tpl.html" . }}
+
+    <body
+        class="bg-background dark:bg-background-dark text-text-primary dark:text-text-dark-primary p-4 pt-10 flex flex-col min-h-screen max-w-screen mx-auto justify-center"
+    >
+        {{ template "menu-main.tpl.html" . }} {{ template "alerts.tpl.html" . }}
+
+        <style>
+            .logo {
+                position: absolute;
+                top: 0;
+            }
+
+            #logo-side {
+                left: 0;
+            }
+        </style>
+
+        <main class="mt-10 grow flex justify-center w-full">
+            <div class="grow max-w-screen-lg mt-10">
+                <div class="mb-8">
+                    <h1
+                        class="text-4xl font-semibold antialiased mb-1 leading-snug"
+                    >
+                        The Hackatime Shop!
+                    </h1>
+                    <span
+                        class="ml-1 text-text-secondary dark:text-text-dark-secondary"
+                        >The best (and only) place to buy hackatime stuff!</span
+                    >
+                </div>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    {{ range .Products }}
+                    <div
+                        class="product bg-accent-primary dark:bg-accent-dark-primary rounded-lg shadow-md overflow-hidden"
+                    >
+                        <img
+                            src="{{ .Image }}"
+                            alt="{{ .Name }}"
+                            class="w-full h-48 object-cover"
+                        />
+                        <div class="p-4">
+                            <h2 class="text-xl font-semibold mb-2">
+                                {{ .Name }}
+                            </h2>
+                            <p
+                                class="text-text-secondary dark:text-text-dark-secondary mb-4"
+                            >
+                                {{ .Description }}
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <p
+                                    class="text-lg font-bold text-primary dark:text-primary-dark"
+                                >
+                                    🍂 {{ .Price }}
+                                </p>
+                                <a
+                                    href="/shop/buy/{{ .ID }}"
+                                    class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </main>
+
+        {{ template "footer.tpl.html" . }} {{ template "foot.tpl.html" . }}
+    </body>
+</html>
