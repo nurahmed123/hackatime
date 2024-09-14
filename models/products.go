@@ -7,6 +7,7 @@ type Product struct {
 	ID          uint   `json:"id" gorm:"primary_key"`
 	Name        string `json:"name"`
 	Price       int    `json:"price"`
+	Stock       int    `json:"stock"`
 	Description string `json:"description"`
 	Image       string `json:"image"`
 }

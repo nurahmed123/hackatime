@@ -16,6 +16,18 @@
             #logo-side {
                 left: 0;
             }
+
+            .stock-badge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(-2deg);
+                padding: 5px 30px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: white;
+                z-index: 10;
+            }
         </style>
 
         <main class="mt-10 grow flex justify-center w-full">
@@ -37,23 +49,40 @@
                 >
                     {{ range .Products }}
                     <div
-                        class="product bg-accent-primary dark:bg-accent-dark-primary rounded-lg shadow-md overflow-hidden"
+                        class="product bg-accent-primary dark:bg-accent-dark-primary rounded-lg shadow-md overflow-hidden relative {{ if eq .Stock 0 }}opacity-50{{ end }} flex flex-col h-full"
                     >
-                        <img
-                            src="{{ .Image }}"
-                            alt="{{ .Name }}"
-                            class="w-full h-48 object-cover"
-                        />
-                        <div class="p-4">
+                        {{ if gt .Stock 0 }}
+                        <div class="stock-badge bg-primary">
+                            In Stock: {{ .Stock }}
+                        </div>
+                        {{ else if eq .Stock 0 }}
+                        <div class="stock-badge bg-red-500">Out of Stock</div>
+                        {{ else }}
+                        <div
+                            class="stock-badge bg-secondary-primary dark:bg-secondary-dark-primary"
+                        >
+                            Unlimited
+                        </div>
+                        {{ end }}
+                        <div class="h-48 flex items-center justify-center">
+                            <img
+                                src="{{ .Image }}"
+                                alt="{{ .Name }}"
+                                class="object-contain h-full w-full"
+                            />
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
                             <h2 class="text-xl font-semibold mb-2">
                                 {{ .Name }}
                             </h2>
                             <p
-                                class="text-text-secondary dark:text-text-dark-secondary mb-4"
+                                class="text-text-secondary dark:text-text-dark-secondary mb-4 flex-grow"
                             >
                                 {{ .Description }}
                             </p>
-                            <div class="flex justify-between items-center">
+                            <div
+                                class="flex justify-between items-center mt-auto"
+                            >
                                 <p
                                     class="text-lg font-bold text-primary dark:text-primary-dark"
                                 >
@@ -61,9 +90,18 @@
                                 </p>
                                 <a
                                     href="/shop/buy/{{ .ID }}"
-                                    class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded"
+                                    class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded {{ if eq .Stock 0 }}cursor-not-allowed opacity-50{{ end }}"
+                                    {{
+                                    if
+                                    eq
+                                    .Stock
+                                    0
+                                    }}disabled{{
+                                    end
+                                    }}
                                 >
-                                    Buy Now
+                                    {{ if eq .Stock 0 }}Out of Stock{{ else
+                                    }}Buy Now{{ end }}
                                 </a>
                             </div>
                         </div>

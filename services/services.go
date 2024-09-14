@@ -152,3 +152,7 @@ type IUserService interface {
 	FlushCache()
 	FlushUserCache(string)
 }
+
+type IShopService interface {
+	GetProducts() ([]*models.Product, error)
+}

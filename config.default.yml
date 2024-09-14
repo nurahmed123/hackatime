@@ -106,3 +106,9 @@ mail:
         username:
         password:
         tls:
+
+shop:
+    enabled: true
+    airtable_api_key:
+    airtable_base_id:
+    airtable_product_table_name:

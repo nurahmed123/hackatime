@@ -87,6 +87,7 @@ var (
 	diagnosticsService     services.IDiagnosticsService
 	housekeepingService    services.IHousekeepingService
 	miscService            services.IMiscService
+	shopService            services.IShopService
 )
 
 // TODO: Refactor entire project to be structured after business domains
@@ -188,6 +189,7 @@ func main() {
 	diagnosticsService = services.NewDiagnosticsService(diagnosticsRepository)
 	housekeepingService = services.NewHousekeepingService(userService, heartbeatService, summaryService)
 	miscService = services.NewMiscService(userService, heartbeatService, summaryService, keyValueService, mailService)
+	shopService = services.NewShopService()
 
 	if config.App.LeaderboardEnabled {
 		leaderboardService = services.NewLeaderboardService(leaderboardRepository, summaryService, userService)
@@ -233,7 +235,7 @@ func main() {
 	settingsHandler := routes.NewSettingsHandler(userService, heartbeatService, summaryService, aliasService, aggregationService, languageMappingService, projectLabelService, keyValueService, mailService)
 	subscriptionHandler := routes.NewSubscriptionHandler(userService, mailService, keyValueService)
 	projectsHandler := routes.NewProjectsHandler(userService, heartbeatService)
-	shopHandler := routes.NewShopHandler(userService)
+	shopHandler := routes.NewShopHandler(userService, shopService)
 	homeHandler := routes.NewHomeHandler(userService, keyValueService)
 	loginHandler := routes.NewLoginHandler(userService, mailService, keyValueService)
 	imprintHandler := routes.NewImprintHandler(keyValueService)

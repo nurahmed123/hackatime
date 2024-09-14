@@ -42,7 +42,10 @@ require (
 	gorm.io/gorm v1.25.11
 )
 
-require github.com/cespare/xxhash/v2 v2.3.0 // indirect
+require (
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/fabioberger/airtable-go v3.1.0+incompatible // indirect
+)
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect

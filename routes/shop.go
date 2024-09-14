@@ -6,7 +6,6 @@ import (
 	"github.com/go-chi/chi/v5"
 	conf "github.com/kcoderhtml/hackatime/config"
 	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
 	"github.com/kcoderhtml/hackatime/models/view"
 	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
 	"github.com/kcoderhtml/hackatime/services"
@@ -16,12 +15,14 @@ import (
 type ShopHandler struct {
 	config      *conf.Config
 	userService services.IUserService
+	shopService services.IShopService
 }
 
-func NewShopHandler(userService services.IUserService) *ShopHandler {
+func NewShopHandler(userService services.IUserService, shopService services.IShopService) *ShopHandler {
 	return &ShopHandler{
 		config:      conf.Get(),
 		userService: userService,
+		shopService: shopService,
 	}
 }
 
@@ -54,13 +55,10 @@ func (h *ShopHandler) buildViewModel(r *http.Request, w http.ResponseWriter) *vi
 		return h.buildViewModel(r, w).WithError("unauthorized")
 	}
 
-	products := []*models.Product{
-		{
-			Name:        "Sticker Pile",
-			Price:       1,
-			Description: "We'll send you 3 random stickers! (Available anywhere!)",
-			Image:       "https://cloud-c1gqq7ttf-hack-club-bot.vercel.app/0sticker_pile_2.png",
-		},
+	products, err := h.shopService.GetProducts()
+	if err != nil {
+		conf.Log().Request(r).Error("failed to get products", "error", err.Error())
+		return h.buildViewModel(r, w).WithError("failed to get products")
 	}
 
 	pageParams := utils.ParsePageParamsWithDefault(r, 1, 24)

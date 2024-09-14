@@ -189,6 +189,13 @@ type SMTPMailConfig struct {
 	SkipVerify bool   `env:"WAKAPI_MAIL_SMTP_SKIP_VERIFY"`
 }
 
+type shopConfig struct {
+	Enabled                  bool   `yaml:"enabled" default:"false" env:"WAKAPI_SHOP_ENABLED"`
+	AirtableApiKey           string `env:"WAKAPI_SHOP_AIRTABLE_API_KEY"`
+	AirtableBaseId           string `env:"WAKAPI_SHOP_AIRTABLE_BASE_ID"`
+	AirtableProductTableName string `env:"WAKAPI_SHOP_AIRTABLE_PRODUCT_TABLE_NAME"`
+}
+
 type Config struct {
 	Env            string `default:"dev" env:"ENVIRONMENT"`
 	Version        string `yaml:"-"`
@@ -203,6 +210,7 @@ type Config struct {
 	Subscriptions  subscriptionsConfig
 	Sentry         sentryConfig
 	Mail           mailConfig
+	Shop           shopConfig
 }
 
 func (c *Config) CreateCookie(name, value string) *http.Cookie {
