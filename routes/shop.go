@@ -32,10 +32,26 @@ func (h *ShopHandler) RegisterRoutes(router chi.Router) {
 		middlewares.NewAuthenticateMiddleware(h.userService).
 			WithRedirectTarget(defaultErrorRedirectTarget()).
 			WithRedirectErrorMessage("unauthorized").Handler,
+		h.shopAvailabilityMiddleware,
 	)
 	r.Get("/", h.GetShop)
 
 	router.Mount("/shop", r)
+}
+
+func (h *ShopHandler) shopAvailabilityMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if !h.config.Shop.Enabled {
+			user := middlewares.GetPrincipal(r)
+			if user != nil {
+				http.Redirect(w, r, "/summary", http.StatusSeeOther)
+			} else {
+				http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			}
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }
 
 func (h *ShopHandler) GetShop(w http.ResponseWriter, r *http.Request) {

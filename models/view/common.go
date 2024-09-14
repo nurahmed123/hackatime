@@ -18,6 +18,7 @@ type Messages struct {
 type SharedViewModel struct {
 	Messages
 	LeaderboardEnabled bool
+	ShopEnabled        bool
 	InvitesEnabled     bool
 }
 
@@ -30,6 +31,7 @@ type SharedLoggedInViewModel struct {
 func NewSharedViewModel(c *conf.Config, messages *Messages) SharedViewModel {
 	vm := SharedViewModel{
 		LeaderboardEnabled: c.App.LeaderboardEnabled,
+		ShopEnabled:        c.Shop.Enabled,
 		InvitesEnabled:     c.Security.InviteCodes,
 	}
 	if messages != nil {
