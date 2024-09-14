@@ -54,10 +54,6 @@ func (srv *ShopService) GetProducts() ([]*models.Product, error) {
 	formattedProducts := []*models.Product{}
 
 	for i, product := range hackClubProducts {
-		description := product.Description
-		if description == "" {
-			description = product.SmallName
-		}
 
 		stock := -1
 		if product.Stock != nil {
@@ -67,7 +63,8 @@ func (srv *ShopService) GetProducts() ([]*models.Product, error) {
 		formattedProducts = append(formattedProducts, &models.Product{
 			ID:          uint(i + 1), // Use index + 1 as ID
 			Name:        product.Name,
-			Description: description,
+			SmallName:   product.SmallName,
+			Description: product.Description,
 			Price:       product.Hours,
 			Stock:       stock,
 			Image:       product.ImageURL,

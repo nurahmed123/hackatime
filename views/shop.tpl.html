@@ -19,14 +19,22 @@
 
             .stock-badge {
                 position: absolute;
-                top: 0;
-                left: 0;
-                transform: rotate(-2deg);
-                padding: 5px 30px;
+                top: -12px;
+                left: -18px;
+                transform: rotate(-6deg);
+                padding: 5px 20px;
                 font-size: 0.8rem;
                 font-weight: bold;
-                color: white;
                 z-index: 10;
+                border-radius: 4px;
+            }
+
+            .product {
+                transition: transform 0.3s ease;
+            }
+
+            .product:hover {
+                transform: scale(1.05);
             }
         </style>
 
@@ -49,7 +57,7 @@
                 >
                     {{ range .Products }}
                     <div
-                        class="product bg-accent-primary dark:bg-accent-dark-primary rounded-lg shadow-md overflow-hidden relative {{ if eq .Stock 0 }}opacity-50{{ end }} flex flex-col h-full"
+                        class="product bg-accent-primary dark:bg-accent-dark-primary rounded-lg shadow-md relative {{ if eq .Stock 0 }}opacity-50{{ end }} flex flex-col h-full"
                     >
                         {{ if gt .Stock 0 }}
                         <div class="stock-badge bg-primary">
@@ -78,7 +86,7 @@
                             <p
                                 class="text-text-secondary dark:text-text-dark-secondary mb-4 flex-grow"
                             >
-                                {{ .Description }}
+                                {{ .SmallName }}
                             </p>
                             <div
                                 class="flex justify-between items-center mt-auto"
