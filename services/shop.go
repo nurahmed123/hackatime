@@ -20,7 +20,7 @@ type ShopService struct {
 func NewShopService() *ShopService {
 	return &ShopService{
 		config: config.Get(),
-		cache:  cache.New(6*time.Hour, 6*time.Hour),
+		cache:  cache.New(1*time.Minute, 1*time.Minute),
 	}
 }
 
