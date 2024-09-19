@@ -30,18 +30,9 @@ func (s *LeaderboardViewModel) WithError(m string) *LeaderboardViewModel {
 
 func (s *LeaderboardViewModel) ColorModifier(item *models.LeaderboardItemRanked, principal *models.User) string {
 	if principal != nil && item.UserID == principal.ID {
-		return "self"
+		return "border-accent-primary dark:border-accent-dark-primary border-3"
 	}
-	if item.Rank == 1 {
-		return "gold"
-	}
-	if item.Rank == 2 {
-		return "silver"
-	}
-	if item.Rank == 3 {
-		return "bronze"
-	}
-	return "default"
+	return ""
 }
 
 func (s *LeaderboardViewModel) LangIcon(lang string) string {

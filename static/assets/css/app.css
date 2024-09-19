@@ -138,6 +138,10 @@ body {
     color: #daa520;
 }
 
+.border-3 {
+    border-width: 3px;
+}
+
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
