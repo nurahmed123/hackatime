@@ -80,28 +80,29 @@ var cfg *Config
 var env string
 
 type appConfig struct {
-	LeaderboardEnabled        bool                         `yaml:"leaderboard_enabled" default:"true" env:"WAKAPI_LEADERBOARD_ENABLED"`
-	LeaderboardScope          string                       `yaml:"leaderboard_scope" default:"7_days" env:"WAKAPI_LEADERBOARD_SCOPE"`
-	LeaderboardGenerationTime string                       `yaml:"leaderboard_generation_time" default:"0 0 6 * * *,0 0 18 * * *" env:"WAKAPI_LEADERBOARD_GENERATION_TIME"`
-	AggregationTime           string                       `yaml:"aggregation_time" default:"0 15 2 * * *" env:"WAKAPI_AGGREGATION_TIME"`
-	ReportTimeWeekly          string                       `yaml:"report_time_weekly" default:"0 0 18 * * 5" env:"WAKAPI_REPORT_TIME_WEEKLY"`
-	DataCleanupTime           string                       `yaml:"data_cleanup_time" default:"0 0 6 * * 0" env:"WAKAPI_DATA_CLEANUP_TIME"`
-	ImportEnabled             bool                         `yaml:"import_enabled" default:"true" env:"WAKAPI_IMPORT_ENABLED"`
-	ImportBackoffMin          int                          `yaml:"import_backoff_min" default:"5" env:"WAKAPI_IMPORT_BACKOFF_MIN"`
-	ImportMaxRate             int                          `yaml:"import_max_rate" default:"24" env:"WAKAPI_IMPORT_MAX_RATE"` // at max one successful import every x hours
-	ImportBatchSize           int                          `yaml:"import_batch_size" default:"50" env:"WAKAPI_IMPORT_BATCH_SIZE"`
-	InactiveDays              int                          `yaml:"inactive_days" default:"7" env:"WAKAPI_INACTIVE_DAYS"`
-	HeartbeatMaxAge           string                       `yaml:"heartbeat_max_age" default:"4320h" env:"WAKAPI_HEARTBEAT_MAX_AGE"`
-	CountCacheTTLMin          int                          `yaml:"count_cache_ttl_min" default:"30" env:"WAKAPI_COUNT_CACHE_TTL_MIN"`
-	DataRetentionMonths       int                          `yaml:"data_retention_months" default:"-1" env:"WAKAPI_DATA_RETENTION_MONTHS"`
-	DataCleanupDryRun         bool                         `yaml:"data_cleanup_dry_run" default:"false" env:"WAKAPI_DATA_CLEANUP_DRY_RUN"` // for debugging only
-	MaxInactiveMonths         int                          `yaml:"max_inactive_months" default:"-1" env:"WAKAPI_MAX_INACTIVE_MONTHS"`
-	AvatarURLTemplate         string                       `yaml:"avatar_url_template" default:"api/avatar/{username_hash}.svg" env:"WAKAPI_AVATAR_URL_TEMPLATE"`
-	SupportContact            string                       `yaml:"support_contact" default:"hostmaster@wakapi.dev" env:"WAKAPI_SUPPORT_CONTACT"`
-	DateFormat                string                       `yaml:"date_format" default:"Mon, 02 Jan 2006" env:"WAKAPI_DATE_FORMAT"`
-	DateTimeFormat            string                       `yaml:"datetime_format" default:"Mon, 02 Jan 2006 15:04" env:"WAKAPI_DATETIME_FORMAT"`
-	CustomLanguages           map[string]string            `yaml:"custom_languages"`
-	Colors                    map[string]map[string]string `yaml:"-"`
+	LeaderboardEnabled              bool                         `yaml:"leaderboard_enabled" default:"true" env:"WAKAPI_LEADERBOARD_ENABLED"`
+	IgnoreUserLeaderboardPreference bool                         `yaml:"ignore_user_leaderboard_preference" default:"false" env:"WAKAPI_IGNORE_USER_LEADERBOARD_PREFERENCE"`
+	LeaderboardScope                string                       `yaml:"leaderboard_scope" default:"7_days" env:"WAKAPI_LEADERBOARD_SCOPE"`
+	LeaderboardGenerationTime       string                       `yaml:"leaderboard_generation_time" default:"0 0 6 * * *,0 0 18 * * *" env:"WAKAPI_LEADERBOARD_GENERATION_TIME"`
+	AggregationTime                 string                       `yaml:"aggregation_time" default:"0 15 2 * * *" env:"WAKAPI_AGGREGATION_TIME"`
+	ReportTimeWeekly                string                       `yaml:"report_time_weekly" default:"0 0 18 * * 5" env:"WAKAPI_REPORT_TIME_WEEKLY"`
+	DataCleanupTime                 string                       `yaml:"data_cleanup_time" default:"0 0 6 * * 0" env:"WAKAPI_DATA_CLEANUP_TIME"`
+	ImportEnabled                   bool                         `yaml:"import_enabled" default:"true" env:"WAKAPI_IMPORT_ENABLED"`
+	ImportBackoffMin                int                          `yaml:"import_backoff_min" default:"5" env:"WAKAPI_IMPORT_BACKOFF_MIN"`
+	ImportMaxRate                   int                          `yaml:"import_max_rate" default:"24" env:"WAKAPI_IMPORT_MAX_RATE"` // at max one successful import every x hours
+	ImportBatchSize                 int                          `yaml:"import_batch_size" default:"50" env:"WAKAPI_IMPORT_BATCH_SIZE"`
+	InactiveDays                    int                          `yaml:"inactive_days" default:"7" env:"WAKAPI_INACTIVE_DAYS"`
+	HeartbeatMaxAge                 string                       `yaml:"heartbeat_max_age" default:"4320h" env:"WAKAPI_HEARTBEAT_MAX_AGE"`
+	CountCacheTTLMin                int                          `yaml:"count_cache_ttl_min" default:"30" env:"WAKAPI_COUNT_CACHE_TTL_MIN"`
+	DataRetentionMonths             int                          `yaml:"data_retention_months" default:"-1" env:"WAKAPI_DATA_RETENTION_MONTHS"`
+	DataCleanupDryRun               bool                         `yaml:"data_cleanup_dry_run" default:"false" env:"WAKAPI_DATA_CLEANUP_DRY_RUN"` // for debugging only
+	MaxInactiveMonths               int                          `yaml:"max_inactive_months" default:"-1" env:"WAKAPI_MAX_INACTIVE_MONTHS"`
+	AvatarURLTemplate               string                       `yaml:"avatar_url_template" default:"api/avatar/{username_hash}.svg" env:"WAKAPI_AVATAR_URL_TEMPLATE"`
+	SupportContact                  string                       `yaml:"support_contact" default:"hostmaster@wakapi.dev" env:"WAKAPI_SUPPORT_CONTACT"`
+	DateFormat                      string                       `yaml:"date_format" default:"Mon, 02 Jan 2006" env:"WAKAPI_DATE_FORMAT"`
+	DateTimeFormat                  string                       `yaml:"datetime_format" default:"Mon, 02 Jan 2006 15:04" env:"WAKAPI_DATETIME_FORMAT"`
+	CustomLanguages                 map[string]string            `yaml:"custom_languages"`
+	Colors                          map[string]map[string]string `yaml:"-"`
 }
 
 type securityConfig struct {

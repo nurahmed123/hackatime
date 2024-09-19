@@ -84,7 +84,17 @@ func (srv *LeaderboardService) Schedule() {
 	slog.Info("scheduling leaderboard generation")
 
 	generate := func() {
-		users, err := srv.userService.GetAllByLeaderboard(true)
+		var users []*models.User
+		var err error
+
+		if srv.config.App.IgnoreUserLeaderboardPreference {
+			users, err = srv.userService.GetAll()
+			config.Log().Info("generating leaderboard for all users", "userCount", len(users))
+		} else {
+			users, err = srv.userService.GetAllByLeaderboard(true)
+			config.Log().Info("generating leaderboard for some users", "userCount", len(users))
+		}
+
 		if err != nil {
 			config.Log().Error("failed to get users for leaderboard generation", "error", err)
 			return
