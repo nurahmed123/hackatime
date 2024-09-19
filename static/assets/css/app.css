@@ -138,18 +138,6 @@ body {
     color: #daa520;
 }
 
-.leaderboard-gold {
-    border-color: #daa520;
-}
-
-.leaderboard-silver {
-    border-color: #c0c0c0;
-}
-
-.leaderboard-bronze {
-    border-color: #cd7f32;
-}
-
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
