@@ -43,7 +43,7 @@ type User struct {
 	WakatimeApiUrl         string      `json:"-"` // for relay middleware and imports
 	ResetToken             string      `json:"-"`
 	ReportsWeekly          bool        `json:"-" gorm:"default:false; type:bool"`
-	PublicLeaderboard      bool        `json:"-" gorm:"default:false; type:bool"`
+	PublicLeaderboard      bool        `json:"-" gorm:"default:true; type:bool"`
 	SubscribedUntil        *CustomTime `json:"-" swaggertype:"string" format:"date" example:"2006-01-02 15:04:05.000"`
 	SubscriptionRenewal    *CustomTime `json:"-" swaggertype:"string" format:"date" example:"2006-01-02 15:04:05.000"`
 	StripeCustomerId       string      `json:"-"`
