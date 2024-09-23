@@ -5,7 +5,7 @@ enable_pprof: false # whether to expose pprof (https://pkg.go.dev/runtime/pprof)
 
 server:
     listen_ipv4: 0.0.0.0 # set to '-' to disable ipv4
-    listen_ipv6: ::1 # set to '-' to disable ipv6
+    listen_ipv6: - # set to '-' to disable ipv6
     base_path: /
     public_url: waka.hackclub.com # required for links (e.g. password reset) in e-mail
 
