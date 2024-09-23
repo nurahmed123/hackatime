@@ -1,0 +1,41 @@
+env: production
+quick_start: false # whether to skip initial tasks on application startup, like summary generation
+skip_migrations: false # whether to intentionally not run database migrations, only use for dev purposes
+enable_pprof: false # whether to expose pprof (https://pkg.go.dev/runtime/pprof) profiling data as an endpoint for debugging
+
+server:
+    base_path: /
+    public_url: waka.hackclub.com # required for links (e.g. password reset) in e-mail
+
+app:
+    leaderboard_enabled: true # whether to enable public leaderboards
+    ignore_user_leaderboard_preference: true # whether to ignore user leaderboard preferences
+    # url template for user avatar images (to be used with services like gravatar or dicebear)
+    # available variable placeholders are: username, username_hash, email, email_hash
+    # defaults to wakapi's internal avatar rendering powered by https://codeberg.org/Codeberg/avatars
+    avatar_url_template: https://api.dicebear.com/9.x/thumbs/svg?seed={username_hash}
+
+db:
+    dialect: cockroach # mysql, postgres, sqlite3, mssql
+    max_conn: 6 # maximum number of concurrent connections to maintain
+    ssl: true # whether to use tls for db connection (must be true for cockroachdb) (ignored for mysql and sqlite) (true means encrypt=true in mssql)
+    automigrate_fail_silently: true # whether to ignore schema auto-migration failures when starting up
+
+security:
+    insecure_cookies: false # should be set to 'false', except when not running with HTTPS (e.g. on localhost)
+    cookie_max_age: 172800
+    allow_signup: true
+    signup_captcha: false
+    invite_codes: true # whether to enable invite codes for overriding disabled signups
+    disable_frontpage: false
+    expose_metrics: true
+    trusted_header_auth: false # whether to enable trusted header auth for reverse proxies, use with caution!! (https://github.com/muety/wakapi/issues/534)
+    trusted_header_auth_key: Remote-User # header field for trusted header auth (warning: your proxy must correctly strip this header from client requests!!)
+    signup_max_rate: 1/1s # signup endpoint rate limit pattern
+    login_max_rate: 2/1s # login endpoint rate limit pattern
+    password_reset_max_rate: 1/1s # password reset endpoint rate limit pattern
+
+mail:
+    enabled: true # whether to enable mails (used for password resets, reports, etc.)
+    provider: smtp # method for sending mails, currently one of ['smtp']
+    sender: Hackatime <noreply@w.dunkirk.sh>

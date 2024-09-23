@@ -8,6 +8,7 @@ build
 *.db
 *.zip
 config*.yml
+!config.yml
 !config.default.yml
 !testing/config.*.yml
 pkged.go
@@ -15,4 +16,3 @@ package-lock.json
 node_modules
 .DS_Store
 .env
-config.yaml
