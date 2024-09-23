@@ -144,7 +144,7 @@ type dbConfig struct {
 }
 
 type serverConfig struct {
-	Port             int    `default:"3000" env:"WAKAPI_PORT"`
+	Port             int    `default:"3000" env:"PORT"`
 	ListenIpV4       string `yaml:"listen_ipv4" default:"127.0.0.1" env:"WAKAPI_LISTEN_IPV4"`
 	ListenIpV6       string `yaml:"listen_ipv6" default:"::1" env:"WAKAPI_LISTEN_IPV6"`
 	ListenSocket     string `yaml:"listen_socket" default:"" env:"WAKAPI_LISTEN_SOCKET"`
