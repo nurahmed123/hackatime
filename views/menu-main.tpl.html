@@ -110,6 +110,22 @@
                     <div class="submenu-item">
                         <a
                             class="flex justify-between w-full text-text-secondary dark:text-text-dark-secondary items-center px-2 font-semibold"
+                            href="https://github.com/kcoderhtml/hackatime/blob/master/FAQ.md"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            @click="state.showDropdownResources = !state.showDropdownResources"
+                            data-trigger-for="showDropdownResources"
+                        >
+                            <span class="text-sm">FAQ</span>
+                            <span
+                                class="iconify inline"
+                                data-icon="bx:bx-help-circle"
+                            ></span>
+                        </a>
+                    </div>
+                    <div class="submenu-item">
+                        <a
+                            class="flex justify-between w-full text-text-secondary dark:text-text-dark-secondary items-center px-2 font-semibold"
                             href="swagger-ui"
                             @click="state.showDropdownResources = !state.showDropdownResources"
                             data-trigger-for="showDropdownResources"

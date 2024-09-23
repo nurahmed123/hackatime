@@ -86,6 +86,7 @@ let icons = [
     'mdi:invite',
     'octicon:info-16',
     'ic:round-shopping-cart',
+    'bx:bx-help-circle',
 ]
 
 const output = path.normalize(
