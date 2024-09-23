@@ -11,7 +11,7 @@ This is a living document so more information will be added here as we discover 
 This is an example of a hackatime config config file.
 
 `.wakatime.cfg`
-```toml
+```cfg
 [settings]
 api_url = https://waka.hackclub.com/api
 api_key = a12b34c5-6d7e-89f0-g1h2-i3j456k78901
