@@ -1,4 +1,4 @@
-module github.com/kcoderhtml/hackatime
+module github.com/hackclub/hackatime
 
 go 1.23
 
@@ -44,7 +44,6 @@ require (
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/fabioberger/airtable-go v3.1.0+incompatible // indirect
 )
 
 require (
@@ -98,3 +97,5 @@ require (
 	modernc.org/memory v1.8.0 // indirect
 	modernc.org/sqlite v1.32.0 // indirect
 )
+
+replace github.com/kcoderhtml/hackatime => github.com/hackclub/hackatime v0.1.5
