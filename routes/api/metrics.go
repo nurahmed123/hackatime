@@ -11,15 +11,15 @@ import (
 
 	"github.com/alitto/pond"
 	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	mm "github.com/kcoderhtml/hackatime/models/metrics"
-	"github.com/kcoderhtml/hackatime/repositories"
-	"github.com/kcoderhtml/hackatime/services"
-	"github.com/kcoderhtml/hackatime/utils"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	v1 "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	mm "github.com/hackclub/hackatime/models/metrics"
+	"github.com/hackclub/hackatime/repositories"
+	"github.com/hackclub/hackatime/services"
+	"github.com/hackclub/hackatime/utils"
 )
 
 const (

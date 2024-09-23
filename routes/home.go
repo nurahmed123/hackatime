@@ -10,11 +10,11 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/gorilla/schema"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models/view"
-	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models/view"
+	routeutils "github.com/hackclub/hackatime/routes/utils"
+	"github.com/hackclub/hackatime/services"
 )
 
 type HomeHandler struct {

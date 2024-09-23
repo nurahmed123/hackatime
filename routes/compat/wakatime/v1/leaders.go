@@ -8,14 +8,14 @@ import (
 
 	"github.com/duke-git/lancet/v2/slice"
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	v1 "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	"github.com/hackclub/hackatime/services"
 )
 
 type LeadersHandler struct {

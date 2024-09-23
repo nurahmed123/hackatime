@@ -4,8 +4,8 @@ import (
 	"sort"
 
 	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/services"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/services"
 )
 
 // GetEffectiveProjectsList returns the user's projects, including all alias targets and excluding all remapped project names (alias sources)

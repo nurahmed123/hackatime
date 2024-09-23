@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
 )
 
 // https://wakatime.com/api/v1/users/current/stats/last_7_days

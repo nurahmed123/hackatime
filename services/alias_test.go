@@ -3,8 +3,8 @@ package services
 import (
 	"testing"
 
-	"github.com/kcoderhtml/hackatime/mocks"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/mocks"
+	"github.com/hackclub/hackatime/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/suite"

@@ -1,6 +1,6 @@
 package mail
 
-import "github.com/kcoderhtml/hackatime/models"
+import "github.com/hackclub/hackatime/models"
 
 type PasswordResetTplData struct {
 	ResetLink string

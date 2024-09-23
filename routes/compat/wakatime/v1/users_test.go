@@ -11,10 +11,10 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/mocks"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/mocks"
+	"github.com/hackclub/hackatime/models"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 )
 
 type HeartbeatsViewModel struct {

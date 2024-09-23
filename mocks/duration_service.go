@@ -3,7 +3,7 @@ package mocks
 import (
 	"time"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 	"github.com/stretchr/testify/mock"
 )
 

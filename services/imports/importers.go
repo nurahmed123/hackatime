@@ -3,7 +3,7 @@ package imports
 import (
 	"time"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 )
 
 type DataImporter interface {

@@ -3,8 +3,8 @@ package utils
 import (
 	"net/http"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models/view"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models/view"
 )
 
 func SetError(r *http.Request, w http.ResponseWriter, message string) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/config"
+	"github.com/hackclub/hackatime/config"
 )
 
 // ParseDateTimeTZ attempts to parse the given date string from multiple formats.

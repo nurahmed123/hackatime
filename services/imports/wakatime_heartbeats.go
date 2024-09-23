@@ -11,14 +11,14 @@ import (
 
 	"github.com/alitto/pond"
 	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/utils"
 	"github.com/muety/artifex/v2"
 
 	"log/slog"
 
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
-	wakatime "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
+	wakatime "github.com/hackclub/hackatime/models/compat/wakatime/v1"
 	"go.uber.org/atomic"
 )
 

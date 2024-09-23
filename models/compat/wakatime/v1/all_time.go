@@ -3,8 +3,8 @@ package v1
 import (
 	"time"
 
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
 )
 
 // https://wakatime.com/developers#all_time_since_today

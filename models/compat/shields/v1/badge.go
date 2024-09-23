@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
 )
 
 // https://shields.io/endpoint

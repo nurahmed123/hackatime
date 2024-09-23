@@ -8,12 +8,12 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/services"
-	"github.com/kcoderhtml/hackatime/utils"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/services"
+	"github.com/hackclub/hackatime/utils"
 )
 
 var userWithExtPattern *regexp.Regexp

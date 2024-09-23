@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/duke-git/lancet/v2/slice"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

@@ -7,7 +7,7 @@ import (
 	"regexp"
 
 	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/config"
+	conf "github.com/hackclub/hackatime/config"
 )
 
 const targetUrlHeader = "X-Target-URL"

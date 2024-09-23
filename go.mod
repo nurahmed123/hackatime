@@ -97,5 +97,3 @@ require (
 	modernc.org/memory v1.8.0 // indirect
 	modernc.org/sqlite v1.32.0 // indirect
 )
-
-replace github.com/kcoderhtml/hackatime => github.com/hackclub/hackatime v0.1.5

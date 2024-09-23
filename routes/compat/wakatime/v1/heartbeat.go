@@ -6,13 +6,13 @@ import (
 
 	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/hackclub/hackatime/helpers"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	wakatime "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	wakatime "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/hackclub/hackatime/routes/utils"
+	"github.com/hackclub/hackatime/services"
 )
 
 type HeartbeatsResult struct {

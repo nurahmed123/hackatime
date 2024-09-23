@@ -5,8 +5,8 @@ import (
 
 	"github.com/duke-git/lancet/v2/datetime"
 	"github.com/duke-git/lancet/v2/mathutil"
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
 )
 
 type DurationService struct {

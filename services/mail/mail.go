@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/routes"
-	"github.com/kcoderhtml/hackatime/services"
-	"github.com/kcoderhtml/hackatime/utils"
-	"github.com/kcoderhtml/hackatime/views/mail"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/routes"
+	"github.com/hackclub/hackatime/services"
+	"github.com/hackclub/hackatime/utils"
+	"github.com/hackclub/hackatime/views/mail"
 
-	conf "github.com/kcoderhtml/hackatime/config"
+	conf "github.com/hackclub/hackatime/config"
 )
 
 const (

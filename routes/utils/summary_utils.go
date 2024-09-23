@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/models/types"
-	"github.com/kcoderhtml/hackatime/services"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/models/types"
+	"github.com/hackclub/hackatime/services"
 )
 
 func LoadUserSummary(ss services.ISummaryService, r *http.Request) (*models.Summary, error, int) {

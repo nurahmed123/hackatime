@@ -1,8 +1,8 @@
 package view
 
 import (
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 )
 
 type ShopViewModel struct {

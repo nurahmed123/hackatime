@@ -3,7 +3,7 @@ package repositories
 import (
 	"errors"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 	"gorm.io/gorm"
 )
 

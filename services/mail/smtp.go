@@ -7,8 +7,8 @@ import (
 
 	"github.com/emersion/go-sasl"
 	"github.com/emersion/go-smtp"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
 )
 
 type SMTPSendingService struct {

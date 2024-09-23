@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
 	"gorm.io/gorm"
 )
 

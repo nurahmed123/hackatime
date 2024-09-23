@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/duke-git/lancet/v2/slice"
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 	"github.com/muety/artifex/v2"
 )
 

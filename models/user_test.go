@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	conf "github.com/kcoderhtml/hackatime/config"
+	conf "github.com/hackclub/hackatime/config"
 	"github.com/stretchr/testify/assert"
 )
 

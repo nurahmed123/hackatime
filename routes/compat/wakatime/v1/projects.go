@@ -6,17 +6,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/hackclub/hackatime/helpers"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/services"
-	"github.com/kcoderhtml/hackatime/utils"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	v1 "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	routeutils "github.com/hackclub/hackatime/routes/utils"
+	"github.com/hackclub/hackatime/services"
+	"github.com/hackclub/hackatime/utils"
 )
 
 type ProjectsHandler struct {

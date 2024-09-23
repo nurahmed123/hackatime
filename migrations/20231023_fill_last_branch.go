@@ -2,9 +2,9 @@ package migrations
 
 import (
 	"github.com/alitto/pond"
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 	"gorm.io/gorm"
 )
 

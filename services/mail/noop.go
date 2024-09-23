@@ -3,7 +3,7 @@ package mail
 import (
 	"log/slog"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 )
 
 type NoopSendingService struct{}

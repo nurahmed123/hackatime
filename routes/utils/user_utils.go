@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/services"
 )
 
 // CheckEffectiveUser extracts the requested user from a URL (like '/users/{user}'), compares it with the currently authorized user and writes an HTTP error if they differ.

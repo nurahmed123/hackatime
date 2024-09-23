@@ -35,9 +35,9 @@ import (
 	"log"
 	"os"
 
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/repositories"
 	"github.com/jinzhu/configor"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/repositories"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"

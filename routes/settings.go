@@ -17,14 +17,14 @@ import (
 
 	datastructure "github.com/duke-git/lancet/v2/datastructure/set"
 	"github.com/gorilla/schema"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/models/view"
-	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
-	"github.com/kcoderhtml/hackatime/services"
-	"github.com/kcoderhtml/hackatime/services/imports"
-	"github.com/kcoderhtml/hackatime/utils"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/models/view"
+	routeutils "github.com/hackclub/hackatime/routes/utils"
+	"github.com/hackclub/hackatime/services"
+	"github.com/hackclub/hackatime/services/imports"
+	"github.com/hackclub/hackatime/utils"
 )
 
 const criticalError = "a critical error has occurred, sorry"

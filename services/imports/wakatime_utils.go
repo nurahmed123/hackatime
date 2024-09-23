@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
-	wakatime "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
+	wakatime "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	"github.com/hackclub/hackatime/utils"
 )
 
 // https://wakatime.com/api/v1/users/current/machine_names

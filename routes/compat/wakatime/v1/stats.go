@@ -5,13 +5,13 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/helpers"
+	"github.com/hackclub/hackatime/helpers"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/models"
-	v1 "github.com/kcoderhtml/hackatime/models/compat/wakatime/v1"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/models"
+	v1 "github.com/hackclub/hackatime/models/compat/wakatime/v1"
+	"github.com/hackclub/hackatime/services"
 )
 
 type StatsHandler struct {

@@ -13,10 +13,10 @@ import (
 	"github.com/alitto/pond"
 	"github.com/duke-git/lancet/v2/condition"
 	"github.com/duke-git/lancet/v2/datetime"
-	"github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 	"github.com/patrickmn/go-cache"
 )
 

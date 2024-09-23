@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/duke-git/lancet/v2/mathutil"
-	"github.com/kcoderhtml/hackatime/helpers"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/helpers"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 )
 
 // https://wakatime.com/developers#summaries

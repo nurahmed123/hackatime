@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/kcoderhtml/hackatime/utils"
+	"github.com/hackclub/hackatime/utils"
 	"github.com/muety/artifex/v2"
 )
 

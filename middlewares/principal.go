@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 )
 
 const keyPrincipal = "principal"

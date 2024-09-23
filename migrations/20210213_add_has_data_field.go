@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"github.com/kcoderhtml/hackatime/config"
+	"github.com/hackclub/hackatime/config"
 	"gorm.io/gorm"
 )
 

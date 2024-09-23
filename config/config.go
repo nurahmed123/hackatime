@@ -17,9 +17,9 @@ import (
 
 	"github.com/gofrs/uuid/v5"
 	"github.com/gorilla/securecookie"
+	"github.com/hackclub/hackatime/data"
+	"github.com/hackclub/hackatime/utils"
 	"github.com/jinzhu/configor"
-	"github.com/kcoderhtml/hackatime/data"
-	"github.com/kcoderhtml/hackatime/utils"
 	"github.com/robfig/cron/v3"
 )
 

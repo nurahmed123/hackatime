@@ -7,9 +7,9 @@ import (
 	"codeberg.org/Codeberg/avatars"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/utils"
 	lru "github.com/hashicorp/golang-lru"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/utils"
 )
 
 type AvatarHandler struct {

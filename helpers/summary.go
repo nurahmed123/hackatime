@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/models"
 )
 
 func ParseSummaryParams(r *http.Request) (*models.SummaryParams, error) {

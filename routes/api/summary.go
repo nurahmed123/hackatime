@@ -4,12 +4,12 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/kcoderhtml/hackatime/helpers"
-	routeutils "github.com/kcoderhtml/hackatime/routes/utils"
+	"github.com/hackclub/hackatime/helpers"
+	routeutils "github.com/hackclub/hackatime/routes/utils"
 
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/middlewares"
-	"github.com/kcoderhtml/hackatime/services"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/middlewares"
+	"github.com/hackclub/hackatime/services"
 )
 
 type SummaryApiHandler struct {

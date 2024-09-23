@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/duke-git/lancet/v2/slice"
-	conf "github.com/kcoderhtml/hackatime/config"
-	"github.com/kcoderhtml/hackatime/models"
-	"github.com/kcoderhtml/hackatime/utils"
+	conf "github.com/hackclub/hackatime/config"
+	"github.com/hackclub/hackatime/models"
+	"github.com/hackclub/hackatime/utils"
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

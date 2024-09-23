@@ -7,10 +7,10 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/kcoderhtml/hackatime/config"
+	"github.com/hackclub/hackatime/config"
 
-	"github.com/kcoderhtml/hackatime/mocks"
-	"github.com/kcoderhtml/hackatime/models"
+	"github.com/hackclub/hackatime/mocks"
+	"github.com/hackclub/hackatime/models"
 	"github.com/stretchr/testify/assert"
 )
 
