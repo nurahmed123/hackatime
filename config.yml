@@ -4,7 +4,7 @@ skip_migrations: false # whether to intentionally not run database migrations, o
 enable_pprof: false # whether to expose pprof (https://pkg.go.dev/runtime/pprof) profiling data as an endpoint for debugging
 
 server:
-    listen_ipv4: 127.0.0.1 # set to '-' to disable ipv4
+    listen_ipv4: 0.0.0.0 # set to '-' to disable ipv4
     listen_ipv6: ::1 # set to '-' to disable ipv6
     base_path: /
     public_url: waka.hackclub.com # required for links (e.g. password reset) in e-mail
