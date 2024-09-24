@@ -5,10 +5,11 @@
 </p>
 
 <p align="center">
-  <img src="https://badges.fw-web.space/github/license/kcoderhtml/hackatime">
-  <img src="https://wakapi.dev/api/badge/n1try/interval:any/project:wakapi?label=wakapi">
-  <img src="https://badges.fw-web.space/github/languages/code-size/kcoderhtml/hackatime">
-  <a href="https://goreportcard.com/report/github.com/kcoderhtml/hackatime"><img src="https://goreportcard.com/badge/github.com/kcoderhtml/hackatime"></a>
+  <img src="https://badges.fw-web.space/github/license/hackclub/hackatime">
+  <img src="https://waka.hackclub.com/api/badge/krn/interval:any/project:wakapi?label=wakapi">
+  <img src="https://badges.fw-web.space/github/languages/code-size/hackclub/hackatime">
+  <a href="https://goreportcard.com/report/github.com/hackclub/hackatime">
+  <img src="https://goreportcard.com/badge/github.com/hackclub/hackatime"></a>
 </p>
 
 <h3 align="center">A minimalist, self-hosted WakaTime-compatible backend for coding statistics.</h3>
@@ -17,7 +18,7 @@
   <img src="static/assets/images/screenshot.png" width="500px">
 </p>
 
-Forked from [muety/wakapi](https://github.com/muety/wakapi) for a Hackclub version.
+Forked from [muety/wakapi](https://github.com/muety/wakapi) for a Hackclub specifc version. Huge thanks to [@muety](https://github.com/muety) for all the work he has done in [wakapi](https://github.com/muety/wakapi) which allowed us to spin this up so quickly :)
 
 ## 🚀 Features
 
@@ -52,7 +53,7 @@ $ docker run -d \
   -e "WAKAPI_PASSWORD_SALT=$SALT" \
   -v hackatime-data:/data \
   --name hackatime \
-  ghcr.io/kcoderhtml/hackatime:latest
+  ghcr.io/hackclub/hackatime:latest
 ```
 
 Alternatively, you can use Docker Compose (`docker compose up -d`) for a more straightforward deployment.
