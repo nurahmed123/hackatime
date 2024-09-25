@@ -208,6 +208,10 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if signup.Name == "" {
+		signup.Name = signup.Username
+	}
+
 	numUsers, _ := h.userSrvc.Count()
 
 	_, created, err := h.userSrvc.CreateOrGet(&signup, numUsers == 0)

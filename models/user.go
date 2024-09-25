@@ -24,6 +24,7 @@ func init() {
 
 type User struct {
 	ID                     string      `json:"id" gorm:"primary_key"`
+	Name                   string      `json:"name"`
 	ApiKey                 string      `json:"api_key" gorm:"unique; default:NULL"`
 	Email                  string      `json:"email" gorm:"index:idx_user_email; size:255"`
 	Location               string      `json:"location"`
@@ -59,6 +60,7 @@ type Login struct {
 
 type Signup struct {
 	Username       string `schema:"username"`
+	Name           string `schema:"name"`
 	Email          string `schema:"email"`
 	Password       string `schema:"password"`
 	PasswordRepeat string `schema:"password_repeat"`

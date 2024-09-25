@@ -60,10 +60,17 @@
                     </div>
                     <div class="mb-4">
                         <input class="input-default"
+                               v-model="name"
+                               type="name" id="name"
+                               name="name" @keyup="updateAvatar" placeholder="Your name">
+                        <div class="text-xs text-text-secondary dark:text-text-dark-secondary mt-2">You aren't required to choose a name but if you don't then it will simply be your username.</div>
+                    </div>
+                    <div class="mb-4">
+                        <input class="input-default"
                                v-model="email"
                                type="email" id="email"
-                               name="email" @keyup="updateAvatar" placeholder="Your e-mail address">
-                        <div class="text-xs text-text-secondary dark:text-text-dark-secondary mt-2">E-Mail address is optional, but required for some weekly reports and password reset.</div>
+                               name="email" @keyup="updateAvatar" placeholder="Your e-mail address" required>
+                        <div class="text-xs text-text-secondary dark:text-text-dark-secondary mt-2">E-Mail address is non-optional and required for weekly reports and password reset.</div>
                     </div>
                 </div>
             </div>
