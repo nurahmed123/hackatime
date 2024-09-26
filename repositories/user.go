@@ -128,6 +128,7 @@ func (r *UserRepository) InsertOrGet(user *models.User) (*models.User, bool, err
 
 func (r *UserRepository) Update(user *models.User) (*models.User, error) {
 	updateMap := map[string]interface{}{
+		"name":                     user.Name,
 		"api_key":                  user.ApiKey,
 		"password":                 user.Password,
 		"email":                    user.Email,
