@@ -213,6 +213,7 @@ func (h *SettingsHandler) actionUpdateUser(w http.ResponseWriter, r *http.Reques
 		return actionResult{http.StatusBadRequest, "", "cannot unset email while subscription is active", nil}
 	}
 
+	user.Name = payload.Name
 	user.Email = payload.Email
 	user.Location = payload.Location
 	user.ReportsWeekly = payload.ReportsWeekly

@@ -88,6 +88,7 @@ type CredentialsReset struct {
 }
 
 type UserDataUpdate struct {
+	Name              string `schema:"name"`
 	Email             string `schema:"email"`
 	Location          string `schema:"location"`
 	ReportsWeekly     bool   `schema:"reports_weekly"`
