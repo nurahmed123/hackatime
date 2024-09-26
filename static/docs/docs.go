@@ -2003,7 +2003,7 @@ var SwaggerInfo = &swag.Spec{
 	BasePath:         "",
 	Schemes:          []string{},
 	Title:            "Hackatime API",
-	Description:      "REST API to interact with [Hackatime](https://w.dunkirk.sh)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`\nIf you are using the admin token then set header `Authorization` to the admin token prefixed with `Bearer` and not encoded with anything\n**Example:** `Bearer blahaji_rulz_da_world` One point to be aware of is that when using this method you always need to pass the `user` query parameter with the id of the user you wish to query for.",
+	Description:      "REST API to interact with [Hackatime](https://w.dunkirk.sh)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`\n\nIf you are using the admin token then set header `Authorization` to the admin token prefixed with `Bearer` and not encoded with anything\n**Example:** `Bearer blahaji_rulz_da_world` One point to be aware of is that when using this method you always need to pass the `user` query parameter with the id of the user you wish to query for.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",
