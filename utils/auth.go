@@ -3,11 +3,12 @@ package utils
 import (
 	"encoding/base64"
 	"errors"
-	"github.com/alexedwards/argon2id"
-	"golang.org/x/crypto/bcrypt"
 	"net/http"
 	"regexp"
 	"strings"
+
+	"github.com/alexedwards/argon2id"
+	"golang.org/x/crypto/bcrypt"
 )
 
 var md5Regex = regexp.MustCompile(`^[a-f0-9]{32}$`)
@@ -39,8 +40,12 @@ func ExtractBearerAuth(r *http.Request) (key string, err error) {
 		return key, errors.New("failed to extract API key")
 	}
 
-	keyBytes, err := base64.StdEncoding.DecodeString(authHeader[1])
-	return string(keyBytes), err
+	if authHeader[0] == "Basic" {
+		keyBytes, err := base64.StdEncoding.DecodeString(authHeader[1])
+		return string(keyBytes), err
+	}
+
+	return authHeader[1], nil
 }
 
 // password hashing

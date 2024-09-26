@@ -48,6 +48,7 @@ func (h *SummaryApiHandler) RegisterRoutes(router chi.Router) {
 // @Param operating_system query string false "OS to filter by"
 // @Param machine query string false "Machine to filter by"
 // @Param label query string false "Project label to filter by"
+// @Param user query string false "The user to filter by if using Bearer authentication and the admin token"
 // @Security ApiKeyAuth
 // @Success 200 {object} models.Summary
 // @Router /summary [get]

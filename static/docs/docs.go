@@ -953,6 +953,12 @@ const docTemplate = `{
                         "description": "Project label to filter by",
                         "name": "label",
                         "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "The user to filter by if using Bearer authentication and the admin token",
+                        "name": "user",
+                        "in": "query"
                     }
                 ],
                 "responses": {

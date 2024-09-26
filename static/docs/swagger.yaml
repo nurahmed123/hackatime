@@ -1180,6 +1180,11 @@ paths:
         in: query
         name: label
         type: string
+      - description: The user to filter by if using Bearer authentication and the
+          admin token
+        in: query
+        name: user
+        type: string
       produces:
       - application/json
       responses:
