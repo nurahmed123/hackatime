@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     {{ template "head.tpl.html" . }}
 
@@ -125,15 +125,16 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                    You have configured Wakapi
-                                                    to relay your heartbeats to
-                                                    WakaTime's API. However,
-                                                    requests for the last {{
-                                                    .NumFailures }} heartbeats
-                                                    have failed. This is most
-                                                    likely an authentication
-                                                    issue. WakaTime connection
-                                                    is paused for now. To resume
+                                                    You have configured
+                                                    Hackatime to relay your
+                                                    heartbeats to WakaTime's
+                                                    API. However, requests for
+                                                    the last {{ .NumFailures }}
+                                                    heartbeats have failed. This
+                                                    is most likely an
+                                                    authentication issue.
+                                                    WakaTime connection is
+                                                    paused for now. To resume
                                                     it, please re-enter your
                                                     WakaTime API token under
                                                     <a
