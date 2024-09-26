@@ -46,7 +46,7 @@ trap cleanup EXIT
 
 # Initialise test data
 case $DB_TYPE in
-    postgres|mysql|mariadb|cockroach|mssql)
+    postgres|mysql|mariadb|cockroach)
     docker compose -f "$script_dir/compose.yml" down
 
     docker_down=1

@@ -146,6 +146,31 @@
                             <div class="w-1/2 mr-4 inline-block">
                                 <label
                                     class="font-semibold text-text-primary dark:text-text-dark-primary"
+                                    for="name"
+                                    >Name</label
+                                >
+                                <span
+                                    class="block text-sm text-text-secondary dark:text-text-dark-secondary"
+                                >
+                                    Optional but you can customize it :)
+                                </span>
+                            </div>
+                            <div class="w-1/2 ml-4">
+                                <input
+                                    class="input-default"
+                                    type="name"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    value="{{ .User.Name }}"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex mb-8">
+                            <div class="w-1/2 mr-4 inline-block">
+                                <label
+                                    class="font-semibold text-text-primary dark:text-text-dark-primary"
                                     for="email"
                                     >E-Mail Address</label
                                 >
