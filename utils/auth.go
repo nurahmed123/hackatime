@@ -12,6 +12,7 @@ import (
 )
 
 var md5Regex = regexp.MustCompile(`^[a-f0-9]{32}$`)
+var base64Regex = regexp.MustCompile(`^[a-zA-Z0-9+/=]+$`)
 
 func ExtractBasicAuth(r *http.Request) (username, password string, err error) {
 	authHeader := strings.Split(r.Header.Get("Authorization"), " ")
@@ -40,7 +41,7 @@ func ExtractBearerAuth(r *http.Request) (key string, err error) {
 		return key, errors.New("failed to extract API key")
 	}
 
-	if authHeader[0] == "Basic" {
+	if base64Regex.MatchString(authHeader[1]) {
 		keyBytes, err := base64.StdEncoding.DecodeString(authHeader[1])
 		return string(keyBytes), err
 	}
