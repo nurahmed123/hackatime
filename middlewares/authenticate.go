@@ -119,7 +119,7 @@ func (m *AuthenticateMiddleware) tryGetUserByApiKeyHeader(r *http.Request) (*mod
 	var user *models.User
 	userKey := strings.TrimSpace(key)
 
-	if key == m.config.Security.AdminToken {
+	if m.config != nil && key == m.config.Security.AdminToken {
 		user, err = m.userSrvc.GetUserById(r.URL.Query().Get("user"))
 	} else {
 		user, err = m.userSrvc.GetUserByKey(userKey)
