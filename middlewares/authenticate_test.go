@@ -15,7 +15,7 @@ import (
 )
 
 func TestAuthenticateMiddleware_tryGetUserByApiKeyHeader_Success(t *testing.T) {
-	testApiKey := "z5uig69cn9ut93n"
+	testApiKey := "86648d74-19c5-452b-ba01-fb3ec70d4c2f"
 	testToken := base64.StdEncoding.EncodeToString([]byte(testApiKey))
 	testUser := &models.User{ApiKey: testApiKey}
 
@@ -37,7 +37,7 @@ func TestAuthenticateMiddleware_tryGetUserByApiKeyHeader_Success(t *testing.T) {
 }
 
 func TestAuthenticateMiddleware_tryGetUserByApiKeyHeader_Invalid(t *testing.T) {
-	testApiKey := "z5uig69cn9ut93n"
+	testApiKey := "86648d74-19c5-452b-ba01-fb3ec70d4c2f"
 	testToken := base64.StdEncoding.EncodeToString([]byte(testApiKey))
 
 	mockRequest := &http.Request{
@@ -58,7 +58,7 @@ func TestAuthenticateMiddleware_tryGetUserByApiKeyHeader_Invalid(t *testing.T) {
 }
 
 func TestAuthenticateMiddleware_tryGetUserByApiKeyQuery_Success(t *testing.T) {
-	testApiKey := "z5uig69cn9ut93n"
+	testApiKey := "86648d74-19c5-452b-ba01-fb3ec70d4c2f"
 	testUser := &models.User{ApiKey: testApiKey}
 
 	params := url.Values{}
@@ -81,7 +81,7 @@ func TestAuthenticateMiddleware_tryGetUserByApiKeyQuery_Success(t *testing.T) {
 }
 
 func TestAuthenticateMiddleware_tryGetUserByApiKeyQuery_Invalid(t *testing.T) {
-	testApiKey := "z5uig69cn9ut93n"
+	testApiKey := "86648d74-19c5-452b-ba01-fb3ec70d4c2f"
 
 	params := url.Values{}
 	params.Add("token", testApiKey)
