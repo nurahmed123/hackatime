@@ -43,7 +43,7 @@ func TestAuthenticateMiddleware_tryGetUserByApiKeyHeader_Invalid(t *testing.T) {
 	mockRequest := &http.Request{
 		Header: http.Header{
 			// 'Basic' prefix missing here
-			"Authorization": []string{fmt.Sprintf("%s", testToken)},
+			"Authorization": []string{testToken},
 		},
 	}
 
