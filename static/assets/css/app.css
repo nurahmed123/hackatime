@@ -190,3 +190,7 @@ body {
 .wi-min {
     width: min-content !important;
 }
+
+.link {
+    @apply font-semibold text-text-primary dark:text-text-dark-primary hover:text-accent-secondary hover:dark:hover:text-accent-primary;
+}

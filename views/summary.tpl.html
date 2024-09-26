@@ -668,58 +668,69 @@
                             alt="User welcome illustration"
                         />
                     </div>
-                    <h1 class="font-semibold text-3xl text-white m-0 w-full">
-                        Welcome to Wakapi!
+                    <h1
+                        class="font-semibold text-3xl m-0 antialiased mb-1 leading-snug w-full"
+                    >
+                        Welcome to Hackatime!
                     </h1>
                     <p>
                         It looks like there is no data available for the
-                        specified time range. If you logged in to Wakapi for the
-                        first time, see the setup instructions below on how to
-                        get started.<br />
+                        specified time range. If you logged in to Hackatime for
+                        the first time, see the setup instructions below on how
+                        to get started.<br />
                         Check out
                         <a
                             href="settings#integrations"
                             rel="noreferrer noopener"
-                            class="text-gray-400 hover:"
+                            class="link"
                             ><i>Settings &rarr; Integrations</i></a
                         >
-                        for instructions on how to use Wakapi and WakaTime in
+                        for instructions on how to use Hackatime and WakaTime in
                         parallel.
                     </p>
                     {{ if gt .DataRetentionMonths 0 }}
                     <p>
-                        By default, Wakapi will keep your coding activity for {{
-                        .DataRetentionMonths }} months. If you want
-                        <strong>unlimited data storage</strong> or simply
-                        <strong>support the project</strong> (which the authors
-                        would very much appreciate 😊), you can opt for a paid
-                        subscription for <strong>only 4 € / month</strong>. Go
-                        to
-                        <a
-                            href="settings#subscription"
-                            class="text-gray-400 hover:"
-                            rel="noreferrer noopener"
-                            >Settings → Subscription</a
-                        >
-                        to purchase one.
+                        By default, Hackatime will keep your coding activity for
+                        {{ .DataRetentionMonths }} months. If this is too short
+                        then please contact Kieran Klukas (@krn) on slack.
                     </p>
                     {{ end }}
                     <div class="w-full pt-10 flex flex-col space-y-4">
-                        <h1 class="font-semibold text-3xl text-white m-0 mb-2">
+                        <h1
+                            class="font-semibold text-3xl m-0 antialiased mb-1 leading-snug"
+                        >
                             Setup Instructions
                         </h1>
+
+                        <p>
+                            <strong>Step 1:</strong> Download WakaTime plugin
+                            for your IDE. See:
+                            <a href="https://wakatime.com/plugins" class="link"
+                                >https://wakatime.com/plugins</a
+                            >
+                        </p>
+                        <p>
+                            <strong>Step 2:</strong> Set your
+                            <i
+                                class="bg-secondary-secondary dark:bg-secondary-dark-secondary rounded-md px-1"
+                                >~/.wakatime.cfg</i
+                            >
+                            (if you are on linux or macOS use
+                            <i
+                                class="bg-secondary-secondary dark:bg-secondary-dark-secondary rounded-md px-1"
+                                >~/.wakatime.cfg</i
+                            >
+                            if you are on windows open a file manager window and
+                            navigate to
+                            <i
+                                class="bg-secondary-secondary dark:bg-secondary-dark-secondary rounded-md px-1"
+                                >%USERPROFILE%</i
+                            >
+                            and make the file there) to this:
+                        </p>
                         <div
                             class="w-full bg-secondary-secondary dark:bg-secondary-dark-secondary text-left rounded-md py-4 px-8 text-xs font-mono shadow-md"
                         >
-                            # <strong>Step 1:</strong> Download WakaTime plugin
-                            for your IDE<br />
-                            # See: https://wakatime.com/plugins<br /><br />
-
-                            # <strong>Step 2:</strong> Set your ~/.wakatime.cfg
-                            (if you are on linux or macOS use ~/.wakatime.cfg if
-                            you are on windows open a file manager window and
-                            navigate to %USERPROFILE% and make the file there)
-                            to this:<br /><br />
                             <!-- https://github.com/muety/wakapi/issues/224#issuecomment-890855563 -->
                             [settings]<br />
                             api_url = <span class="with-url-inner">%s/api</span
@@ -727,12 +738,18 @@
                             api_key =
                             <span id="api-key-instruction">{{ .ApiKey }}</span
                             ><br /><br />
-
-                            # <strong>Step 3:</strong> Start coding and then
-                            check back here! # Finaly if you ever need to access
-                            these instructions again go to
-                            https://github.com/kcoderhtml/hackatime/blob/master/FAQ.md
                         </div>
+
+                        <p>
+                            <strong>Step 3:</strong> Start coding and then check
+                            back here! Finaly if you ever need to access these
+                            instructions again go to
+                            <a
+                                href="https://github.com/kcoderhtml/hackatime/blob/master/FAQ.md"
+                                class="link"
+                                >The Faq</a
+                            >
+                        </p>
                     </div>
                 </div>
 
