@@ -556,6 +556,8 @@ info:
     ## Authentication
     Set header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`
     **Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`
+    If you are using the admin token then set header `Authorization` to the admin token prefixed with `Bearer` and not encoded with anything
+    **Example:** `Bearer blahaji_rulz_da_world` One point to be aware of is that when using this method you always need to pass the `user` query parameter with the id of the user you wish to query for.
   license:
     name: MIT
     url: https://github.com/kcoderhtml/hackatime/blob/master/LICENSE
