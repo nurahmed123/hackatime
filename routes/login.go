@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"encoding/json"
 	"fmt"
 	"log/slog"
 	"net/http"
@@ -214,13 +215,32 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 
 	numUsers, _ := h.userSrvc.Count()
 
-	_, created, err := h.userSrvc.CreateOrGet(&signup, numUsers == 0)
+	user, created, err := h.userSrvc.CreateOrGet(&signup, numUsers == 0)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		conf.Log().Request(r).Error("failed to create new user", "error", err)
 		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("failed to create new user"))
 		return
 	}
+
+	// Check if submitted with admin token in authorization header
+	authHeader := r.Header.Get("Authorization")
+	if authHeader == "Bearer "+h.config.Security.AdminToken {
+		// Return JSON response with created and api key values
+		response := struct {
+			Created bool   `json:"created"`
+			APIKey  string `json:"api_key"`
+		}{
+			Created: created,
+			APIKey:  user.ApiKey,
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
 	if !created {
 		w.WriteHeader(http.StatusConflict)
 		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("user already existing"))
