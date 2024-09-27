@@ -225,6 +225,34 @@ Hackatime supports different types of user authentication.
 
 See our [Swagger API Documentation](https://wakapi.dev/swagger-ui).
 
+For signing up user programaticaly you can use the `/signup` endpoint with the admin token as Bearer and it will return a json object similar to the following:
+
+```ts
+const signup = await fetch('http://localhost:8888/signup', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer blahaji_rulz_da_world'
+  },
+  body: new URLSearchParams({
+    'location': 'America/New_York',
+    'captcha_id': '',
+    'invite_code': '',
+    'username': 'test',
+    'email': 'test@test.com',
+    'password': '123456',
+    'password_repeat': '123456'
+  })
+});
+
+console.log(await signup.json())
+```
+
+```json
+{"created":false,"api_key":"f91e9ae9-e667-44a6-bb1e-b40117e04439"}
+```
+
+If the user already exists then you will get a `true` value in the `created` field.
+
 ### Generating Swagger docs
 
 ```bash
