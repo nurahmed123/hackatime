@@ -44,6 +44,7 @@ require (
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/jonahgeorge/force-ssl-heroku v1.0.1 // indirect
 )
 
 require (

@@ -139,6 +139,8 @@ github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.1.5 h1:/o9tlHleP7gOFmsnYNz3RGnqzefHA47wQpKrrdTIwXQ=
 github.com/jinzhu/now v1.1.5/go.mod h1:d3SSVoowX0Lcu0IBviAWJpolVfI5UJVZZ7cO71lE/z8=
+github.com/jonahgeorge/force-ssl-heroku v1.0.1 h1:+ScRG9RGLMkOM/JcUARTOXERajv+xeWsYbgiCaazZRY=
+github.com/jonahgeorge/force-ssl-heroku v1.0.1/go.mod h1:2Tv/4eNfweSWc5RLyQgcL0ntc5+4XeS243oAji/Ve+g=
 github.com/josharian/intern v1.0.0 h1:vlS4z54oSdjm0bgjRigI+G1HpF+tI+9rE5LLzOg8HmY=
 github.com/josharian/intern v1.0.0/go.mod h1:5DoeVV0s6jJacbCEi61lwdGj/aVlrQvzHFFd8Hwg//Y=
 github.com/kevinpollet/nego v0.0.0-20211010160919-a65cd48cee43 h1:Pdirg1gwhEcGjMLyuSxGn9664p+P8J9SrfMgpFwrDyg=

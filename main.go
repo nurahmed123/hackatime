@@ -40,6 +40,8 @@ import (
 	fsutils "github.com/hackclub/hackatime/utils/fs"
 
 	_ "net/http/pprof"
+
+	heroku "github.com/jonahgeorge/force-ssl-heroku"
 )
 
 // Embed version.txt
@@ -251,6 +253,7 @@ func main() {
 	router := chi.NewRouter()
 	router.Use(
 		middleware.CleanPath,
+		heroku.ForceSsl,
 		middleware.StripSlashes,
 		middleware.Recoverer,
 		middlewares.NewPrincipalMiddleware(),
