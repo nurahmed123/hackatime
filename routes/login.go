@@ -223,7 +223,13 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	h.mailSrvc.SendWelcome(user)
+	if created {
+		if err := h.mailSrvc.SendWelcome(user); err != nil {
+			conf.Log().Request(r).Error("failed to send welcome mail", "userID", user.ID, "error", err)
+		} else {
+			slog.Info("sent welcome email", "userID", user.ID)
+		}
+	}
 
 	// Check if submitted with admin token in authorization header
 	authHeader := r.Header.Get("Authorization")

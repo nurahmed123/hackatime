@@ -22,6 +22,7 @@ const (
 	tplNameWakatimeFailureNotification = "wakatime_connection_failure"
 	tplNameReport                      = "report"
 	tplNameSubscriptionNotification    = "subscription_expiring"
+	subjectWelcome                     = "Hackatime - Welcome!"
 	subjectPasswordReset               = "Hackatime - Password Reset"
 	subjectImportNotification          = "Hackatime - Data Import Finished"
 	subjectWakatimeFailureNotification = "Hackatime - WakaTime Connection Failure"
@@ -62,14 +63,14 @@ func NewMailService() services.IMailService {
 }
 
 func (m *MailService) SendWelcome(recipient *models.User) error {
-	tpl, err := m.getWelcomeTemplate(WelcomeTplData{Name: recipient.Name, Email: recipient.Email, Id: recipient.ID})
+	tpl, err := m.getWelcomeTemplate(WelcomeTplData{PublicUrl: m.config.Server.PublicUrl, Name: recipient.Name, Email: recipient.Email, Id: recipient.ID})
 	if err != nil {
 		return err
 	}
 	mail := &models.Mail{
 		From:    models.MailAddress(m.config.Mail.Sender),
 		To:      models.MailAddresses([]models.MailAddress{models.MailAddress(recipient.Email)}),
-		Subject: subjectPasswordReset,
+		Subject: subjectWelcome,
 	}
 	mail.WithHTML(tpl.String())
 	return m.sendingService.Send(mail)

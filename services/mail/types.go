@@ -3,9 +3,10 @@ package mail
 import "github.com/hackclub/hackatime/models"
 
 type WelcomeTplData struct {
-	Email string
-	Name  string
-	Id    string
+	PublicUrl string
+	Email     string
+	Name      string
+	Id        string
 }
 
 type PasswordResetTplData struct {
