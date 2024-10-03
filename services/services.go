@@ -80,6 +80,7 @@ type IProjectLabelService interface {
 }
 
 type IMailService interface {
+	SendWelcome(*models.User) error
 	SendPasswordReset(*models.User, string) error
 	SendWakatimeFailureNotification(*models.User, int) error
 	SendImportNotification(*models.User, time.Duration, int) error

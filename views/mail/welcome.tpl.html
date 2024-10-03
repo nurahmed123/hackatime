@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{ template "head.tpl.html" . }}
+        <style>
+            body {
+                text-align: center;
+                justify-content: center;
+                background-color: #d6d7d7;
+                font-family: sans-serif;
+                -webkit-font-smoothing: antialiased;
+                color: #2c240c;
+                font-size: 14px;
+                line-height: 1.4;
+                margin: 0;
+                padding: 0;
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main {
+                border-radius: 3px;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .btn-primary {
+                display: inline-block;
+                background-color: #dd9821;
+                border: solid 1px #9b5f00;
+                color: #0e0901 !important;
+                border-radius: 5px;
+                box-sizing: border-box;
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0;
+                padding: 12px 25px;
+                text-transform: capitalize;
+                border-color: #8f5d0c;
+            }
+        </style>
+    </head>
+    <body>
+        {{ template "theader.tpl.html" . }}
+
+        <main class="content">
+            <h1>Welcome to Hackatime {{ .Name }}</h1>
+            <p>Welcome to Hackatime! Your username is: {{ .Id }}</p>
+            <p>
+                If you don't know your password then change it below otherwise
+                you can login at
+                <a href="https://{{ .PublicUrl }}/login"
+                    >{{ .PublicUrl }}/login</a
+                >
+            </p>
+            <a
+                href="https://{{ .PublicUrl }}/reset-password"
+                target="_blank"
+                class="btn-primary"
+                >Change your password here</a
+            >
+            <p>
+                If you did not signup for hackatime then something weird is
+                happening (you are auto signed up when your join low-skies btw)
+            </p>
+        </main>
+
+        {{ template "tfooter.tpl.html" . }}
+    </body>
+</html>

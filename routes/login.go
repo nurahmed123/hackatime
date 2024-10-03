@@ -223,6 +223,8 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	h.mailSrvc.SendWelcome(user)
+
 	// Check if submitted with admin token in authorization header
 	authHeader := r.Header.Get("Authorization")
 	if authHeader == "Bearer "+h.config.Security.AdminToken {

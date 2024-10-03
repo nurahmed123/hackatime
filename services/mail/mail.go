@@ -16,6 +16,7 @@ import (
 )
 
 const (
+	tplNameWelcome                     = "welcome"
 	tplNamePasswordReset               = "reset_password"
 	tplNameImportNotification          = "import_finished"
 	tplNameWakatimeFailureNotification = "wakatime_connection_failure"
@@ -58,6 +59,20 @@ func NewMailService() services.IMailService {
 	}
 
 	return &MailService{sendingService: sendingService, config: config, templates: templates}
+}
+
+func (m *MailService) SendWelcome(recipient *models.User) error {
+	tpl, err := m.getWelcomeTemplate(WelcomeTplData{Name: recipient.Name, Email: recipient.Email, Id: recipient.ID})
+	if err != nil {
+		return err
+	}
+	mail := &models.Mail{
+		From:    models.MailAddress(m.config.Mail.Sender),
+		To:      models.MailAddresses([]models.MailAddress{models.MailAddress(recipient.Email)}),
+		Subject: subjectPasswordReset,
+	}
+	mail.WithHTML(tpl.String())
+	return m.sendingService.Send(mail)
 }
 
 func (m *MailService) SendPasswordReset(recipient *models.User, resetLink string) error {
@@ -139,6 +154,14 @@ func (m *MailService) SendSubscriptionNotification(recipient *models.User, hasEx
 	}
 	mail.WithHTML(tpl.String())
 	return m.sendingService.Send(mail)
+}
+
+func (m *MailService) getWelcomeTemplate(data WelcomeTplData) (*bytes.Buffer, error) {
+	var rendered bytes.Buffer
+	if err := m.templates[m.fmtName(tplNameWelcome)].Execute(&rendered, data); err != nil {
+		return nil, err
+	}
+	return &rendered, nil
 }
 
 func (m *MailService) getPasswordResetTemplate(data PasswordResetTplData) (*bytes.Buffer, error) {
