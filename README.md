@@ -24,8 +24,8 @@ Forked from [muety/wakapi](https://github.com/muety/wakapi) for a Hackclub speci
 
 ### 💻 Client setup
 
-Hackatim relies on the open-source [WakaTime](https://github.com/wakatime/wakatime-cli) client tools. In order to collect
-statistics for Hackatim, you need to set them up.
+Hackatime relies on the open-source [WakaTime](https://github.com/wakatime/wakatime-cli) client tools. In order to collect
+statistics for Hackatime, you need to set them up.
 
 1. **Set up WakaTime** for your specific IDE or editor. Please refer to the
    respective [plugin guide](https://wakatime.com/plugins)
@@ -34,10 +34,10 @@ statistics for Hackatim, you need to set them up.
 ```ini
 [settings]
 
-# Your Hackatim server URL
+# Your Hackatime server URL
 api_url = http://localhost:3000/api
 
-# Your Hackatim API key (get it from the web interface after having created an account)
+# Your Hackatime API key (get it from the web interface after having created an account)
 api_key = 406fe41f-6d69-4183-a4cc-121e0c524c2b
 ```
 
