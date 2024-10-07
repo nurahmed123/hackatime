@@ -21,6 +21,11 @@ definitions:
       email:
         type: string
     type: object
+  models.HasData:
+    properties:
+      hasData:
+        type: boolean
+    type: object
   models.Heartbeat:
     properties:
       Entity:
@@ -957,27 +962,6 @@ paths:
       summary: Retrieve WakaTime-compatible summaries
       tags:
       - wakatime
-  /email:
-    get:
-      operationId: get-email
-      parameters:
-      - description: The user to filter by if using Bearer authentication and the
-          admin token
-        in: query
-        name: user
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/models.Email'
-      security:
-      - ApiKeyAuth: []
-      summary: Retrieve a users email
-      tags:
-      - email
   /health:
     get:
       operationId: get-health
@@ -1152,6 +1136,48 @@ paths:
       summary: Proxy an PUT API request to another Wakapi instance
       tags:
       - relay
+  /special/email:
+    get:
+      operationId: get-email
+      parameters:
+      - description: The user to filter by if using Bearer authentication and the
+          admin token
+        in: query
+        name: user
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Email'
+      security:
+      - ApiKeyAuth: []
+      summary: Retrieve a users email
+      tags:
+      - email
+  /special/hasData:
+    get:
+      operationId: has-data
+      parameters:
+      - description: The user to filter by if using Bearer authentication and the
+          admin token
+        in: query
+        name: user
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.HasData'
+      security:
+      - ApiKeyAuth: []
+      summary: Whether the user has data any heartbeats received yet
+      tags:
+      - hasData
   /summary:
     get:
       operationId: get-summary

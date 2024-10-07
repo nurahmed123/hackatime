@@ -591,39 +591,6 @@ const docTemplate = `{
                 }
             }
         },
-        "/email": {
-            "get": {
-                "security": [
-                    {
-                        "ApiKeyAuth": []
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "email"
-                ],
-                "summary": "Retrieve a users email",
-                "operationId": "get-email",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "The user to filter by if using Bearer authentication and the admin token",
-                        "name": "user",
-                        "in": "query"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/models.Email"
-                        }
-                    }
-                }
-            }
-        },
         "/health": {
             "get": {
                 "produces": [
@@ -888,6 +855,72 @@ const docTemplate = `{
                         "description": "Returned if upstream host is down",
                         "schema": {
                             "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/special/email": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "email"
+                ],
+                "summary": "Retrieve a users email",
+                "operationId": "get-email",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The user to filter by if using Bearer authentication and the admin token",
+                        "name": "user",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Email"
+                        }
+                    }
+                }
+            }
+        },
+        "/special/hasData": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "hasData"
+                ],
+                "summary": "Whether the user has data any heartbeats received yet",
+                "operationId": "has-data",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The user to filter by if using Bearer authentication and the admin token",
+                        "name": "user",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.HasData"
                         }
                     }
                 }
@@ -1238,6 +1271,14 @@ const docTemplate = `{
             "properties": {
                 "email": {
                     "type": "string"
+                }
+            }
+        },
+        "models.HasData": {
+            "type": "object",
+            "properties": {
+                "hasData": {
+                    "type": "boolean"
                 }
             }
         },
