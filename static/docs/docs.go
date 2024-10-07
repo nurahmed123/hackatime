@@ -591,6 +591,39 @@ const docTemplate = `{
                 }
             }
         },
+        "/email": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "email"
+                ],
+                "summary": "Retrieve a users email",
+                "operationId": "get-email",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The user to filter by if using Bearer authentication and the admin token",
+                        "name": "user",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/models.Email"
+                        }
+                    }
+                }
+            }
+        },
         "/health": {
             "get": {
                 "produces": [
@@ -1200,6 +1233,14 @@ const docTemplate = `{
                 }
             }
         },
+        "models.Email": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                }
+            }
+        },
         "models.Heartbeat": {
             "type": "object",
             "properties": {
@@ -1229,6 +1270,9 @@ const docTemplate = `{
                 "language": {
                     "type": "string"
                 },
+                "lines": {
+                    "type": "integer"
+                },
                 "machine": {
                     "description": "ignored because wakatime api doesn't return machines currently",
                     "type": "string"
@@ -1239,6 +1283,9 @@ const docTemplate = `{
                 },
                 "project": {
                     "type": "string"
+                },
+                "project_root_count": {
+                    "type": "integer"
                 },
                 "time": {
                     "type": "number"

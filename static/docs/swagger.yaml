@@ -16,6 +16,11 @@ definitions:
       stacktrace:
         type: string
     type: object
+  models.Email:
+    properties:
+      email:
+        type: string
+    type: object
   models.Heartbeat:
     properties:
       Entity:
@@ -36,6 +41,8 @@ definitions:
         type: boolean
       language:
         type: string
+      lines:
+        type: integer
       machine:
         description: ignored because wakatime api doesn't return machines currently
         type: string
@@ -44,6 +51,8 @@ definitions:
         type: string
       project:
         type: string
+      project_root_count:
+        type: integer
       time:
         type: number
       type:
@@ -948,6 +957,27 @@ paths:
       summary: Retrieve WakaTime-compatible summaries
       tags:
       - wakatime
+  /email:
+    get:
+      operationId: get-email
+      parameters:
+      - description: The user to filter by if using Bearer authentication and the
+          admin token
+        in: query
+        name: user
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Email'
+      security:
+      - ApiKeyAuth: []
+      summary: Retrieve a users email
+      tags:
+      - email
   /health:
     get:
       operationId: get-health

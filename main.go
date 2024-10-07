@@ -215,6 +215,7 @@ func main() {
 	healthApiHandler := api.NewHealthApiHandler(db)
 	heartbeatApiHandler := api.NewHeartbeatApiHandler(userService, heartbeatService, languageMappingService)
 	summaryApiHandler := api.NewSummaryApiHandler(userService, summaryService)
+	specialApiHandler := api.NewSpecialApiHandler(userService)
 	metricsHandler := api.NewMetricsHandler(userService, summaryService, heartbeatService, leaderboardService, keyValueService, metricsRepository)
 	diagnosticsHandler := api.NewDiagnosticsApiHandler(userService, diagnosticsService)
 	avatarHandler := api.NewAvatarHandler()
@@ -291,6 +292,7 @@ func main() {
 
 	// API route registrations
 	summaryApiHandler.RegisterRoutes(apiRouter)
+	specialApiHandler.RegisterRoutes(apiRouter)
 	healthApiHandler.RegisterRoutes(apiRouter)
 	heartbeatApiHandler.RegisterRoutes(apiRouter)
 	metricsHandler.RegisterRoutes(apiRouter)
