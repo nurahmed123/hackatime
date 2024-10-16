@@ -24,6 +24,8 @@ type Heartbeat struct {
 	Language         string     `json:"language" gorm:"index:idx_language"`
 	IsWrite          bool       `json:"is_write"`
 	Lines            uint64     `json:"lines"`
+	LineAdditions    uint32     `json:"line_additions"`
+	LineDeletions    uint32     `json:"line_deletions"`
 	Editor           string     `json:"editor" gorm:"index:idx_editor" hash:"ignore"`                     // ignored because editor might be parsed differently by wakatime
 	OperatingSystem  string     `json:"operating_system" gorm:"index:idx_operating_system" hash:"ignore"` // ignored because os might be parsed differently by wakatime
 	Machine          string     `json:"machine" gorm:"index:idx_machine" hash:"ignore"`                   // ignored because wakatime api doesn't return machines currently
