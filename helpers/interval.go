@@ -74,6 +74,9 @@ func ResolveIntervalTZ(interval *models.IntervalKey, tz *time.Location) (err err
 		from = now.AddDate(0, -12, 0)
 	case models.IntervalAny:
 		from = time.Time{}
+	case models.IntervalLowSkies:
+		from = time.Date(2024, 10, 3, 0, 0, 0, 0, time.Local)
+		to = time.Date(2024, 10, 17, 23, 59, 59, 0, time.Local)
 	default:
 		err = errors.New("invalid interval")
 	}

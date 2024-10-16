@@ -27,6 +27,14 @@
             class="grow flex flex-col bg-accent-primary dark:bg-accent-dark-primary shadow-md rounded w-40 p-1"
         >
             <a
+                id="time-option-low_skies"
+                class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
+                :href="intervalLink('low_skies')"
+                @click="state.showDropdownTimepicker = !state.showDropdownTimepicker"
+                data-trigger-for="showDropdownTimepicker"
+                >Low Skies</a
+            >
+            <a
                 id="time-option-today"
                 class="submenu-item hover:bg-accent-secondary hover:dark:bg-accent-dark-secondary rounded p-1 text-right w-full text-gray-300 px-2 font-semibold text-sm"
                 :href="intervalLink('today')"

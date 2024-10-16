@@ -22,6 +22,7 @@ var (
 	IntervalPast6Months        = &IntervalKey{"6_months", "last_6_months", "Last 6 Months"}
 	IntervalPast12Months       = &IntervalKey{"12_months", "last_12_months", "last_year", "Last 12 Months"}
 	IntervalAny                = &IntervalKey{"any", "all_time", "All Time"}
+	IntervalLowSkies           = &IntervalKey{"low_skies", "Low Skies"}
 )
 
 var AllIntervals = []*IntervalKey{
@@ -40,6 +41,7 @@ var AllIntervals = []*IntervalKey{
 	IntervalPast6Months,
 	IntervalPast12Months,
 	IntervalAny,
+	IntervalLowSkies,
 }
 
 type IntervalKey []string
