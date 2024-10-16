@@ -13,7 +13,7 @@ app:
     leaderboard_enabled: true # whether to enable public leaderboards
     ignore_user_leaderboard_preference: true # whether to ignore user leaderboard preferences
     leaderboard_generation_time: 0 0 * * * *
-    leaderboard_scope: low_skies # leaderboard time interval (e.g. 14_days, 6_months, ...)
+    leaderboard_scope: 7_days # leaderboard time interval (e.g. 14_days, 6_months, ...)
     # url template for user avatar images (to be used with services like gravatar or dicebear)
     # available variable placeholders are: username, username_hash, email, email_hash
     # defaults to wakapi's internal avatar rendering powered by https://codeberg.org/Codeberg/avatars
