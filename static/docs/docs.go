@@ -959,7 +959,8 @@ const docTemplate = `{
                             "last_12_months",
                             "last_year",
                             "any",
-                            "all_time"
+                            "all_time",
+                            "low_skies"
                         ],
                         "type": "string",
                         "description": "Interval identifier",
