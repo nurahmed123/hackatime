@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://badges.fw-web.space/github/license/hackclub/hackatime">
-  <img src="https://waka.hackclub.com/api/badge/krn/interval:any/project:wakapi?label=wakapi">
+  <img src="https://waka.hackclub.com/api/badge/U062UG485EE/interval:any/project:hackatime?label=hackatime">
   <img src="https://badges.fw-web.space/github/languages/code-size/hackclub/hackatime">
   <a href="https://goreportcard.com/report/github.com/hackclub/hackatime">
   <img src="https://goreportcard.com/badge/github.com/hackclub/hackatime"></a>
