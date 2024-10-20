@@ -13,7 +13,7 @@ app:
     leaderboard_enabled: true # whether to enable public leaderboards
     ignore_user_leaderboard_preference: true # whether to ignore user leaderboard preferences
     leaderboard_generation_time: 0 0 * * * *
-    leaderboard_scope: last_7_days # leaderboard time interval (e.g. 14_days, 6_months, ...)
+    leaderboard_scope: 7_days # leaderboard time interval (e.g. 14_days, 6_months, ...)
     import_max_rate: 1 # minimum hours to pass after a successful data import by a user before attempting a new one
     # url template for user avatar images (to be used with services like gravatar or dicebear)
     # available variable placeholders are: username, username_hash, email, email_hash
