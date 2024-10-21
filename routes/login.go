@@ -101,9 +101,14 @@ func (h *LoginHandler) PostLogin(w http.ResponseWriter, r *http.Request) {
 
 	user, err := h.userSrvc.GetUserById(login.Username)
 	if err != nil {
-		w.WriteHeader(http.StatusNotFound)
-		templates[conf.LoginTemplate].Execute(w, h.buildViewModel(r, w, false).WithError("user not found"))
-		return
+		// try getting the user by email
+		err = nil
+		user, err = h.userSrvc.GetUserByEmail(login.Username)
+		if err != nil {
+			w.WriteHeader(http.StatusNotFound)
+			templates[conf.LoginTemplate].Execute(w, h.buildViewModel(r, w, false).WithError("user not found"))
+			return
+		}
 	}
 
 	if !utils.ComparePassword(user.Password, login.Password, h.config.Security.PasswordSalt) {
@@ -112,7 +117,7 @@ func (h *LoginHandler) PostLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	encoded, err := h.config.Security.SecureCookie.Encode(models.AuthCookieKey, login.Username)
+	encoded, err := h.config.Security.SecureCookie.Encode(models.AuthCookieKey, user.ID)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		conf.Log().Request(r).Error("failed to encode secure cookie", "error", err)
