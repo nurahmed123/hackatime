@@ -176,10 +176,11 @@ type sentryConfig struct {
 }
 
 type mailConfig struct {
-	Enabled  bool           `env:"WAKAPI_MAIL_ENABLED" default:"true"`
-	Provider string         `env:"WAKAPI_MAIL_PROVIDER" default:"smtp"`
-	Smtp     SMTPMailConfig `yaml:"smtp"`
-	Sender   string         `env:"WAKAPI_MAIL_SENDER" yaml:"sender"`
+	Enabled        bool           `env:"WAKAPI_MAIL_ENABLED" default:"true"`
+	WelcomeEnabled bool           `yaml:"welcome_enabled" env:"WAKAPI_WELCOME_ENABLED" default:"true"`
+	Provider       string         `env:"WAKAPI_MAIL_PROVIDER" default:"smtp"`
+	Smtp           SMTPMailConfig `yaml:"smtp"`
+	Sender         string         `env:"WAKAPI_MAIL_SENDER" yaml:"sender"`
 }
 
 type SMTPMailConfig struct {

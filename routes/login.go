@@ -228,7 +228,7 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if created {
+	if created && h.config.Mail.WelcomeEnabled {
 		if err := h.mailSrvc.SendWelcome(user); err != nil {
 			conf.Log().Request(r).Error("failed to send welcome mail", "userID", user.ID, "error", err)
 		} else {

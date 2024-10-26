@@ -42,5 +42,6 @@ security:
 
 mail:
     enabled: true # whether to enable mails (used for password resets, reports, etc.)
+    welcome_enabled: false
     provider: smtp # method for sending mails, currently one of ['smtp']
     sender: Hackatime <hackatime@hackclub.com>
