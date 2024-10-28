@@ -10,10 +10,10 @@ type AliasReverseResolver func(t uint8, k string) []string
 
 type Alias struct {
 	ID     uint   `gorm:"primary_key"`
-	Type   uint8  `gorm:"not null; index:idx_alias_type_key"`
+	Type   uint8  `gorm:"not null"`
 	User   *User  `json:"-" gorm:"not null; constraint:OnUpdate:CASCADE,OnDelete:CASCADE"`
 	UserID string `gorm:"not null; index:idx_alias_user"`
-	Key    string `gorm:"not null; index:idx_alias_type_key"`
+	Key    string `gorm:"not null"`
 	Value  string `gorm:"not null"`
 }
 
