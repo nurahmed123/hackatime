@@ -236,7 +236,7 @@ func (s *Signup) IsValid() (valid bool, err string) {
 			return false, strings.Join(errors, "; ") + "; failed to marshal signup data"
 		}
 
-		fmt.Println(errors, jsonData)
+		fmt.Println(errors, string(jsonData))
 		return false, strings.Join(errors, "; ") + string(jsonData)
 	}
 
