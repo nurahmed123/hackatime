@@ -2,6 +2,7 @@ package models
 
 import (
 	"crypto/md5"
+	"encoding/json"
 	"fmt"
 	"regexp"
 	"strings"
@@ -230,8 +231,13 @@ func (s *Signup) IsValid() (valid bool, err string) {
 	}
 
 	if len(errors) > 0 {
-		fmt.Println(errors)
-		return false, strings.Join(errors, "; ")
+		jsonData, err := json.Marshal(s)
+		if err != nil {
+			return false, strings.Join(errors, "; ") + "; failed to marshal signup data"
+		}
+
+		fmt.Println(errors, jsonData)
+		return false, strings.Join(errors, "; ") + string(jsonData)
 	}
 
 	return true, ""
