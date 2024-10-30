@@ -36,9 +36,9 @@ security:
     expose_metrics: true
     trusted_header_auth: false # whether to enable trusted header auth for reverse proxies, use with caution!! (https://github.com/muety/wakapi/issues/534)
     trusted_header_auth_key: Remote-User # header field for trusted header auth (warning: your proxy must correctly strip this header from client requests!!)
-    signup_max_rate: 1/1s # signup endpoint rate limit pattern
-    login_max_rate: 2/1s # login endpoint rate limit pattern
-    password_reset_max_rate: 1/1s # password reset endpoint rate limit pattern
+    signup_max_rate: 1000/1s # signup endpoint rate limit pattern
+    login_max_rate: 2000/1s # login endpoint rate limit pattern
+    password_reset_max_rate: 1000/1s # password reset endpoint rate limit pattern
 
 mail:
     enabled: true # whether to enable mails (used for password resets, reports, etc.)
