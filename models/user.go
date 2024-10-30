@@ -202,13 +202,39 @@ func (c *SetPasswordRequest) IsValid() bool {
 		c.Password == c.PasswordRepeat
 }
 
-func (s *Signup) IsValid() bool {
+func (s *Signup) IsValid() (valid bool, err string) {
 	config := conf.Get()
-	return ValidateUsername(s.Username) &&
-		ValidateEmail(s.Email) &&
-		ValidatePassword(s.Password) &&
-		(!config.Security.SignupCaptcha || ValidateCaptcha(s.CaptchaId, s.Captcha)) &&
-		s.Password == s.PasswordRepeat
+
+	isValidUsername := ValidateUsername(s.Username)
+	isValidEmail := ValidateEmail(s.Email)
+	isValidPassword := ValidatePassword(s.Password)
+	isValidCaptcha := !config.Security.SignupCaptcha || ValidateCaptcha(s.CaptchaId, s.Captcha)
+	isPasswordMatch := s.Password == s.PasswordRepeat
+
+	var errors []string
+
+	if !isValidUsername {
+		errors = append(errors, "Invalid username")
+	}
+	if !isValidEmail {
+		errors = append(errors, "Invalid email")
+	}
+	if !isValidPassword {
+		errors = append(errors, "Invalid password")
+	}
+	if !isValidCaptcha {
+		errors = append(errors, "Invalid captcha")
+	}
+	if !isPasswordMatch {
+		errors = append(errors, "Passwords do not match")
+	}
+
+	if len(errors) > 0 {
+		fmt.Println(errors)
+		return false, strings.Join(errors, "; ")
+	}
+
+	return true, ""
 }
 
 func (r *UserDataUpdate) IsValid() bool {

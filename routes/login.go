@@ -207,10 +207,10 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	}
 
 	signup.InvitedBy = invitedBy
-
-	if !signup.IsValid() {
+	validity, validityErr := signup.IsValid()
+	if !validity {
 		w.WriteHeader(http.StatusBadRequest)
-		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("invalid parameters"))
+		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError(validityErr))
 		return
 	}
 
