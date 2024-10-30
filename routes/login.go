@@ -162,6 +162,8 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		loadTemplates()
 	}
 
+	adminTokenSignup := r.Header.Get("Authorization") == "Bearer "+h.config.Security.AdminToken
+
 	var signup models.Signup
 	if err := r.ParseForm(); err != nil {
 		w.WriteHeader(http.StatusBadRequest)
@@ -174,7 +176,7 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if !h.config.IsDev() && r.Header.Get("Authorization") != "Bearer "+h.config.Security.AdminToken && !h.config.Security.AllowSignup && (!h.config.Security.InviteCodes || signup.InviteCode == "") {
+	if !h.config.IsDev() && !adminTokenSignup && !h.config.Security.AllowSignup && (!h.config.Security.InviteCodes || signup.InviteCode == "") {
 		w.WriteHeader(http.StatusForbidden)
 		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("registration is disabled on this server"))
 		return
@@ -210,7 +212,11 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	validity, validityErr := signup.IsValid()
 	if !validity {
 		w.WriteHeader(http.StatusBadRequest)
-		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError(validityErr))
+		if adminTokenSignup {
+			w.Write([]byte(validityErr))
+		} else {
+			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError(validityErr))
+		}
 		return
 	}
 
@@ -224,7 +230,11 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		conf.Log().Request(r).Error("failed to create new user", "error", err)
-		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("failed to create new user"))
+		if adminTokenSignup {
+			w.Write([]byte("failed to create new user: " + err.Error()))
+		} else {
+			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("failed to create new user"))
+		}
 		return
 	}
 
@@ -237,8 +247,7 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Check if submitted with admin token in authorization header
-	authHeader := r.Header.Get("Authorization")
-	if authHeader == "Bearer "+h.config.Security.AdminToken {
+	if adminTokenSignup {
 		// Return JSON response with created and api key values
 		response := struct {
 			Created bool   `json:"created"`
@@ -256,7 +265,11 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 
 	if !created {
 		w.WriteHeader(http.StatusConflict)
-		templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("user already existing"))
+		if adminTokenSignup {
+			w.Write([]byte("user already existing"))
+		} else {
+			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("user already existing"))
+		}
 		return
 	}
 
