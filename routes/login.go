@@ -213,7 +213,13 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	if !validity {
 		w.WriteHeader(http.StatusBadRequest)
 		if adminTokenSignup {
-			w.Write([]byte(validityErr))
+			response := struct {
+				Error string `json:"error"`
+			}{
+				Error: validityErr,
+			}
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(response)
 		} else {
 			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError(validityErr))
 		}
@@ -231,7 +237,13 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		conf.Log().Request(r).Error("failed to create new user", "error", err)
 		if adminTokenSignup {
-			w.Write([]byte("failed to create new user: " + err.Error()))
+			response := struct {
+				Error string `json:"error"`
+			}{
+				Error: "failed to create new user: " + err.Error(),
+			}
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(response)
 		} else {
 			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("failed to create new user"))
 		}
@@ -266,7 +278,13 @@ func (h *LoginHandler) PostSignup(w http.ResponseWriter, r *http.Request) {
 	if !created {
 		w.WriteHeader(http.StatusConflict)
 		if adminTokenSignup {
-			w.Write([]byte("user already existing"))
+			response := struct {
+				Error string `json:"error"`
+			}{
+				Error: "User already exists",
+			}
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(response)
 		} else {
 			templates[conf.SignupTemplate].Execute(w, h.buildViewModel(r, w, h.config.Security.SignupCaptcha).WithError("user already existing"))
 		}
