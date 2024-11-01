@@ -49,6 +49,20 @@ func (r *HeartbeatRepository) InsertBatch(heartbeats []*models.Heartbeat) error 
 		return nil
 	}
 
+	filteredHeartbeats := heartbeats[:0]
+
+	for _, hb := range heartbeats {
+		if hb.Lines != 0 {
+			filteredHeartbeats = append(filteredHeartbeats, hb)
+		}
+	}
+
+	heartbeats = filteredHeartbeats
+
+	if len(heartbeats) == 0 {
+		return nil
+	}
+
 	if err := r.db.
 		Clauses(clause.OnConflict{
 			DoNothing: true,
