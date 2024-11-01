@@ -56,7 +56,7 @@ func (h *SummaryHandler) GetIndex(w http.ResponseWriter, r *http.Request) {
 			http.Redirect(w, r, redirectAddress, http.StatusFound)
 		}
 
-		q.Set("interval", "today")
+		q.Set("interval", "high_seas")
 		r.URL.RawQuery = q.Encode()
 	} else if q.Get("interval") != "" {
 		// Send a Set-Cookie header to persist the interval
