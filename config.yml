@@ -31,7 +31,7 @@ security:
     cookie_max_age: 172800
     allow_signup: false
     signup_captcha: false
-    invite_codes: true # whether to enable invite codes for overriding disabled signups
+    invite_codes: false # whether to enable invite codes for overriding disabled signups
     disable_frontpage: false
     expose_metrics: true
     trusted_header_auth: false # whether to enable trusted header auth for reverse proxies, use with caution!! (https://github.com/muety/wakapi/issues/534)
