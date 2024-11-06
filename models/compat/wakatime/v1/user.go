@@ -49,6 +49,31 @@ func NewFromUser(user *models.User) *User {
 	}
 
 	return &User{
+		ID:          user.ID,
+		DisplayName: user.ID,
+		Email:       user.Email,
+		TimeZone:    tz,
+		Username:    user.ID,
+		CreatedAt:   user.CreatedAt,
+		ModifiedAt:  user.CreatedAt,
+		Photo:       avatarURL,
+	}
+}
+
+func RedactedFromUser(user *models.User) *User {
+	cfg := config.Get()
+	tz, _ := time.Now().Zone()
+	if user.Location != "" {
+		tz = user.Location
+	}
+
+	avatarURL := user.AvatarURL(cfg.App.AvatarURLTemplate)
+
+	if !strings.HasPrefix(avatarURL, "http") {
+		avatarURL = fmt.Sprintf("%s%s/%s", cfg.Server.GetPublicUrl(), cfg.Server.BasePath, avatarURL)
+	}
+
+	return &User{
 		DisplayName: user.ID,
 		TimeZone:    tz,
 		CreatedAt:   user.CreatedAt,

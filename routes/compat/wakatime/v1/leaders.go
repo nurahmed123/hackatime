@@ -163,7 +163,7 @@ func (h *LeadersHandler) buildViewModel(globalLeaderboard, languageLeaderboard m
 					}
 				}),
 			},
-			User: v1.NewFromUser(entry.User),
+			User: v1.RedactedFromUser(entry.User),
 		})
 	}
 
