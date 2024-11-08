@@ -46,7 +46,7 @@
 								},
 								{
 									"key": "email",
-									"value": "testuser@waka.hackclub.com",
+									"value": "testuser@wakapi.dev",
 									"type": "text"
 								},
 								{
@@ -109,7 +109,7 @@
 								},
 								{
 									"key": "email",
-									"value": "testuser@waka.hackclub.com",
+									"value": "testuser@wakapi.dev",
 									"type": "text"
 								},
 								{
