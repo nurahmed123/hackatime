@@ -50,7 +50,7 @@ sentry:
 mail:
     enabled: false
     provider: smtp
-    sender: Wakapi <noreply@wakapi.dev>
+    sender: Wakapi <noreply@waka.hackclub.com>
 
     smtp:
         host:

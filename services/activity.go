@@ -139,8 +139,8 @@ func (s *ActivityService) getChartPastYear(user *models.User, darkTheme, hideAtt
 
 	if !hideAttribution {
 		canvas.Group()
-		canvas.Title("Wakapi.dev")
-		canvas.Image(w-60, h-24, 60, 24, "https://wakapi.dev/assets/images/logo-gh.svg")
+		canvas.Title("waka.hackclub.com")
+		canvas.Image(w-60, h-24, 60, 24, "https://waka.hackclub.com/assets/images/logo-gh.svg")
 		canvas.Gend()
 	}
 
