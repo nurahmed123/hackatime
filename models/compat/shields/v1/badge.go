@@ -8,7 +8,7 @@ import (
 // https://shields.io/endpoint
 
 const (
-	defaultLabel = "wakapi.dev"
+	defaultLabel = "waka.hackclub.com"
 	defaultColor = "2F855A"
 )
 

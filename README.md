@@ -50,7 +50,7 @@ Clone the repo run `go build` and then `./hackatime -config config.yml`. More in
 
 ## 🔧 API endpoints
 
-See our [Swagger API Documentation](https://wakapi.dev/swagger-ui).
+See our [Swagger API Documentation](https://waka.hackclub.com/swagger-ui).
 
 For signing up user programaticaly you can use the `/signup` endpoint with the admin token as Bearer and it will return a json object similar to the following:
 
@@ -93,15 +93,15 @@ section of your Hackatime instance's settings page.
 Hackatime also integrates
 with [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats#wakatime-week-stats) to generate fancy
 cards for you. Here is an example. To use this, don't forget to **enable public data**
-under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
+under [Settings -> Permissions](https://waka.hackclub.com/settings#permissions).
 
-![](https://github-readme-stats.vercel.app/api/wakatime?username=n1try&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact&range=last_7_days)
+![](https://github-readme-stats.vercel.app/api/wakatime?username=U062UG485EE&api_domain=waka.hackclub.com&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact&range=last_7_days)
 
 <details>
 <summary>Click to view code</summary>
 
 ```markdown
-![](https://github-readme-stats.vercel.app/api/wakatime?username={yourusername}&api_domain=wakapi.dev&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact)
+![](https://github-readme-stats.vercel.app/api/wakatime?username={yourusername}&api_domain=waka.hackclub.com&bg_color=2D3748&title_color=2F855A&icon_color=2F855A&text_color=ffffff&custom_title=Hackatime%20Week%20Stats&layout=compact)
 ```
 
 </details>
@@ -111,7 +111,7 @@ under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
 
 There is a [WakaTime plugin](https://github.com/lowlighter/metrics/tree/master/source/plugins/wakatime) for
 GitHub [Metrics](https://github.com/lowlighter/metrics/) that is also compatible with Hackatime. To use this, don't forget
-to **enable public data** under [Settings -> Permissions](https://wakapi.dev/settings#permissions).
+to **enable public data** under [Settings -> Permissions](https://waka.hackclub.com/settings#permissions).
 
 Preview:
 
@@ -129,7 +129,7 @@ Preview:
       plugin_wakatime_days: 7 # Display last week stats
       plugin_wakatime_sections: time, projects, projects-graphs # Display time and projects sections, along with projects graphs
       plugin_wakatime_limit: 4 # Show 4 entries per graph
-      plugin_wakatime_url: http://wakapi.dev # Wakatime url endpoint
+      plugin_wakatime_url: http://waka.hackclub.com # Wakatime url endpoint
       plugin_wakatime_user: .user.login # User
 ```
 
@@ -146,9 +146,9 @@ get started:
    store ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/wakatimes), [Chrome](https://chrome.google.com/webstore/detail/wakatime/jnbbnacmeggbgdjgaoojpmhdlkkpblgi?hl=de))
 2. Open the extension settings dialog
 3. Configure it like so (see screenshot below):
-    - API Key: Your personal API key (get it at [wakapi.dev](https://wakapi.dev))
+    - API Key: Your personal API key (get it at [waka.hackclub.com](https://waka.hackclub.com))
     - Logging Type: _Only the domain_
-    - API URL: `https://wakapi.dev/api/compat/wakatime/v1` (alternatively, replace _wakapi.dev_ with your self-hosted
+    - API URL: `https://waka.hackclub.com/api/compat/wakatime/v1` (alternatively, replace _waka.hackclub.com_ with your self-hosted
       instance hostname)
 4. Save
 5. Start browsing!

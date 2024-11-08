@@ -101,7 +101,7 @@ argument) or via environment variables. Here is an overview of all options.
 | `app.avatar_url_template` /<br>`WAKAPI_AVATAR_URL_TEMPLATE`                  | (see [`config.default.yml`](config.default.yml)) | URL template for external user avatar images (e.g. from [Dicebear](https://dicebear.com) or [Gravatar](https://gravatar.com))                                                           |
 | `app.date_format` /<br>`WAKAPI_DATE_FORMAT`                                  | `Mon, 02 Jan 2006`                               | Go time format strings to format human-readable date (see [`Time.Format`](https://pkg.go.dev/time#Time.Format))                                                                         |
 | `app.datetime_format` /<br>`WAKAPI_DATETIME_FORMAT`                          | `Mon, 02 Jan 2006 15:04`                         | Go time format strings to format human-readable datetime (see [`Time.Format`](https://pkg.go.dev/time#Time.Format))                                                                     |
-| `app.support_contact` /<br>`WAKAPI_SUPPORT_CONTACT`                          | `hostmaster@wakapi.dev`                          | E-Mail address to display as a support contact on the page                                                                                                                              |
+| `app.support_contact` /<br>`WAKAPI_SUPPORT_CONTACT`                          | `hostmaster@waka.hackclub.com`                   | E-Mail address to display as a support contact on the page                                                                                                                              |
 | `app.data_retention_months` /<br>`WAKAPI_DATA_RETENTION_MONTHS`              | `-1`                                             | Maximum retention period in months for user data (heartbeats) (-1 for unlimited)                                                                                                        |
 | `app.max_inactive_months` /<br>`WAKAPI_MAX_INACTIVE_MONTHS`                  | `12`                                             | Maximum number of inactive months after which to delete user accounts without data (-1 for unlimited)                                                                                   |
 | `server.port` /<br> `WAKAPI_PORT`                                            | `3000`                                           | Port to listen on                                                                                                                                                                       |
@@ -141,7 +141,7 @@ argument) or via environment variables. Here is an overview of all options.
 | `db.automgirate_fail_silently` /<br> `WAKAPI_DB_AUTOMIGRATE_FAIL_SILENTLY`   | `false`                                          | Whether to ignore schema auto-migration failures when starting up                                                                                                                       |
 | `mail.enabled` /<br> `WAKAPI_MAIL_ENABLED`                                   | `true`                                           | Whether to allow Hackatime to send e-mail (e.g. for password resets) |
 | `mail.welcome_enabled` /<br> `WAKAPI_WELCOME_ENABLED`                        | `true`                                           | Whether Hackatime should send an e-mail on user signup |
-| `mail.sender` /<br> `WAKAPI_MAIL_SENDER`                                     | `Hackatime <noreply@wakapi.dev>`                 | Default sender address for outgoing mails |
+| `mail.sender` /<br> `WAKAPI_MAIL_SENDER`                                     | `Hackatime <noreply@waka.hackclub.com>`          | Default sender address for outgoing mails |
 | `mail.provider` /<br> `WAKAPI_MAIL_PROVIDER`                                 | `smtp`                                           | Implementation to use for sending mails (one of [`smtp`])                                                                                                                               |
 | `mail.smtp.host` /<br> `WAKAPI_MAIL_SMTP_HOST`                               | -                                                | SMTP server address for sending mail (if using `smtp` mail provider)                                                                                                                    |
 | `mail.smtp.port` /<br> `WAKAPI_MAIL_SMTP_PORT`                               | -                                                | SMTP server port (usually 465)                                                                                                                                                          |
@@ -261,7 +261,7 @@ $ python scripts/download_heartbeats.py --api_key API_KEY [--url URL] [--from FR
 
 ```bash
 python scripts/download_heartbeats.py --api_key 04648d14-15c9-432b-b901-dbeec70d4eaf \
-  --url https://wakapi.dev/api \
+  --url https://waka.hackclub.com/api \
   --from 2023-01-01 \
   --to 2023-01-31 \
   --output wakapi_export.csv

@@ -60,6 +60,28 @@ func NewFromUser(user *models.User) *User {
 	}
 }
 
+func RedactedFromUser(user *models.User) *User {
+	cfg := config.Get()
+	tz, _ := time.Now().Zone()
+	if user.Location != "" {
+		tz = user.Location
+	}
+
+	avatarURL := user.AvatarURL(cfg.App.AvatarURLTemplate)
+
+	if !strings.HasPrefix(avatarURL, "http") {
+		avatarURL = fmt.Sprintf("%s%s/%s", cfg.Server.GetPublicUrl(), cfg.Server.BasePath, avatarURL)
+	}
+
+	return &User{
+		DisplayName: user.ID,
+		TimeZone:    tz,
+		CreatedAt:   user.CreatedAt,
+		ModifiedAt:  user.CreatedAt,
+		Photo:       avatarURL,
+	}
+}
+
 func (u *User) WithLatestHeartbeat(h *models.Heartbeat) *User {
 	u.LastHeartbeatAt = h.Time
 	u.LastProject = h.Project
