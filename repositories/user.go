@@ -3,6 +3,7 @@ package repositories
 import (
 	"errors"
 	"fmt"
+	"strings"
 	"time"
 
 	"github.com/duke-git/lancet/v2/condition"
@@ -21,6 +22,9 @@ func NewUserRepository(db *gorm.DB) *UserRepository {
 }
 
 func (r *UserRepository) FindOne(attributes models.User) (*models.User, error) {
+	if attributes.Email != "" {
+		attributes.Email = strings.ToLower(attributes.Email)
+	}
 	u := &models.User{}
 	if err := r.db.Where(&attributes).First(u).Error; err != nil {
 		return u, err
@@ -114,6 +118,9 @@ func (r *UserRepository) Count() (int64, error) {
 }
 
 func (r *UserRepository) InsertOrGet(user *models.User) (*models.User, bool, error) {
+	if user.Email != "" {
+		user.Email = strings.ToLower(user.Email)
+	}
 	if u, err := r.FindOne(models.User{ID: user.ID}); err == nil && u != nil && u.ID != "" {
 		return u, false, nil
 	}
@@ -164,6 +171,11 @@ func (r *UserRepository) Update(user *models.User) (*models.User, error) {
 }
 
 func (r *UserRepository) UpdateField(user *models.User, key string, value interface{}) (*models.User, error) {
+	// lower user params and if its an update to user or email then properly case
+	if key == "email" {
+		value = strings.ToLower(value.(string))
+	}
+
 	result := r.db.Model(user).Update(key, value)
 	if err := result.Error; err != nil {
 		return nil, err
