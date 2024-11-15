@@ -41,6 +41,8 @@ import (
 	fsutils "github.com/hackclub/hackatime/utils/fs"
 
 	_ "net/http/pprof"
+
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 // Embed version.txt
