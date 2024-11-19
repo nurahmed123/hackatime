@@ -1,6 +1,6 @@
 env: heroku
 quick_start: false # whether to skip initial tasks on application startup, like summary generation
-skip_migrations: false # whether to intentionally not run database migrations, only use for dev purposes
+skip_migrations: true # whether to intentionally not run database migrations, only use for dev purposes
 enable_pprof: false # whether to expose pprof (https://pkg.go.dev/runtime/pprof) profiling data as an endpoint for debugging
 
 server:
