@@ -184,8 +184,6 @@ func (h *SettingsHandler) dispatchAction(action string) action {
 		return h.actionGenerateInvite
 	case "update_unknown_projects":
 		return h.actionUpdateExcludeUnknownProjects
-	case "update_heartbeats_timeout":
-		return h.actionUpdateHeartbeatsTimeout
 	}
 	return nil
 }
