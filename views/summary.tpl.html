@@ -204,12 +204,6 @@
                         <h4 class="font-semibold text-lg text-gray-500">
                             {{ .TotalTime | duration }}
                         </h4>
-                        <div v-cloak v-show="currentInterval">
-                            <img
-                                :src="'api/badge/{{ .SharedLoggedInViewModel.User.ID }}/interval:' + currentInterval + '/project:{{ .GetProjectFilter }}'"
-                                alt="Coding Time Badge"
-                            />
-                        </div>
                     </div>
                 </div>
                 {{ end }}
