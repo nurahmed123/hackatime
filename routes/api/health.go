@@ -35,5 +35,8 @@ func (h *HealthApiHandler) Get(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/plain")
+	if dbStatus == 0 {
+		w.WriteHeader(http.StatusInternalServerError)
+	}
 	w.Write([]byte(fmt.Sprintf("app=1\ndb=%d", dbStatus)))
 }
