@@ -1,0 +1,6 @@
+# ... existing code ...
+
+# Remove or comment out the CockroachDB-specific parameter
+# 'enable_experimental_alter_column_type_general': True,
+
+# ... existing code ... 

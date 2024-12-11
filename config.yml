@@ -21,7 +21,7 @@ app:
     avatar_url_template: https://api.dicebear.com/9.x/thumbs/svg?seed={username_hash}
 
 db:
-    dialect: cockroach # mysql, postgres, sqlite3, mssql
+    dialect: postgres # mysql, postgres, sqlite3, mssql
     max_conn: 6 # maximum number of concurrent connections to maintain
     ssl: true # whether to use tls for db connection (must be true for cockroachdb) (ignored for mysql and sqlite) (true means encrypt=true in mssql)
     automigrate_fail_silently: true # whether to ignore schema auto-migration failures when starting up
