@@ -2,9 +2,11 @@ package middlewares
 
 import (
 	"context"
+	"io"
+	"net/http"
+
 	"github.com/getsentry/sentry-go"
 	sentryhttp "github.com/getsentry/sentry-go/http"
-	"net/http"
 )
 
 // SentryMiddleware is a wrapper around sentryhttp to include user information to traces
@@ -26,6 +28,13 @@ func (h *SentryMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if hub := sentry.GetHubFromContext(ctx); hub != nil {
 		if user := GetPrincipal(r); user != nil {
 			hub.Scope().SetUser(sentry.User{ID: user.ID})
+		}
+
+		// Attach request body if available
+		if r.Body != nil {
+			if body, err := io.ReadAll(r.Body); err == nil {
+				hub.Scope().SetExtra("request_body", string(body))
+			}
 		}
 	}
 }
