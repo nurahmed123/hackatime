@@ -7,6 +7,7 @@ import (
 
 	"github.com/getsentry/sentry-go"
 	sentryhttp "github.com/getsentry/sentry-go/http"
+	"github.com/hackclub/hackatime/utils"
 )
 
 // SentryMiddleware is a wrapper around sentryhttp to include user information to traces
@@ -28,6 +29,13 @@ func (h *SentryMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if hub := sentry.GetHubFromContext(ctx); hub != nil {
 		if user := GetPrincipal(r); user != nil {
 			hub.Scope().SetUser(sentry.User{ID: user.ID})
+		}
+
+		// Parse user agent
+		userAgent := r.Header.Get("User-Agent")
+		_, editor, err := utils.ParseUserAgent(userAgent)
+		if err == nil && editor != "" {
+			hub.Scope().SetTag("editor", editor)
 		}
 
 		// Attach request body if available
