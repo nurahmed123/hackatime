@@ -18,7 +18,7 @@ app:
     # url template for user avatar images (to be used with services like gravatar or dicebear)
     # available variable placeholders are: username, username_hash, email, email_hash
     # defaults to wakapi's internal avatar rendering powered by https://codeberg.org/Codeberg/avatars
-    avatar_url_template: https://api.dicebear.com/9.x/thumbs/svg?seed={username_hash}
+    avatar_url_template: https://cachet.dunkirk.sh/users/{username}/r
 
 db:
     dialect: postgres # mysql, postgres, sqlite3, mssql
