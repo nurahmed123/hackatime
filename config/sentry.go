@@ -1,14 +1,15 @@
 package config
 
 import (
-	"github.com/getsentry/sentry-go"
-	slogmulti "github.com/samber/slog-multi"
-	slogsentry "github.com/samber/slog-sentry/v2"
 	"log/slog"
 	"net/http"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/getsentry/sentry-go"
+	slogmulti "github.com/samber/slog-multi"
+	slogsentry "github.com/samber/slog-sentry/v2"
 )
 
 // How to: Logging
@@ -27,7 +28,7 @@ func Log() *SentryLogger {
 		return sentryLogger
 	}
 
-	level := slog.LevelInfo
+	level := slog.LevelWarn
 	if Get().IsDev() {
 		level = slog.LevelDebug
 	}
