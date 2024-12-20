@@ -31,5 +31,5 @@ func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {
 		return []*models.Heartbeat{&heartbeat}, nil
 	}
 
-	return nil, fmt.Errorf("failed to parse heartbeat data: %w", err)
+	return nil, fmt.Errorf("failed to parse heartbeat data: %v", err)
 }
