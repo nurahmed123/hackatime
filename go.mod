@@ -14,12 +14,14 @@ require (
 	github.com/getsentry/sentry-go v0.28.1
 	github.com/glebarez/sqlite v1.11.0
 	github.com/go-chi/chi/v5 v5.1.0
+	github.com/go-chi/cors v1.2.1
 	github.com/go-chi/httprate v0.14.1
 	github.com/gofrs/uuid/v5 v5.3.0
 	github.com/gorilla/schema v1.4.1
 	github.com/gorilla/securecookie v1.1.2
 	github.com/gorilla/sessions v1.4.0
 	github.com/hashicorp/golang-lru v1.0.2
+	github.com/heroku/x v0.4.0
 	github.com/jinzhu/configor v1.2.2
 	github.com/leandro-lugaresi/hub v1.1.1
 	github.com/lpar/gzipped/v2 v2.1.0
@@ -42,18 +44,7 @@ require (
 	gorm.io/gorm v1.25.11
 )
 
-require (
-	github.com/Bowery/prompt v0.0.0-20190916142128-fa8279994f75 // indirect
-	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/dchest/safefile v0.0.0-20151022103144-855e8d98f185 // indirect
-	github.com/go-chi/cors v1.2.1 // indirect
-	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
-	github.com/heroku/x v0.4.0 // indirect
-	github.com/kardianos/govendor v1.0.9 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
-	golang.org/x/tools/go/vcs v0.1.0-deprecated // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
-)
+require github.com/cespare/xxhash/v2 v2.3.0 // indirect
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
