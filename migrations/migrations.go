@@ -28,35 +28,23 @@ func GetMigrationFunc(cfg *config.Config) gormMigrationFunc {
 	switch cfg.Db.Dialect {
 	default:
 		return func(db *gorm.DB) error {
-			if err := db.AutoMigrate(&models.User{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
+			models := []interface{}{
+				&models.User{},
+				&models.KeyStringValue{},
+				&models.Alias{},
+				&models.Heartbeat{},
+				&models.Summary{},
+				&models.SummaryItem{},
+				&models.LanguageMapping{},
+				&models.ProjectLabel{},
+				&models.Diagnostics{},
+				&models.LeaderboardItem{},
 			}
-			if err := db.AutoMigrate(&models.KeyStringValue{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.Alias{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.Heartbeat{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.Summary{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.SummaryItem{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.LanguageMapping{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.ProjectLabel{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.Diagnostics{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
-			}
-			if err := db.AutoMigrate(&models.LeaderboardItem{}); err != nil && !cfg.Db.AutoMigrateFailSilently {
-				return err
+
+			for _, model := range models {
+				if err := db.AutoMigrate(model); err != nil && !cfg.Db.AutoMigrateFailSilently {
+					return err
+				}
 			}
 			return nil
 		}
