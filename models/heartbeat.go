@@ -15,20 +15,23 @@ type Heartbeat struct {
 	ID               uint64     `gorm:"primary_key" hash:"ignore"`
 	User             *User      `json:"-" gorm:"not null; constraint:OnUpdate:CASCADE,OnDelete:CASCADE;" hash:"ignore"`
 	UserID           string     `json:"-" gorm:"not null; index:idx_time_user; index:idx_user_project"` // idx_user_project is for quickly fetching a user's project list (settings page)
-	Entity           string     `json:"Entity" gorm:"not null"`
+	Entity           string     `json:"entity" gorm:"not null"`
 	Type             string     `json:"type" gorm:"size:255"`
 	Category         string     `json:"category" gorm:"size:255"`
-	Project          string     `json:"project" gorm:"index:idx_user_project"`
-	ProjectRootCount uint64     `json:"project_root_count"`
+	Project          string     `json:"project" gorm:"index:idx_project; index:idx_user_project"`
+	ProjectRootCount uint32     `json:"project_root_count,omitempty" gorm:"index:idx_project_root_count"`
+	LineAdditions    uint32     `json:"line_additions,omitempty"`
+	LineDeletions    uint32     `json:"line_deletions,omitempty"`
+	Lines            uint32     `json:"lines"`
+	LineNumber       uint32     `json:"lineno,omitempty"`
+	CursorPosition   uint32     `json:"cursorpos,omitempty"`
 	Branch           string     `json:"branch" gorm:"index:idx_branch"`
-	Language         string     `json:"language"`
-	IsWrite          bool       `json:"is_write"`
-	Lines            uint64     `json:"lines"`
-	LineAdditions    uint32     `json:"line_additions"`
-	LineDeletions    uint32     `json:"line_deletions"`
-	Editor           string     `json:"editor" hash:"ignore"`           // ignored because editor might be parsed differently by wakatime
-	OperatingSystem  string     `json:"operating_system" hash:"ignore"` // ignored because os might be parsed differently by wakatime
-	Machine          string     `json:"machine" hash:"ignore"`          // ignored because wakatime api doesn't return machines currently
+	Language         string     `json:"language" gorm:"index:idx_language"`
+	Dependencies     string     `json:"dependencies,omitempty" gorm:"type:text"`
+	IsWrite          bool       `json:"is_write,omitempty"`
+	Editor           string     `json:"editor" gorm:"index:idx_editor" hash:"ignore"`                     // ignored because editor might be parsed differently by wakatime
+	OperatingSystem  string     `json:"operating_system" gorm:"index:idx_operating_system" hash:"ignore"` // ignored because os might be parsed differently by wakatime
+	Machine          string     `json:"machine" gorm:"index:idx_machine" hash:"ignore"`                   // ignored because wakatime api doesn't return machines currently
 	UserAgent        string     `json:"user_agent" hash:"ignore" gorm:"type:varchar(255)"`
 	Time             CustomTime `json:"time" gorm:"timeScale:3; index:idx_time_user" swaggertype:"primitive,number"`
 	Hash             string     `json:"-" gorm:"type:varchar(17); uniqueIndex"`
@@ -101,14 +104,21 @@ func (h *Heartbeat) GetKey(t uint8) (key string) {
 
 func (h *Heartbeat) String() string {
 	return fmt.Sprintf(
-		"Heartbeat {user=%s, Entity=%s, type=%s, category=%s, project=%s, branch=%s, language=%s, iswrite=%v, editor=%s, os=%s, machine=%s, time=%d}",
+		"Heartbeat {user=%s, Entity=%s, type=%s, category=%s, project=%s, project_root_count=%v, line_additions=%v, line_deletions=%v, lines=%v, lineno=%v, cursorpos=%v, branch=%s, language=%s, dependencies=%s, iswrite=%v, editor=%s, os=%s, machine=%s, time=%d}",
 		h.UserID,
 		h.Entity,
 		h.Type,
 		h.Category,
 		h.Project,
+		h.ProjectRootCount,
+		h.LineAdditions,
+		h.LineDeletions,
+		h.Lines,
+		h.LineNumber,
+		h.CursorPosition,
 		h.Branch,
 		h.Language,
+		h.Dependencies,
 		h.IsWrite,
 		h.Editor,
 		h.OperatingSystem,

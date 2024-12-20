@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/duke-git/lancet/v2/condition"
@@ -69,9 +70,12 @@ func (h *HeartbeatApiHandler) Post(w http.ResponseWriter, r *http.Request) {
 		return // response was already sent by util function
 	}
 
+	conf.Log().Info("heartbeat")
+
 	var heartbeats []*models.Heartbeat
 	heartbeats, err = routeutils.ParseHeartbeats(r)
 	if err != nil {
+		fmt.Println(r.Body)
 		conf.Log().Request(r).Error("error occurred", "error", err)
 		w.WriteHeader(http.StatusBadRequest)
 		w.Write([]byte(err.Error()))

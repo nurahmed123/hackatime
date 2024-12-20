@@ -3,6 +3,7 @@ package utils
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 
@@ -10,45 +11,25 @@ import (
 )
 
 func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {
-	heartbeats, err := tryParseBulk(r)
-	if err == nil {
-		return heartbeats, err
+	// Read body once
+	body, err := io.ReadAll(r.Body)
+	if err != nil {
+		return nil, err
 	}
+	r.Body.Close()
+	r.Body = io.NopCloser(bytes.NewBuffer(body))
 
-	heartbeats, err = tryParseSingle(r)
-	if err == nil {
-		return heartbeats, err
-	}
-
-	return []*models.Heartbeat{}, err
-}
-
-func tryParseBulk(r *http.Request) ([]*models.Heartbeat, error) {
+	// Try bulk first
 	var heartbeats []*models.Heartbeat
-
-	body, _ := io.ReadAll(r.Body)
-	r.Body.Close()
-	r.Body = io.NopCloser(bytes.NewBuffer(body))
-
-	dec := json.NewDecoder(io.NopCloser(bytes.NewBuffer(body)))
-	if err := dec.Decode(&heartbeats); err != nil {
-		return nil, err
+	if err := json.Unmarshal(body, &heartbeats); err == nil {
+		return heartbeats, nil
 	}
 
-	return heartbeats, nil
-}
-
-func tryParseSingle(r *http.Request) ([]*models.Heartbeat, error) {
+	// Try single if bulk fails
 	var heartbeat models.Heartbeat
-
-	body, _ := io.ReadAll(r.Body)
-	r.Body.Close()
-	r.Body = io.NopCloser(bytes.NewBuffer(body))
-
-	dec := json.NewDecoder(io.NopCloser(bytes.NewBuffer(body)))
-	if err := dec.Decode(&heartbeat); err != nil {
-		return nil, err
+	if err := json.Unmarshal(body, &heartbeat); err == nil {
+		return []*models.Heartbeat{&heartbeat}, nil
 	}
 
-	return []*models.Heartbeat{&heartbeat}, nil
+	return nil, fmt.Errorf("failed to parse heartbeat data: %w", err)
 }
