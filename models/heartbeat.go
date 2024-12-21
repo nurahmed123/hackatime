@@ -27,7 +27,7 @@ type Heartbeat struct {
 	CursorPosition   uint32     `json:"cursorpos,omitempty"`
 	Branch           string     `json:"branch" gorm:"index:idx_branch"`
 	Language         string     `json:"language" gorm:"index:idx_language"`
-	Dependencies     string     `json:"dependencies,omitempty" gorm:"type:text"`
+	Dependencies     []string   `json:"dependencies,omitempty" gorm:"serializer:json;type:text"`
 	IsWrite          bool       `json:"is_write,omitempty"`
 	Editor           string     `json:"editor" gorm:"index:idx_editor" hash:"ignore"`                     // ignored because editor might be parsed differently by wakatime
 	OperatingSystem  string     `json:"operating_system" gorm:"index:idx_operating_system" hash:"ignore"` // ignored because os might be parsed differently by wakatime

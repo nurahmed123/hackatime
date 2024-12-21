@@ -30,7 +30,7 @@ type HeartbeatEntry struct {
 	Lines            uint32    `json:"lines"`
 	LineNumber       uint32    `json:"lineno,omitempty"`
 	CursorPosition   uint32    `json:"cursorpos,omitempty"`
-	Dependencies     string    `json:"dependencies,omitempty"`
+	Dependencies     []string  `json:"dependencies,omitempty"`
 	Time             float64   `json:"time"`
 	Type             string    `json:"type"`
 	UserId           string    `json:"user_id"`

@@ -20,6 +20,8 @@ func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {
 	r.Body.Close()
 	r.Body = io.NopCloser(bytes.NewBuffer(body))
 
+	fmt.Println(string(body))
+
 	conf.Log().Debug("Parsing heartbeat array")
 
 	// Try bulk first
