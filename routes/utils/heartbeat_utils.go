@@ -30,17 +30,13 @@ func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {
 		return heartbeats, nil
 	} else {
 		err = fmt.Errorf("failed to parse heartbeat array: %v", err)
-		conf.Log().Error(err.Error())
 	}
-
-	conf.Log().Debug("Failed to parse heartbeat array, trying single")
 
 	// Try single if bulk fails
 	var heartbeat models.Heartbeat
 	if err := json.Unmarshal(body, &heartbeat); err == nil {
 		return []*models.Heartbeat{&heartbeat}, nil
 	} else {
-		conf.Log().Error(err.Error())
 		err = fmt.Errorf("failed to parse heartbeat: %v", err)
 	}
 
