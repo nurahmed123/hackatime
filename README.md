@@ -136,28 +136,6 @@ Preview:
 </details>
 <br>
 
-### Browser Plugin (Chrome & Firefox)
-
-The [browser-wakatime](https://github.com/wakatime/browser-wakatime) plugin enables you to track your web surfing in
-WakaTime (and Hackatime, of course). Visited websites will appear as "files" in the summary. Follow these instructions to
-get started:
-
-1. Install the browser extension from the official
-   store ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/wakatimes), [Chrome](https://chrome.google.com/webstore/detail/wakatime/jnbbnacmeggbgdjgaoojpmhdlkkpblgi?hl=de))
-2. Open the extension settings dialog
-3. Configure it like so (see screenshot below):
-    - API Key: Your personal API key (get it at [waka.hackclub.com](https://waka.hackclub.com))
-    - Logging Type: _Only the domain_
-    - API URL: `https://waka.hackclub.com/api/compat/wakatime/v1` (alternatively, replace _waka.hackclub.com_ with your self-hosted
-      instance hostname)
-4. Save
-5. Start browsing!
-
-![](.github/assets/screenshot_browser_plugin.png)
-
-Note: the plugin will only sync heartbeats once in a while, so it might take some time for them to appear on Hackatime.
-To "force" it to sync, simply bring up the plugin main dialog.
-
 ### Gnome Extension
 
 If you're using the GNOME desktop, there is a quick way to display your today's coding statistics in the status bar.
