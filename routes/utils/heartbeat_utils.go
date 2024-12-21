@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 
+	conf "github.com/hackclub/hackatime/config"
 	"github.com/hackclub/hackatime/models"
 )
 
@@ -19,17 +20,27 @@ func ParseHeartbeats(r *http.Request) ([]*models.Heartbeat, error) {
 	r.Body.Close()
 	r.Body = io.NopCloser(bytes.NewBuffer(body))
 
+	conf.Log().Debug("Parsing heartbeat array")
+
 	// Try bulk first
 	var heartbeats []*models.Heartbeat
 	if err := json.Unmarshal(body, &heartbeats); err == nil {
 		return heartbeats, nil
+	} else {
+		err = fmt.Errorf("failed to parse heartbeat array: %v", err)
+		conf.Log().Error(err.Error())
 	}
+
+	conf.Log().Debug("Failed to parse heartbeat array, trying single")
 
 	// Try single if bulk fails
 	var heartbeat models.Heartbeat
 	if err := json.Unmarshal(body, &heartbeat); err == nil {
 		return []*models.Heartbeat{&heartbeat}, nil
+	} else {
+		conf.Log().Error(err.Error())
+		err = fmt.Errorf("failed to parse heartbeat: %v", err)
 	}
 
-	return nil, fmt.Errorf("failed to parse heartbeat data: %v", err)
+	return nil, err
 }
