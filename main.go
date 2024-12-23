@@ -252,6 +252,17 @@ func main() {
 	// Other Handlers
 	relayHandler := relay.NewRelayHandler()
 
+	originCORSMiddleware := func(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			origin := r.Header.Get("Origin")
+			if origin != "" {
+				w.Header().Set("Access-Control-Allow-Origin", origin)
+				w.Header().Set("Access-Control-Allow-Credentials", "true")
+			}
+			next.ServeHTTP(w, r)
+		})
+	}
+
 	// Setup Routing
 	router := chi.NewRouter()
 	router.Use(
@@ -262,10 +273,11 @@ func main() {
 			AllowedOrigins:   []string{"https://*", "http://*", "chrome-extension://*", "https://pro.easyeda.com", "*"},
 			AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 			AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token", "Access-Control-Allow-Origin"},
-			ExposedHeaders:   []string{"Link"},
+			ExposedHeaders:   []string{"Link", "Access-Control-Allow-Origin"},
 			AllowCredentials: false,
 			MaxAge:           300, // Maximum value not ignored by any of major browsers
 		}),
+		originCORSMiddleware,
 		middleware.StripSlashes,
 		middleware.Recoverer,
 		middlewares.NewPrincipalMiddleware(),
