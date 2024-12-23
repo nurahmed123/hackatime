@@ -259,10 +259,9 @@ func main() {
 		middlewares.ForceSsl,
 		cors.Handler(cors.Options{
 			// AllowedOrigins:   []string{"https://foo.com"}, // Use this to allow specific origin hosts
-			AllowedOrigins: []string{"https://*", "http://*", "chrome-extension://*", "*.easyeda.com", "https://pro.easyeda.com"},
-			// AllowOriginFunc:  func(r *http.Request, origin string) bool { return true },
+			AllowedOrigins:   []string{"https://*", "http://*", "chrome-extension://*", "https://pro.easyeda.com", "*"},
 			AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-			AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
+			AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token", "Access-Control-Allow-Origin"},
 			ExposedHeaders:   []string{"Link"},
 			AllowCredentials: false,
 			MaxAge:           300, // Maximum value not ignored by any of major browsers
