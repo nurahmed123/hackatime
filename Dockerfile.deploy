@@ -16,9 +16,8 @@ FROM alpine:latest
 WORKDIR /app
 
 COPY --from=builder /app/hackatime .
-
-RUN mkdir -p /app/config
+COPY --from=builder /app/config.yml config.yml
 
 EXPOSE 3000
 
-ENTRYPOINT ["./hackatime", "-config", "/app/config/config.yml"]
+ENTRYPOINT ["./hackatime", "-config", "config.yml"]
