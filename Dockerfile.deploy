@@ -19,4 +19,6 @@ COPY --from=builder /app/hackatime .
 
 RUN mkdir -p /app/config
 
+EXPOSE 3000
+
 ENTRYPOINT ["./hackatime", "-config", "/app/config/config.yml"]
