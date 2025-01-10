@@ -407,7 +407,7 @@ func (h *LoginHandler) PostResetPassword(w http.ResponseWriter, r *http.Request)
 		} else {
 			go func(user *models.User) {
 				link := fmt.Sprintf("%s/set-password?token=%s", h.config.Server.GetPublicUrl(), user.ResetToken)
-				if h.config.Security.AirtableAPIKey != "" && resetRequest.Slack {
+				if h.config.Security.AirtableAPIKey != "" && resetRequest.Slack && strings.HasPrefix(user.ID, "U") {
 					msgtext := fmt.Sprintf("Arr `%s`! Looks liek ye requested a password reset from hackatime for the email `%s`! If ye didn't request this then sombardy is trying to hack thee account and you should steer clear of below button :tw_crossed_swords:", func() string {
 						if user.Name == "" {
 							return "matey"
@@ -439,7 +439,7 @@ func (h *LoginHandler) PostResetPassword(w http.ResponseWriter, r *http.Request)
 							]
 						}
 					]`
-					if err := utils.SendSlackMessage(h.config.Security.AirtableAPIKey, "U062UG485EE", msg, blocks); err != nil {
+					if err := utils.SendSlackMessage(h.config.Security.AirtableAPIKey, user.ID, msg, blocks); err != nil {
 						conf.Log().Request(r).Error("failed to send slack message", "error", err)
 					} else {
 						slog.Info("sent slack message", "userID", user.ID)
