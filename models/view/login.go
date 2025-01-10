@@ -2,10 +2,11 @@ package view
 
 type LoginViewModel struct {
 	SharedViewModel
-	TotalUsers  int
-	AllowSignup bool
-	CaptchaId   string
-	InviteCode  string
+	TotalUsers   int
+	AllowSignup  bool
+	CaptchaId    string
+	InviteCode   string
+	SlackEnabled bool
 }
 
 type SetPasswordViewModel struct {

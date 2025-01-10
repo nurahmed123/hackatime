@@ -80,6 +80,7 @@ type SetPasswordRequest struct {
 
 type ResetPasswordRequest struct {
 	Email string `schema:"email"`
+	Slack bool   `schema:"slack"`
 }
 
 type CredentialsReset struct {

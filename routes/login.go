@@ -407,6 +407,44 @@ func (h *LoginHandler) PostResetPassword(w http.ResponseWriter, r *http.Request)
 		} else {
 			go func(user *models.User) {
 				link := fmt.Sprintf("%s/set-password?token=%s", h.config.Server.GetPublicUrl(), user.ResetToken)
+				if h.config.Security.AirtableAPIKey != "" && resetRequest.Slack {
+					msgtext := fmt.Sprintf("Arr `%s`! Looks liek ye requested a password reset from hackatime for the email `%s`! If ye didn't request this then sombardy is trying to hack thee account and you should steer clear of below button :tw_crossed_swords:", func() string {
+						if user.Name == "" {
+							return "matey"
+						} else {
+							return user.Name
+						}
+					}(), user.Email)
+					msg := fmt.Sprintf("A password reset was requested for the email %s; you can use the following link to reset your password: %s", user.Email, link)
+					blocks := `[
+						{
+							"type": "section",
+							"text": {
+								"type": "mrkdwn",
+								"text": "` + msgtext + `"
+							}
+						},
+						{
+							"type": "actions",
+							"elements": [
+								{
+									"type": "button",
+									"text": {
+										"type": "plain_text",
+										"text": "Reset Password"
+									},
+									"style": "primary",
+									"url": "` + link + `"
+								}
+							]
+						}
+					]`
+					if err := utils.SendSlackMessage(h.config.Security.AirtableAPIKey, "U062UG485EE", msg, blocks); err != nil {
+						conf.Log().Request(r).Error("failed to send slack message", "error", err)
+					} else {
+						slog.Info("sent slack message", "userID", user.ID)
+					}
+				}
 				if err := h.mailSrvc.SendPasswordReset(user, link); err != nil {
 					conf.Log().Request(r).Error("failed to send password reset mail", "userID", user.ID, "error", err)
 				} else {
@@ -430,6 +468,7 @@ func (h *LoginHandler) buildViewModel(r *http.Request, w http.ResponseWriter, wi
 		TotalUsers:      int(numUsers),
 		AllowSignup:     h.config.IsDev() || h.config.Security.AllowSignup,
 		InviteCode:      r.URL.Query().Get("invite"),
+		SlackEnabled:    h.config.Security.AirtableAPIKey != "",
 	}
 
 	if withCaptcha {
